@@ -10,7 +10,7 @@ const NavBar = () => {
         <Image 
         alt='logo hernan jojoa' 
         src={logo} 
-        width={300} 
+        width={200} 
         height={300}/>
         </Link>
     </div>
