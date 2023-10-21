@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import NavBar from './nav-bar'
@@ -5,12 +6,29 @@ import NavBar from './nav-bar'
 
 const Header = () => {
     
+    const [isScrolled, setIsScrolled] = React.useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const bgColor = isScrolled ? 'bg-black  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-transparent duration-300 ease-in-out transition-delay-300';
     
     return (
-       <section className=' h-screen bg-cover bg-center" sm:h-auto bg-red flex justify-center z-[-10]' 
-       style={{ backgroundImage: 'url("header.jpg")' }}
+        
+       <section className={` h-screen  bg-cover  sm:h-auto  flex justify-center `} 
+       style={{ backgroundImage: 'url("header.jpg")' , backgroundPosition: '-70px 0'  }}
      >
-        <div className='fixed top-0 bg-blue w-full bg-transparent p-4 transition-bg duration-300 ease-in-out'>
+        <div className={` ${bgColor} fixed top-0 w-full z-10`} >
         <NavBar/>
         </div>
 

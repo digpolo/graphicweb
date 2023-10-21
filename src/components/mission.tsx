@@ -16,7 +16,7 @@ const Mission = () => {
     return (
         <div className='my-10 '>
             <div className='mx-4 border-t border-white flex grid md:grid-cols-2 pb-20'>
-                <h2 className={`${garamond.variable} font-garamond text-6xl py-4`} >Tecnología e innovación</h2>
+                <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-4xl py-4`} >Tecnología e innovación</h2>
                 <p className='text-2xl py-4'>Nuestra dedicación para ofrecer una experiencia excepcional al cliente requiere una comprensión profunda de sus necesidades y expectativas, así como una consideración cuidadosa del impacto en su satisfacción y lealtad.</p>
             </div>
             <Image
