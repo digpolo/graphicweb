@@ -26,7 +26,7 @@ const Header = () => {
     return (
         
        <section className={` h-screen  bg-cover  sm:h-auto  flex justify-center `} 
-       style={{ backgroundImage: 'url("header.jpg")' , backgroundPosition: '-70px 0'  }}
+       style={{ backgroundImage: 'url("header.jpg")' , backgroundPosition: '-60px 0'  }}
      >
         <div className={` ${bgColor} fixed top-0 w-full z-10`} >
         <NavBar/>
