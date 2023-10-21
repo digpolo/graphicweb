@@ -17,6 +17,11 @@ const config: Config = {
         garamond: ['var(--font-garamond)'],
         
       },
+    //   colors: {
+    //     blue: '#1484f6',
+    //     grey: '#181818',
+    //     white: 'ffffff'
+    // },
     },
   },
   plugins: [],

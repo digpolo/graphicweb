@@ -1,13 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
-import profile from '../../public/profile.jpeg'
-import logoBrasil from '../../public/logo-brasil.svg'
 import NavBar from './nav-bar'
 
 
 const Header = () => {
+    
+    
     return (
-       <section className=' h-screen sm:h-auto bg-red flex justify-center '>
+       <section className=' h-screen bg-cover bg-center" sm:h-auto bg-red flex justify-center z-[-10]' 
+       style={{ backgroundImage: 'url("header.jpg")' }}
+     >
+        <div className='fixed top-0 bg-blue w-full bg-transparent p-4 transition-bg duration-300 ease-in-out'>
+        <NavBar/>
+        </div>
+
         <div className='flex flex-col mx-auto max-w-5xl  px-4 gap-6 absolute  bottom-0 mb-6'>
          <h1 className=' text-4xl md:text-5xl '>Soluciones digitales para mejorar la competitividad de tu empresa</h1>  
          <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-blue border w-[200px]' target="_blank">
@@ -20,6 +26,18 @@ const Header = () => {
 }
 
 export default Header
+
+
+
+{/* <section className=' h-screen sm:h-auto bg-red flex justify-center '>
+        <div className='flex flex-col mx-auto max-w-5xl  px-4 gap-6 absolute  bottom-0 mb-6'>
+         <h1 className=' text-4xl md:text-5xl '>Soluciones digitales para mejorar la competitividad de tu empresa</h1>  
+         <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-blue border w-[200px]' target="_blank">
+                       <p className='text-center text-blue font-[16px] '>Contactarme</p>
+                        
+                 </a>
+                 </div>
+        </section> */}
 
 
 
