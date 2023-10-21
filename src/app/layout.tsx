@@ -30,7 +30,7 @@ export default function RootLayout({
         />
       </head>
       <body className={poppins.className}>
-        <NavBar />
+      
         {children}
         <Footer />
         <script

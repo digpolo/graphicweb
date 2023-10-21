@@ -1,13 +1,37 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
-import profile from '../../public/profile.jpeg'
-import logoBrasil from '../../public/logo-brasil.svg'
 import NavBar from './nav-bar'
 
 
 const Header = () => {
+    
+    const [isScrolled, setIsScrolled] = React.useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const bgColor = isScrolled ? 'bg-black  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-transparent duration-300 ease-in-out transition-delay-300';
+    
     return (
-       <section className=' h-screen sm:h-auto bg-red flex justify-center '>
+        
+       <section className={` h-screen  bg-cover  sm:h-auto  flex justify-center `} 
+       style={{ backgroundImage: 'url("header.jpg")' , backgroundPosition: '-70px 0'  }}
+     >
+        <div className={` ${bgColor} fixed top-0 w-full z-10`} >
+        <NavBar/>
+        </div>
+
         <div className='flex flex-col mx-auto max-w-5xl  px-4 gap-6 absolute  bottom-0 mb-6'>
          <h1 className=' text-4xl md:text-5xl '>Soluciones digitales para mejorar la competitividad de tu empresa</h1>  
          <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-blue border w-[200px]' target="_blank">
@@ -20,6 +44,18 @@ const Header = () => {
 }
 
 export default Header
+
+
+
+{/* <section className=' h-screen sm:h-auto bg-red flex justify-center '>
+        <div className='flex flex-col mx-auto max-w-5xl  px-4 gap-6 absolute  bottom-0 mb-6'>
+         <h1 className=' text-4xl md:text-5xl '>Soluciones digitales para mejorar la competitividad de tu empresa</h1>  
+         <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-blue border w-[200px]' target="_blank">
+                       <p className='text-center text-blue font-[16px] '>Contactarme</p>
+                        
+                 </a>
+                 </div>
+        </section> */}
 
 
 
