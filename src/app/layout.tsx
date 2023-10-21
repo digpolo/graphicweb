@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Poppins, EB_Garamond} from "next/font/google";
 import NavBar from "@/components/nav-bar";
 import Footer from "@/components/footer";
 
@@ -9,6 +9,7 @@ const poppins = Poppins({
   style: ["normal", "italic"],
   subsets: ["latin-ext"],
 });
+
 
 export const metadata = {
   title: "GraphicWeb",
