@@ -22,7 +22,7 @@ const Services = () => {
 
     return (
         <div className=' mx-4'>
-             <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-4xl py-4 border-t border-white`} >Productos</h2>
+             <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-white`} >Productos</h2>
             
             <div className='lg-4  md:flex gap-10'>
             {products.map(product => {

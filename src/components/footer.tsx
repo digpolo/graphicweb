@@ -7,28 +7,34 @@ const Footer = () => {
     return (
         <section className='bg-grey p-6 mt-32'>
             <div className='mx-auto grid grid-cols-1 md:grid-cols-4 max-w-5xl gap-10'>
-                <div className='flex flex-col mt-10'>
+                <div className='flex flex-col items-center mt-10'>
                     <a href="/" >
-                        <Image alt='logo hernan jojoa' src={logo} width={300} height={300} />
+                        <Image alt='logo hernan jojoa' src={logo} width={200} height={300} />
                     </a>
 
                 </div>
                 <div>
-                    <h2 className='text-white py-3 font-semibold text-[16px]'>Atención</h2>
+                    <h2 className='text-white py-3 font-black text-[16px]'>Experiencia del cliente</h2>
                     <ul className='text-white gap-3 flex flex-col font-light'>
                         <li>
-                            Puerto Asis, Putumayo
+                            <Link href=''>
+                            Personalización
+                            </Link>
                         </li>
                         <li>
-                            Puerto Caicedo, Putumayo
+                        <Link href=''>
+                            Omnicanalidad
+                            </Link>
                         </li>
                         <li>
-                            Armenia, Quindio
+                        <Link href=''>
+                           Automatización
+                            </Link>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h2 className='text-white py-3 font-semibold text-[16px]'>Siguenos</h2>
+                    <h2 className='text-white py-3 font-black text-[16px]'>Siguenos</h2>
                     <ul className='text-white gap-3 flex flex-col font-thin'>
                         <li className='font-light'>
                         <Link href="https://www.instagram.com/drhernanjojoa/" target="_blank" rel="noopener noreferrer">
@@ -43,7 +49,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h2 className='text-white py-3 font-semibold text-[16px] '>Informaci&oacute;n de inter&eacute;s</h2>
+                    <h2 className='text-white py-3 font-black text-[16px] '>Informaci&oacute;n de inter&eacute;s</h2>
                     <ul className='grid grid-cols-1 text-white  gap-3 flex justify-between'>
                         <li><Link href="/politica-de-privacidad">Política de privacidad</Link></li>
                         <li><Link href="/terminos-y-condiciones">Terminos y condiciones</Link></li>
@@ -51,7 +57,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className='mx-auto text-xs text-white mt-12 mb-6 text-left max-w-5xl text-center'>Todos los derechos reservados - Dr. Hernan Joja &copy; 2023</div>
+            <div className='mx-auto text-x text-white mt-12 mb-6 text-left max-w-5xl text-center'>Todos los derechos reservados - GraphicWeb &copy; 2023</div>
         </section>
     )
 }

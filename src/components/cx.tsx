@@ -8,7 +8,7 @@ const Cx = () => {
         { id: 3, title: "Automatización para liberar tu tiempo y recursos", cta: 'Explora tu potencial' },
     ]
     return (
-        <div className='lg-4 md:flex mx-4 gap-10'>
+        <div className='lg-4 md:flex mx-4 gap-10 pt-12'>
             {cxs.map(cx => {
                 return <Card key={cx.id} card={cx} />
             })}
