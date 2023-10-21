@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import React from 'react'
-import NavBar from './nav-bar';
 import { EB_Garamond } from "next/font/google";
 import Services from "@/components/services"
+import Link from 'next/link';
 
 type cxPage = {
   id: number;
+  logo: string
   title: string;
   subtitle: string
   src: string;
@@ -33,11 +34,18 @@ const garamond = EB_Garamond({
 const CxPage: React.FC<Props> = ({ card }) => {
 
   return (
-    <div className='bg-white py-6'>
+    <div className='bg-white pb-6'>
       <div className='h-screen  bg-[#FFF0D6]'>
-        <div className='-blue'>
-          <NavBar />
-        </div>
+      <div className='flex justify-center items-center py-4 md:py-8 '>
+      <Link href={'/'}>
+        <Image 
+        alt='logo hernan jojoa' 
+        src={card.logo} 
+        width={200} 
+        height={300}
+        className="text-[#0000FF]"/>
+        </Link>
+    </div>
         <div className='flex flex-col gap-4 absolute bottom-0 flex-1 m-4'>
           <h1 className='font-medium text-[38px] text-[#0000FF]'>{card.title}</h1>
           <h2 className='text-[#0000FF] text-lg'>{card.subtitle}</h2>
