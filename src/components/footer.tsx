@@ -17,17 +17,17 @@ const Footer = () => {
                     <h2 className='text-white py-3 font-black text-[16px]'>Experiencia del cliente</h2>
                     <ul className='text-white gap-3 flex flex-col font-light'>
                         <li>
-                            <Link href=''>
+                            <Link href='/personalizacion'>
                             Personalización
                             </Link>
                         </li>
                         <li>
-                        <Link href=''>
+                        <Link href='/omnicanalidad'>
                             Omnicanalidad
                             </Link>
                         </li>
                         <li>
-                        <Link href=''>
+                        <Link href='/automation'>
                            Automatización
                             </Link>
                         </li>
