@@ -27,7 +27,7 @@ const Footer = () => {
                             </Link>
                         </li>
                         <li>
-                        <Link href='/automation'>
+                        <Link href='/automatizacion'>
                            Automatización
                             </Link>
                         </li>
