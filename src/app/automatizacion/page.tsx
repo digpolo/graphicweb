@@ -15,7 +15,7 @@ const garamond = EB_Garamond({
 });
 
 
-const page = () => {
+const Page = () => {
   let customization = {
     id: 1,
     logo: "/logo-green.svg",
@@ -109,4 +109,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

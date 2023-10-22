@@ -15,7 +15,7 @@ const garamond = EB_Garamond({
   subsets: ["latin-ext"],
   variable: '--font-garamond'
 });
-const page = () => {
+const Page = () => {
   let customization = {
     id: 1,
     logo: 'logo.svg',
@@ -110,4 +110,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

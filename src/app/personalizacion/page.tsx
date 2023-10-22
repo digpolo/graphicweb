@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Services from '@/components/services'
@@ -14,7 +14,7 @@ const garamond = EB_Garamond({
     variable: '--font-garamond'
 });
 
-const page = () => {
+const Page = () => {
     let customization = {
         id: 1,
         logo: '/logo-blue.svg',
@@ -30,7 +30,7 @@ const page = () => {
         enfoque6: "Diferenciación competitiva"
     }
 
-    const [isScrolled, setIsScrolled] = React.useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -40,7 +40,7 @@ const page = () => {
         }
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -112,4 +112,4 @@ const page = () => {
 }
 
 
-export default page
+export default Page

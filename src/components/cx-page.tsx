@@ -76,7 +76,7 @@ const CxPage: React.FC<Props> = ({ card }) => {
         <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
           <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
         </a>
-      <Services/>
+      <Services colorText='black'/>
     </div>
   )
 }
