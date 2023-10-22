@@ -11,7 +11,8 @@ const NavBar = () => {
         alt='logo hernan jojoa' 
         src={logo} 
         width={200} 
-        height={300}/>
+        height={300}
+        className="text-[#0000FF]"/>
         </Link>
     </div>
   )
