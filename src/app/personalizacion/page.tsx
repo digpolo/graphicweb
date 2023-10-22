@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Services from '@/components/services'
 import { EB_Garamond } from "next/font/google";
+import Footer from '@/components/footer'
 
 const garamond = EB_Garamond({
     display: "swap",
@@ -48,7 +49,7 @@ const page = () => {
 
 
     return (
-        <div className='bg-white pb-6'>
+        <div className='bg-white '>
             <div className=' bg-[#FFF0D6] '>
                 <div className='fixed top-0 w-full z-10'>
                     <div className={` flex justify-center items-center py-4 md:py-8 ${bgColor}`}>
@@ -102,7 +103,10 @@ const page = () => {
             <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
                 <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
             </a>
-            <Services />
+            <Services colorText='black'/>
+            
+            <Footer bgClass='[#FFF0D6]' colorText='[#0000FF]' src='/logo-blue.svg'/>
+            
         </div>
     )
 }

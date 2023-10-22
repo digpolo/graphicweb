@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={poppins.className}>
       
         {children}
-        <Footer />
+        
         <script
           async // Agrega la propiedad async para cargar el script de forma asíncrona
           src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"

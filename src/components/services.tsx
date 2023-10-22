@@ -1,8 +1,5 @@
 import React from 'react'
 import CardServices from './card-services'
-import cx from '../../public/ai.svg'
-import metaverso from '../../public/metaverso.svg'
-import chatbot from '../../public/chatbot.svg'
 import { EB_Garamond } from "next/font/google";
 
 const garamond = EB_Garamond({
@@ -13,7 +10,11 @@ const garamond = EB_Garamond({
     variable: '--font-garamond'
 });
 
-const Services = () => {
+interface Props {
+    colorText: string
+}
+
+const Services: React.FC<Props> = ({ colorText }) => {
     let products = [
         { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "Experiencia del cliente", },
         { id: 2, alt: "imagen de gafas de realidad virtual", src: 'metaverso.svg', title: "Metaverso" },
@@ -21,16 +22,16 @@ const Services = () => {
     ]
 
     return (
-        <div className=' mx-4'>
-             <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-white`} >Productos</h2>
-            
+        <div className={`mx-4 `}>
+            <h2 className={`${garamond.variable} text-[${colorText}] font-garamond text-3xl lg:text-6xl py-4 border-t border-white`} >Productos</h2>
             <div className='lg-4  md:flex gap-10'>
-            {products.map(product => {
-                return <CardServices key={product.id} cardProduct={product} />
-            })}
+                {products.map(product => {
+                    return <CardServices key={product.id} cardProduct={product} />
+                })}
             </div>
-           
-            
+            <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className={`my-8 flex justify-center border text-${colorText} border-${colorText} w-[300px]`} target="_blank">
+                <p className={`font-[16px] text-${colorText} text-s`}>Solicitar producto</p>
+            </a>
         </div>
     )
 }
