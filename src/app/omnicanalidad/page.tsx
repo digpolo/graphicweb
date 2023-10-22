@@ -35,16 +35,16 @@ const page = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   const handleScroll = () => {
-      if (window.scrollY > 0) {
-          setIsScrolled(true);
-      } else {
-          setIsScrolled(false);
-      }
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
   };
 
   React.useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const bgColor = isScrolled ? 'bg-black transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#0000FF] duration-300 ease-in-out transition-delay-300';
@@ -52,7 +52,7 @@ const page = () => {
 
   return (
     <div className='bg-white'>
-      <div className='h-screen  bg-[#0000FF]'>
+      <div className='  bg-[#0000FF]'>
         <div className='fixed top-0 w-full z-10'>
           <div className={` flex justify-center items-center py-4 md:py-8 ${bgColor}`}>
             <Link href={'/'}>
@@ -65,13 +65,22 @@ const page = () => {
             </Link>
           </div>
         </div>
-        <div className='flex flex-col gap-4 absolute bottom-0 flex-1 m-4'>
-          <h1 className='font-medium text-[38px] text-white'>{customization.title}</h1>
-          <h2 className='text-white text-lg'>{customization.subtitle}</h2>
-          <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-white border border-white w-[200px]' target="_blank">
-            <p className='text-center text-white font-[16px] text-s'>Contactarme</p>
-          </a>
-          <Image alt={customization.src} src={customization.src} width={1000} height={1000} />
+        <div className='flex flex-col gap-4 flex-1 m-4 pb-10'>
+          <div className='grid grid-cols-1 md:grid-cols-2 pt-60 md:pb-20'>
+            <h1 className='font-medium text-[35px] md:text-[60px]  text-white pr-10'>{customization.title}</h1>
+            <div>
+              <h2 className='text-white text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
+              <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' target="_blank">
+                <p className='font-[16px] text-s'>Solicitar producto</p>
+              </a>
+            </div>
+          </div>
+          <Image
+            alt={customization.src}
+            src={customization.src}
+            width={2000}
+            height={2000}
+          />
         </div>
       </div>
       <div className='bg-white grid grid-col md:grid-cols-2 mx-4'>
@@ -96,7 +105,7 @@ const page = () => {
         <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
       </a>
       <Services colorText='black' />
-      <Footer bgClass='[#0000FF]' colorText='[white]' src='/logo.svg'/>
+      <Footer bgClass='[#0000FF]' colorText='white' src='/logo.svg' />
     </div>
   )
 }

@@ -33,46 +33,53 @@ const page = () => {
 
   const [isScrolled, setIsScrolled] = React.useState(false);
 
-const handleScroll = () => {
+  const handleScroll = () => {
     if (window.scrollY > 0) {
-        setIsScrolled(true);
+      setIsScrolled(true);
     } else {
-        setIsScrolled(false);
+      setIsScrolled(false);
     }
-};
+  };
 
-React.useEffect(() => {
+  React.useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+  }, []);
 
-const bgColor = isScrolled ? 'bg-white  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#FEE6FF] duration-300 ease-in-out transition-delay-300';
+  const bgColor = isScrolled ? 'bg-white  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#FEE6FF] duration-300 ease-in-out transition-delay-300';
 
 
   return (
     <div className='bg-white pb-'>
-      <div className='h-screen  bg-[#FEE6FF]'>
-        <div className='flex justify-center items-center py-4 md:py-8 '>
+      <div className='bg-[#FEE6FF]'>
         <div className='fixed top-0 w-full z-10'>
-        <div className={` flex justify-center items-center py-4 md:py-8 ${bgColor}`}>
-          <Link href={'/'}>
-            <Image
-              alt='logo hernan jojoa'
-              src={customization.logo}
-              width={200}
-              height={300}
-              className="text-[#0000FF]" />
-          </Link>
+          <div className={` flex justify-center items-center py-4 md:py-8 ${bgColor}`}>
+            <Link href={'/'}>
+              <Image
+                alt='logo hernan jojoa'
+                src={customization.logo}
+                width={200}
+                height={300}
+                className="text-[#0000FF]" />
+            </Link>
           </div>
+        </div>#2D7129
+
+        <div className='flex flex-col gap-4 flex-1 m-4 pb-10'>
+          <div className='grid grid-cols-1 md:grid-cols-2 pt-60 md:pb-20'>
+            <h1 className='font-medium text-[35px] md:text-[60px]  text-[#2D7129] pr-10'>{customization.title}</h1>
+            <div>
+              <h2 className='text-[#2D7129] text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
+              <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className='my-8 flex justify-center py-1 text-[#2D7129] border border-[#2D7129] w-[300px]' target="_blank">
+                <p className='font-[16px] text-s'>Solicitar producto</p>
+              </a>
+            </div>
           </div>
-        </div>
-        <div className='flex flex-col gap-4 absolute bottom-0 flex-1 m-4'>
-          <h1 className='font-medium text-[38px] text-[#2D7129]'>{customization.title}</h1>
-          <h2 className='text-[#2D7129] text-lg'>{customization.subtitle}</h2>
-          <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-[2D7129] border border-[#2D7129] w-[200px]' target="_blank">
-            <p className='text-center text-[#2D7129] font-[16px] text-s'>Solicitar producto</p>
-          </a>
-          <Image alt={customization.src} src={customization.src} width={1000} height={1000} />
+          <Image
+            alt={customization.src}
+            src={customization.src}
+            width={2000}
+            height={2000} />
         </div>
       </div>
       <div className='bg-white grid grid-col md:grid-cols-2 mx-4'>
@@ -96,8 +103,8 @@ const bgColor = isScrolled ? 'bg-white  transition-all duration-300 ease-in-out 
       <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
         <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
       </a>
-      <Services colorText='black'/>
-      <Footer bgClass='[#FEE6FF]' colorText='[#2D7129]' src='/logo-green.svg'/>
+      <Services colorText='black' />
+      <Footer bgClass='[#FEE6FF]' colorText='[#2D7129]' src='/logo-green.svg' />
     </div>
   )
 }

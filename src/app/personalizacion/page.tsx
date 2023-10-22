@@ -64,10 +64,10 @@ const page = () => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-4 flex-1 m-4 pb-10'>
-                    <div className='grid grid-cols-1 md:grid-cols-2 pt-40'>
-                        <h1 className='font-medium text-[38px] text-[#0000FF] '>{customization.title}</h1>
+                    <div className='grid grid-cols-1 md:grid-cols-2 pt-60 md:pb-20'>
+                        <h1 className='font-medium text-[35px] md:text-[60px]  text-[#0000FF] pr-10'>{customization.title}</h1>
                         <div>
-                            <h2 className='text-[#0000FF] text-lg'>{customization.subtitle}</h2>
+                            <h2 className='text-[#0000FF] text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
                             <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className='my-8 flex justify-center py-1 text-[#0000FF] border border-[#0000FF] w-[300px]' target="_blank">
                                 <p className='font-[16px] text-s'>Solicitar producto</p>
                             </a>

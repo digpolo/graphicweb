@@ -14,21 +14,21 @@ const page = () => {
             <div className='mx-4'>
                 <h3 className="my-5 text-green py-14 font-semibold text-[30px]">Política de privacidad</h3>
 
-                <p className='font-extralight text-[16px]'>Agradecemos su confianza al elegir nuestros servicios odontológicos y su interés en nuestra página web. La privacidad de nuestros pacientes y visitantes es de suma importancia para nosotros, y estamos comprometidos en protegerla. Por lo tanto, hemos establecido esta Política de Privacidad para informarle cómo recopilamos, utilizamos y protegemos la información que nos proporciona a través de nuestro formulario en línea.</p>
+                <p className='font-extralight text-[16px]'>Agradecemos su confianza al elegir nuestros servicios y su interés en nuestra página web. La privacidad de nuestros clientes y visitantes es de suma importancia para nosotros, y estamos comprometidos en protegerla. Por lo tanto, hemos establecido esta Política de Privacidad para informarle cómo recopilamos, utilizamos y protegemos la información que nos proporciona a través de nuestro formulario en línea.</p>
 
                 <h4 className="py-14 font-semibold text-[16px] text-green">1. Recopilación de Información</h4>
                 <ul className='font-extralight text-[16px]'>
                     <p>Cuando usted utiliza nuestro formulario en línea para programar una cita o enviar una consulta, recopilamos cierta información personal, que puede incluir: nombre, apellido, número de teléfono celular, motivo de consulta
-                        Esta información es esencial para brindarle el servicio adecuado y mantener un registro de sus necesidades odontológicas.
+                        Esta información es esencial para brindarle el servicio adecuado y mantener un registro de las necesidades de su empresa.
                     </p>
                 </ul>
 
                 <h4 className="py-14 font-semibold text-[16px] text-green">2. Uso de la información</h4>
                 <ul className='font-extralight text-[16px]'>
                     <p>La información personal que recopilamos se utiliza únicamente para los siguientes propósitos:</p>
-                    <li>Programar y confirmar citas odontológicas.</li>
-                    <li>Comunicarnos con usted en relación con su cita o consulta.</li>
-                    <li>Mantener un registro de su historial de visitas y tratamientos dentales.</li>
+                    <li>Programar y confirmar reuniones.</li>
+                    <li>Comunicarnos con usted en relación con los servicios que le estamos prestando</li>
+                    <li>Mantener un registro de su historial de visitas</li>
                     <li>Mejorar nuestros servicios y su experiencia en nuestro sitio web</li>
                 </ul>
 
