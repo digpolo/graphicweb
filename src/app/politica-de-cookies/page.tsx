@@ -15,7 +15,7 @@ const page = () => {
             <div className='mx-4'>
                 <h3 className="my-5 text-green py-14 font-semibold text-[30px]">Políticas de cookies</h3>
 
-                <p className='font-extralight text-[16px]'>Esta Política de Cookies describe cómo Dr. Hernan Jojoa utilizamos cookies y tecnologías similares en nuestra aplicación móvil y sitio web. Al usar la Aplicación, usted acepta el uso de cookies de acuerdo con esta política.</p>
+                <p className='font-extralight text-[16px]'>Esta Política de Cookies describe cómo GraphicWeb utiliza cookies y tecnologías similares en nuestra aplicación móvil y sitio web. Al usar la Aplicación, usted acepta el uso de cookies de acuerdo con esta política.</p>
 
                 <h4 className="py-14 font-semibold text-[16px] text-green">1. ¿Qué son las Cookies?</h4>
                 <p className='font-extralight text-[16px]'>

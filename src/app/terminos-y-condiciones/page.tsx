@@ -17,7 +17,7 @@ const page = () => {
 
                 <h4 className="py-14 font-semibold text-[16px] text-green">1. Aceptación de los Términos y Condiciones</h4>
                 <ul className='font-extralight text-[16px]'>
-                    <li>Propósito: La Aplicación está diseñada para proporcionar información sobre nuestros servicios odontológicos y facilitar la programación de citas y consultas.</li>
+                    <li>Propósito: La Aplicación está diseñada para proporcionar información sobre nuestros servicios  y facilitar la programación de consultas.</li>
                     <li>Acceso y Cuentas: Para utilizar ciertas funciones de la Aplicación, es posible que deba crear una cuenta. Usted es responsable de mantener la confidencialidad de su información de inicio de sesión y de cualquier actividad que ocurra en su cuenta.</li>
                     <li>Uso Apropiado: Usted se compromete a utilizar la Aplicación de manera legal y apropiada, sin violar ninguna ley aplicable ni infringir los derechos de terceros.</li>
                 </ul>
@@ -28,10 +28,10 @@ const page = () => {
                     <li>Precisión de la Información: Nos esforzamos por proporcionar información precisa en la Aplicación, pero no garantizamos la precisión, integridad o actualidad de la información proporcionada.</li>
                 </ul>
 
-                <h4 className="py-14 font-semibold text-[16px] text-green">3. Citas y consultas</h4>
+                <h4 className="py-14 font-semibold text-[16px] text-green">3. Consultas</h4>
                 <ul className='font-extralight text-[16px]'>
-                    <li>Programación: Puede utilizar la Aplicación para programar citas odontológicas y enviar consultas. Toda cita está sujeta a la disponibilidad de horarios.</li>
-                    <li>Confirmación: Le enviaremos una confirmación de su cita o consulta a través de la información de contacto que proporcione. Asegúrese de que su información de contacto sea precisa.</li>
+                    <li>Programación: Puede utilizar la Aplicación para programar consultas. Toda consulta está sujeta a la disponibilidad de horarios.</li>
+                    <li>Confirmación: Le enviaremos una confirmación de su consulta o consulta a través de la información de contacto que proporcione. Asegúrese de que su información de contacto sea precisa.</li>
                 </ul>
 
                 <h4 className="py-14 font-semibold text-[16px] text-green">4. Limitación de Responsabilidad</h4>
