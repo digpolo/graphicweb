@@ -11,7 +11,7 @@ interface CustomBackgroundProps {
 
 const Footer: React.FC<CustomBackgroundProps> = ({bgClass, colorText, src}) => {
     return (
-        <section className={`p-6 mt-32 bg-${bgClass} text-${colorText}`}>
+        <section className={`p-6 mt-10 bg-${bgClass} text-${colorText}`}>
             <div className=' mx-auto grid grid-cols-1 md:grid-cols-4 max-w-5xl gap-10'>
                 <div className='flex flex-col items-center mt-10'>
                     <a href="/" >

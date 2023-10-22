@@ -29,9 +29,11 @@ const Services: React.FC<Props> = ({ colorText }) => {
                     return <CardServices key={product.id} cardProduct={product} />
                 })}
             </div>
-            <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className={`my-8 flex justify-center border text-${colorText} border-${colorText} w-[300px]`} target="_blank">
+            <div className='flex flex-col justify-center items-center'>
+            <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className={`my-8 flex items-center justify-center border text-${colorText} border-${colorText} w-[300px]`} target="_blank">
                 <p className={`font-[16px] text-${colorText} text-s`}>Solicitar producto</p>
             </a>
+            </div>
         </div>
     )
 }
