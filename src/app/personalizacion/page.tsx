@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Services from '@/components/services'
@@ -14,7 +14,7 @@ const garamond = EB_Garamond({
     variable: '--font-garamond'
 });
 
-const page = () => {
+const Page = () => {
     let customization = {
         id: 1,
         logo: '/logo-blue.svg',
@@ -30,7 +30,7 @@ const page = () => {
         enfoque6: "Diferenciación competitiva"
     }
 
-    const [isScrolled, setIsScrolled] = React.useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -40,7 +40,7 @@ const page = () => {
         }
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -68,7 +68,7 @@ const page = () => {
                         <h1 className='font-medium text-[35px] md:text-[60px]  text-[#0000FF] pr-10'>{customization.title}</h1>
                         <div>
                             <h2 className='text-[#0000FF] text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
-                            <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className='my-8 flex justify-center py-1 text-[#0000FF] border border-[#0000FF] w-[300px]' target="_blank">
+                            <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className='my-8 flex justify-center py-1 text-[#0000FF] border border-[#0000FF] w-[300px]' target="_blank">
                                 <p className='font-[16px] text-s'>Solicitar producto</p>
                             </a>
                         </div>
@@ -77,8 +77,8 @@ const page = () => {
                     <Image
                         alt={customization.src}
                         src={customization.src}
-                        width={2000}
-                        height={2000}
+                        width={2500}
+                        height={200}
                     />
                 </div>
             </div>
@@ -100,7 +100,7 @@ const page = () => {
                     </ul>
                 </div>
             </div>
-            <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
+            <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
                 <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
             </a>
             <Services colorText='black'/>
@@ -112,4 +112,4 @@ const page = () => {
 }
 
 
-export default page
+export default Page

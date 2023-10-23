@@ -21,7 +21,7 @@ const Mission = () => {
             </div>
             <Image
                 alt='clientes utilizando tecnologia'
-                src={mission}
+                src='/mission.jpg'
                 width={2080}
                 height={2080} />
         </div>

@@ -30,8 +30,8 @@ const Services: React.FC<Props> = ({ colorText }) => {
                 })}
             </div>
             <div className='flex flex-col justify-center items-center'>
-            <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className={`my-8 flex items-center justify-center border text-${colorText} border-${colorText} w-[300px]`} target="_blank">
-                <p className={`font-[16px] text-${colorText} text-s`}>Solicitar producto</p>
+            <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className={`my-8 flex items-center justify-center border text-${colorText} border-${colorText} w-[300px]`} target="_blank">
+                <p className={`font-[16px] text-${colorText} text-s`}>Contactarme</p>
             </a>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Poppins, EB_Garamond} from "next/font/google";
+import { Poppins } from "next/font/google";
 import NavBar from "@/components/nav-bar";
 import Footer from "@/components/footer";
 
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+       <head>
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
           rel="stylesheet"
