@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Poppins, EB_Garamond} from "next/font/google";
+import { Poppins } from "next/font/google";
 import NavBar from "@/components/nav-bar";
 import Footer from "@/components/footer";
 

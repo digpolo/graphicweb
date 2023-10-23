@@ -70,7 +70,7 @@ const Page = () => {
             <h1 className='font-medium text-[35px] md:text-[60px]  text-white pr-10'>{customization.title}</h1>
             <div>
               <h2 className='text-white text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
-              <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' target="_blank">
+              <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' target="_blank">
                 <p className='font-[16px] text-s'>Solicitar producto</p>
               </a>
             </div>
@@ -101,7 +101,7 @@ const Page = () => {
           </ul>
         </div>
       </div>
-      <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
+      <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
         <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
       </a>
       <Services colorText='black' />
