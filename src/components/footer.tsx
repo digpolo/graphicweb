@@ -47,12 +47,12 @@ const Footer: React.FC<CustomBackgroundProps> = ({bgClass, colorText, src}) => {
                     <h2 className='py-3 font-black text-[16px]'>Siguenos</h2>
                     <ul className='gap-3 flex flex-col font-thin'>
                         <li className='font-light'>
-                        <Link href="https://www.instagram.com/drhernanjojoa/" target="_blank" rel="noopener noreferrer">
+                        <Link href="https://www.instagram.com/graphicweb/" target="_blank" rel="noopener noreferrer">
                             Instagram
                             </Link>
                         </li>
                         <li>
-                            <Link href="https://www.facebook.com/drhernanjojoa" target="_blank" rel="noopener noreferrer">
+                            <Link href="https://www.facebook.com/onegraphicweb" target="_blank" rel="noopener noreferrer">
                                 Facebook
                             </Link>
                         </li>

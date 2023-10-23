@@ -78,7 +78,7 @@ const Page = () => {
                         alt={customization.src}
                         src={customization.src}
                         width={2500}
-                        height={2500}
+                        height={200}
                     />
                 </div>
             </div>
