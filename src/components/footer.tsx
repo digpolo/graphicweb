@@ -52,7 +52,7 @@ const Footer: React.FC<CustomBackgroundProps> = ({bgClass, colorText, src}) => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="https://www.facebook.com/onegraphicweb" target="_blank" rel="noopener noreferrer">
+                            <Link href="https://www.facebook.com/graphicweb0" target="_blank" rel="noopener noreferrer">
                                 Facebook
                             </Link>
                         </li>
