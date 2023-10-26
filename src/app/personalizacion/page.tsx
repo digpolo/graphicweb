@@ -18,8 +18,8 @@ const page = () => {
     let customization = {
         id: 1,
         logo: '/logo-blue.svg',
-        title: "Personalización excepcional para una experiencia única con cada visitante",
-        subtitle: "Conoce a tus clientes a nivel individual y crea experiencias personalizadas que les encantarán.",
+        title: "Cómo la personalización excepcional puede generar valor para tu negocio",
+        subtitle: "En un mundo cada vez más competitivo, las empresas se esfuerzan por ofrecer una experiencia de cliente excepcional. La personalización es una de las tendencias más importantes en este ámbito, ya que permite a las empresas adaptar sus productos y servicios a las necesidades y preferencias individuales de los clientes.",
         src: "/customization.jpg",
         alt: "grupo de personas utilizando tecnologia",
         enfoque1: "Mejora la experiencia del cliente",
@@ -68,8 +68,11 @@ const page = () => {
                         <h1 className='font-medium text-[35px] md:text-[60px]  text-[#0000FF] pr-10'>{customization.title}</h1>
                         <div>
                             <h2 className='text-[#0000FF] text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
+                            <p className='my-10 text-[#0000FF]'>
+                     Descargarga el ebook para ver las ultimas actualizaciones de Cómo crear una experiencia de cliente única y memorable.
+                    </p>
                             <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className='my-8 flex justify-center py-1 text-[#0000FF] border border-[#0000FF] w-[300px]' target="_blank">
-                                <p className='font-[16px] text-s'>Solicitar producto</p>
+                                <p className='font-[16px] text-s'>Descargar ebook</p>
                             </a>
                         </div>
                     </div>
@@ -84,29 +87,56 @@ const page = () => {
             </div>
             <div className='bg-white grid grid-col md:grid-cols-2 mx-4'>
                 <div className=''>
-                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} >Áreas de enfoque</h2>
+                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} > La personalización de la experiecia del cliente agrega valor en tu negocio</h2>
                     <ul className='text-black font-extralight flex flex-col gap-4'>
-                        <li>{customization.enfoque1}</li>
-                        <li>{customization.enfoque2}</li>
-                        <li>{customization.enfoque3}</li>
+                        <li>
+                            <strong>Mejora la satisfacción del cliente</strong>: Los clientes están más satisfechos cuando sienten que las empresas entienden sus necesidades y preferencias. La personalización puede ayudar a las empresas a crear una experiencia más personalizada y relevante para cada cliente.
+                        </li>
+                        <li>
+                            <strong>Aumenta la lealtad del cliente</strong>: Los clientes satisfechos son más propensos a repetir negocios con una empresa. La personalización puede ayudar a las empresas a crear relaciones más sólidas con sus clientes y aumentar la lealtad.
+                        </li>
+                        <li>
+                            <strong>Reduce los costes</strong>: La personalización puede ayudar a las empresas a optimizar sus procesos y reducir los costes. Por ejemplo, la personalización puede ayudar a las empresas a dirigir sus esfuerzos de marketing a los clientes más propensos a comprar sus productos o servicios.
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} >Características</h2>
+                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} >Cómo implementar la personalización en tu empresa</h2>
+                    <p>
+                        Para implementar la personalización excepcional, las empresas deben recopilar datos sobre sus clientes. Estos datos pueden incluir información demográfica, historial de compras, intereses y preferencias. Las empresas pueden utilizar estos datos para crear perfiles de clientes y adaptar sus productos y servicios en consecuencia.
+                    </p>
+                    <p>
+                        Existen muchas maneras de personalizar la experiencia del cliente. Algunas técnicas comunes incluyen:
+                    </p>
                     <ul className='text-black font-extralight flex flex-col gap-4'>
-                        <li>{customization.enfoque4}</li>
-                        <li>{customization.enfoque5}</li>
-                        <li>{customization.enfoque6}</li>
+                        <li>
+                            <strong>Recomendaciones personalizadas</strong>: Las empresas pueden utilizar la personalización para recomendar productos y servicios que sean relevantes para las necesidades y preferencias de los clientes.
+                        </li>
+                        <li>
+                            <strong>Contenido personalizado</strong>: Las empresas pueden utilizar la personalización para crear contenido que sea relevante para los intereses de los clientes.
+                        </li>
+                        <li>
+                            <strong>Ofertas personalizadas</strong>: Las empresas pueden utilizar la personalización para ofrecer ofertas especiales que sean atractivas para los clientes individuales.
+                        </li>
                     </ul>
                 </div>
+                <section className='py-10'>
+                    <p>
+                        La personalización excepcional es una herramienta poderosa que puede ayudar a las empresas a generar valor para su negocio. Al recopilar datos sobre sus clientes y adaptar sus productos y servicios en consecuencia, las empresas pueden crear una experiencia de cliente más personalizada, satisfactoria y rentable.
+                    </p>
+                    <p className='my-10'>
+                     Descargarga el ebook para ver las ultimas actualizaciones de Cómo crear una experiencia de cliente única y memorable.
+                    </p>
+                </section>
+
             </div>
-            <a href='https://wa.me/573102627887?text=Hola,%20deseo%20agendar%20una%20cita' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
-                <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
+            <a href='/ebooks/ebook-graphicweb.pdf' download="graphicweb.pdf" className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
+                <p className='text-center text-black font-[16px] text-s'>Descargar ebook</p>
             </a>
-            <Services colorText='black'/>
-            
-            <Footer bgClass='[#FFF0D6]' colorText='[#0000FF]' src='/logo-blue.svg'/>
-            
+            <Services colorText='black' />
+
+            <Footer bgClass='[#FFF0D6]' colorText='[#0000FF]' src='/logo-blue.svg' />
+
         </div>
     )
 }
