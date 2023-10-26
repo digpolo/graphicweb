@@ -87,7 +87,7 @@ const Page = () => {
                     />
                 </div>
             </div>
-            <div className='bg-white grid grid-col md:grid-cols-2 mx-4'>
+            <div className='bg-white grid grid-col md:grid-cols-2 mx-4 gap-4'>
                 <div className=''>
                     <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} > La personalización de la experiecia del cliente agrega valor en tu negocio</h2>
                     <ul className='text-black font-extralight flex flex-col gap-4'>
