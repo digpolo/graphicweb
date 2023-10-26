@@ -1,0 +1,177 @@
+[debug] [2023-10-26T06:37:37.074Z] ----------------------------------------------------------------------
+[debug] [2023-10-26T06:37:37.080Z] Command:       /home/diego/.nvm/versions/node/v20.8.1/bin/node /home/diego/.nvm/versions/node/v20.8.1/bin/firebase deploy
+[debug] [2023-10-26T06:37:37.081Z] CLI Version:   12.7.0
+[debug] [2023-10-26T06:37:37.081Z] Platform:      linux
+[debug] [2023-10-26T06:37:37.081Z] Node Version:  v20.8.1
+[debug] [2023-10-26T06:37:37.081Z] Time:          Thu Oct 26 2023 01:37:37 GMT-0500 (Colombia Standard Time)
+[debug] [2023-10-26T06:37:37.081Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-26T06:37:37.136Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-26T06:37:37.137Z] > authorizing via signed-in user (diegopolodev@gmail.com)
+[debug] [2023-10-26T06:37:37.137Z] [iam] checking project graphicweb-2d251 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-10-26T06:37:37.138Z] > refreshing access token with scopes: []
+[debug] [2023-10-26T06:37:37.139Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-10-26T06:37:37.139Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-10-26T06:37:37.517Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-10-26T06:37:37.517Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-10-26T06:37:37.532Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions [none]
+[debug] [2023-10-26T06:37:37.533Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions x-goog-quota-user=projects/graphicweb-2d251
+[debug] [2023-10-26T06:37:37.533Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-26T06:37:38.280Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions 200
+[debug] [2023-10-26T06:37:38.281Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-10-26T06:37:38.281Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/graphicweb-2d251 [none]
+[debug] [2023-10-26T06:37:38.723Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/graphicweb-2d251 200
+[debug] [2023-10-26T06:37:38.723Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/graphicweb-2d251 {"projectId":"graphicweb-2d251","projectNumber":"216355403940","displayName":"graphicweb","name":"projects/graphicweb-2d251","resources":{"hostingSite":"graphicweb-2d251"},"state":"ACTIVE","etag":"1_9f8f97a7-aa5e-4dee-8d4d-f274d5bccf6a"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info]    Creating an optimized production build ...
+
+[info] FetchError: request to https://fonts.gstatic.com/s/ebgaramond/v27/SlGWmQSNjdsmc35JDF1K5GRweDY1ZyHKpWiGIg.woff2 failed, reason: 
+    at ClientRequest.<anonymous> (/home/diego/graphicweb/node_modules/next/dist/compiled/node-fetch/index.js:1:65756)
+    at ClientRequest.emit (node:events:514:28)
+    at ClientRequest.emit (node:domain:488:12)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at TLSSocket.emit (node:domain:488:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at runNextTicks (node:internal/process/task_queues:64:3) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+
+[info] FetchError: request to https://fonts.gstatic.com/s/ebgaramond/v27/SlGWmQSNjdsmc35JDF1K5GRweD81ZyHKpWiGIg.woff2 failed, reason: 
+    at ClientRequest.<anonymous> (/home/diego/graphicweb/node_modules/next/dist/compiled/node-fetch/index.js:1:65756)
+    at ClientRequest.emit (node:events:514:28)
+    at ClientRequest.emit (node:domain:488:12)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at TLSSocket.emit (node:domain:488:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at runNextTicks (node:internal/process/task_queues:64:3) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+
+[info] FetchError: request to https://fonts.gstatic.com/s/ebgaramond/v27/SlGWmQSNjdsmc35JDF1K5GRweDc1ZyHKpWiGIg.woff2 failed, reason: 
+    at ClientRequest.<anonymous> (/home/diego/graphicweb/node_modules/next/dist/compiled/node-fetch/index.js:1:65756)
+    at ClientRequest.emit (node:events:514:28)
+    at ClientRequest.emit (node:domain:488:12)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at TLSSocket.emit (node:domain:488:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at runNextTicks (node:internal/process/task_queues:64:3) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+
+[info] FetchError: request to https://fonts.gstatic.com/s/ebgaramond/v27/SlGWmQSNjdsmc35JDF1K5GRweDg1ZyHKpWiGIg.woff2 failed, reason: 
+    at ClientRequest.<anonymous> (/home/diego/graphicweb/node_modules/next/dist/compiled/node-fetch/index.js:1:65756)
+    at ClientRequest.emit (node:events:514:28)
+    at ClientRequest.emit (node:domain:488:12)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at TLSSocket.emit (node:domain:488:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at runNextTicks (node:internal/process/task_queues:64:3) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+
+[info] FetchError: request to https://fonts.gstatic.com/s/ebgaramond/v27/SlGWmQSNjdsmc35JDF1K5GRweDQ1ZyHKpWiGIg.woff2 failed, reason: 
+    at ClientRequest.<anonymous> (/home/diego/graphicweb/node_modules/next/dist/compiled/node-fetch/index.js:1:65756)
+    at ClientRequest.emit (node:events:514:28)
+    at ClientRequest.emit (node:domain:488:12)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at TLSSocket.emit (node:domain:488:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at runNextTicks (node:internal/process/task_queues:64:3) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+
+[info] FetchError: request to https://fonts.gstatic.com/s/ebgaramond/v27/SlGWmQSNjdsmc35JDF1K5GRweDU1ZyHKpWiGIg.woff2 failed, reason: 
+    at ClientRequest.<anonymous> (/home/diego/graphicweb/node_modules/next/dist/compiled/node-fetch/index.js:1:65756)
+    at ClientRequest.emit (node:events:514:28)
+    at ClientRequest.emit (node:domain:488:12)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at TLSSocket.emit (node:domain:488:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at runNextTicks (node:internal/process/task_queues:64:3) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+
+[info] FetchError: request to https://fonts.gstatic.com/s/ebgaramond/v27/SlGWmQSNjdsmc35JDF1K5GRweDs1ZyHKpWg.woff2 failed, reason: 
+    at ClientRequest.<anonymous> (/home/diego/graphicweb/node_modules/next/dist/compiled/node-fetch/index.js:1:65756)
+    at ClientRequest.emit (node:events:514:28)
+    at ClientRequest.emit (node:domain:488:12)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at TLSSocket.emit (node:domain:488:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at runNextTicks (node:internal/process/task_queues:64:3) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+
+[info] FetchError: request to https://fonts.gstatic.com/s/ebgaramond/v27/SlGUmQSNjdsmc35JDF1K5GRxSDk_YAPIlWk.woff2 failed, reason: 
+    at ClientRequest.<anonymous> (/home/diego/graphicweb/node_modules/next/dist/compiled/node-fetch/index.js:1:65756)
+    at ClientRequest.emit (node:events:514:28)
+    at ClientRequest.emit (node:domain:488:12)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:514:28)
+    at TLSSocket.emit (node:domain:488:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  type: 'system',
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT'
+}
+
+[info] Failed to compile.
+
+src/components/services.tsx
+`next/font` error:
+Failed to fetch `EB Garamond` from Google Fonts.
+
+[info] 
+
+[info] 
+> Build failed because of webpack errors
+
+[debug] [2023-10-26T06:37:47.343Z] Error: ENOENT: no such file or directory, open '/home/diego/graphicweb/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
