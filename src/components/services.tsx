@@ -16,7 +16,7 @@ interface Props {
 
 const Services: React.FC<Props> = ({ colorText }) => {
     let products = [
-        { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "Experiencia del cliente", },
+        { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "ORDERS", },
         { id: 2, alt: "imagen de gafas de realidad virtual", src: 'metaverso.svg', title: "Metaverso" },
         { id: 3, alt: "imagen de chatbot", src: 'chatbot.svg', title: "Chatbot" },
     ]
@@ -30,7 +30,7 @@ const Services: React.FC<Props> = ({ colorText }) => {
                 })}
             </div>
             <div className='flex flex-col justify-center items-center'>
-            <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className={`my-8 flex items-center justify-center border text-${colorText} border-${colorText} w-[300px]`} target="_blank">
+            <a href='https://wa.me/573127550201?text=Hola,%20Quiero%20solicitar%20un%20producto' className={`my-8 flex items-center justify-center border text-${colorText} border-${colorText} w-[300px]`} target="_blank">
                 <p className={`font-[16px] text-${colorText} text-s`}>Contactarme</p>
             </a>
             </div>
