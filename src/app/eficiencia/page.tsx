@@ -1,15 +1,14 @@
-import Content from '@/components/product/content'
-import Hero from '@/components/product/hero'
-import React from 'react'
 import Footer from '@/components/footer'
+import Hero from '@/components/product/hero'
 import Services from '@/components/services'
+import React from 'react'
 
 let product = {
     id: 1,
     logo: 'logo5.svg',
-    title: "ORDERS",
-    subtitle: "Una solución sencilla y eficaz para que tus clientes hagan sus pedidos desde casa",
-    src: "/orders.jpg",
+    title: "EFICIENCIA",
+    subtitle: "Tus trabajadores más eficientes en la atención del cliente",
+    src: "/eficiencia.jpg",
     alt: "cliente usando tecnologia",
     enfoque1: "Mejora la satisfacción del cliente",
     enfoque2: "Aumenta la lealtad del cliente",
@@ -22,10 +21,9 @@ let product = {
 const Page = () => {
   return (
     <div>
-        <Hero card={product} />
-        <Content/>
+        <Hero card={product}/>
         <Services colorText='black'/>
-        <Footer bgClass='white' colorText='black' src='/logo5black.svg' />
+        <Footer bgClass='white' colorText='black' src='logo5black.svg' />
     </div>
   )
 }

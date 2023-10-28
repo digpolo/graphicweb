@@ -17,8 +17,8 @@ interface Props {
 const Services: React.FC<Props> = ({ colorText }) => {
     let products = [
         { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "ORDERS", description: 'Simplificamos la manera en que tus clientes realizan pedidos', hrefa: './orders'},
-        { id: 2, alt: "imagen de gafas de realidad virtual", src: 'metaverso.svg', title: "Efficient", description: 'Mide la eficiencia de tus trabajadores', hrefa: './' },
-        { id: 3, alt: "imagen de chatbot", src: 'chatbot.svg', title: "Atención 24/7", description: 'Programación de chat de WhatsApp para brindar una mejor atención al cliente', hrefa: './' },
+        { id: 2, alt: "imagen de gafas de realidad virtual", src: 'metaverso.svg', title: "EFICIENCIA", description: 'Tus trabajadores más eficientes en la atención del cliente', hrefa: './eficiencia' },
+        { id: 3, alt: "imagen de chatbot", src: 'chatbot.svg', title: "ATENCION 24/7", description: 'Programación de chat de WhatsApp para brindar una mejor atención al cliente', hrefa: './atencion' },
     ]
 
     return (
