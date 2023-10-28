@@ -16,14 +16,14 @@ interface Props {
 
 const Services: React.FC<Props> = ({ colorText }) => {
     let products = [
-        { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "ORDERS", },
-        { id: 2, alt: "imagen de gafas de realidad virtual", src: 'metaverso.svg', title: "Metaverso" },
-        { id: 3, alt: "imagen de chatbot", src: 'chatbot.svg', title: "Chatbot" },
+        { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "ORDERS", description: 'Simplificamos la manera en que tus clientes realizan pedidos', hrefa: './orders'},
+        { id: 2, alt: "imagen de gafas de realidad virtual", src: 'metaverso.svg', title: "Efficient", description: 'Mide la eficiencia de tus trabajadores', hrefa: './' },
+        { id: 3, alt: "imagen de chatbot", src: 'chatbot.svg', title: "Atención 24/7", description: 'Programación de chat de WhatsApp para brindar una mejor atención al cliente', hrefa: './' },
     ]
 
     return (
         <div className={`mx-4 `}>
-            <h2 className={`${garamond.variable} text-[${colorText}] font-garamond text-3xl lg:text-6xl py-4 border-t border-white`} >Productos</h2>
+            <h2 className={`${garamond.variable} text-[${colorText}] font-garamond text-3xl lg:text-6xl py-4 border-t border-white`} >Descubre como podemos potenciar tu empresa</h2>
             <div className='lg-4  md:flex gap-10'>
                 {products.map(product => {
                     return <CardServices key={product.id} cardProduct={product} />
@@ -31,7 +31,7 @@ const Services: React.FC<Props> = ({ colorText }) => {
             </div>
             <div className='flex flex-col justify-center items-center'>
             <a href='https://wa.me/573127550201?text=Hola,%20Quiero%20solicitar%20un%20producto' className={`my-8 flex items-center justify-center border text-${colorText} border-${colorText} w-[300px]`} target="_blank">
-                <p className={`font-[16px] text-${colorText} text-s`}>Contactarme</p>
+                <p className={`font-[16px] text-${colorText} text-s`}>Conocer más</p>
             </a>
             </div>
         </div>

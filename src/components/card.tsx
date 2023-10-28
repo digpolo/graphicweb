@@ -2,8 +2,8 @@ import Link from 'next/link';
 import React from 'react'
 type cx = {
     id: number;
-    title: string;
-    cta: string;
+    title: string
+    cta: string
     href: string
 };
 

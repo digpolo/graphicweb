@@ -35,10 +35,9 @@ const Header = () => {
         <div className='flex flex-col mx-auto max-w-5xl  px-4 gap-6 absolute  bottom-0 mb-6'>
          <h1 className=' text-4xl md:text-5xl '>Soluciones digitales para mejorar la competitividad de tu empresa</h1>  
          <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className=' text-blue border w-[200px]' target="_blank">
-                       <p className='text-center text-blue font-[16px] '>Solicitar producto</p>
-                        
-                 </a>
-                 </div>
+            <p className='text-center text-blue font-[16px] '>Conocer más</p>           
+        </a>
+        </div>
         </section>
     )
 }

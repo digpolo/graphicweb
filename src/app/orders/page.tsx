@@ -3,10 +3,10 @@ import React from 'react'
 
 let product = {
     id: 1,
-    logo: 'logo.svg',
-    title: "Omnicanalidad para una experiencia coherente en todos los canales",
-    subtitle: "Conecta con tus clientes en todas partes, sin importar cómo elijan comunicarse",
-    src: "/omnichanel.jpg",
+    logo: 'logo5.svg',
+    title: "ORDERS",
+    subtitle: "Una solución sencilla y eficaz para que tus clientes hagan sus pedidos desde casa",
+    src: "/orders.jpg",
     alt: "cliente usando tecnologia",
     enfoque1: "Mejora la satisfacción del cliente",
     enfoque2: "Aumenta la lealtad del cliente",
@@ -19,7 +19,7 @@ let product = {
 const Page = () => {
   return (
     <div>
-        <Hero card={product}/>
+        <Hero card={product} />
     </div>
   )
 }
