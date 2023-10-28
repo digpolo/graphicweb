@@ -1,3 +1,4 @@
+import Content from '@/components/product/content'
 import Hero from '@/components/product/hero'
 import React from 'react'
 
@@ -20,6 +21,7 @@ const Page = () => {
   return (
     <div>
         <Hero card={product} />
+        <Content/>
     </div>
   )
 }
