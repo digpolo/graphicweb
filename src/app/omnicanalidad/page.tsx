@@ -18,7 +18,7 @@ const garamond = EB_Garamond({
 const Page = () => {
   let customization = {
     id: 1,
-    logo: 'logo.svg',
+    logo: 'logo5.svg',
     title: "Omnicanalidad para una experiencia coherente en todos los canales",
     subtitle: "Conecta con tus clientes en todas partes, sin importar cómo elijan comunicarse",
     src: "/omnichanel.jpg",

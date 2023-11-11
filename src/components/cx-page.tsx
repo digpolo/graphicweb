@@ -17,7 +17,7 @@ type cxPage = {
   enfoque4: string
   enfoque5: string
   enfoque6: string
-};
+}
 
 interface Props {
   card: cxPage;
