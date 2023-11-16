@@ -14,32 +14,54 @@ const garamond = EB_Garamond({
 
 const Mission = () => {
     return (
-        <div className='my-10 '>
-            <div className='mx-4 border-t border-white flex grid md:grid-cols-2 pb-20'>
-                <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >Tecnología e innovación</h2>
-                <p className='text-2xl py-4'>Nuestra dedicación para ofrecer una experiencia excepcional al cliente requiere una comprensión profunda de sus necesidades y expectativas, así como una consideración cuidadosa del impacto en su satisfacción y lealtad.</p>
+        <div>
+            <div className='my-10  grid md:grid-cols-2 border-t border-black'>
+                <div className='mx-4  flex flex-col pb-20 '>
+                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >Impulsamos tu negocio en internet</h2>
+                    <p className='text-lg font-extralight py-4'>
+                        Somos una empresa de tecnología especialista en diseño web de alta calidad y diseño de tiendas online.Ayudamos a tener:
+                    </p>
+                    <ul className='py-2 font-extralight'>
+                        <li>Presencia en internet</li>
+                        <li>Potenciar la visibilidad </li>
+                        <li>Mejorar las ventas</li>
+                        <li>Posicionamiento SEO </li>
+                    </ul>
+                </div>
+                <div className='flex justify-center items-center pt-10'>
+                    <Image
+                        alt='clientes utilizando tecnologia'
+                        src='/gif.gif'
+                        width={280}
+                        height={1520}
+                    />
+                </div>
             </div>
-            <Image
-                alt='clientes utilizando tecnologia'
-                src='/mission.jpg'
-                width={2080}
-                height={2080} />
+            <div className='my-10  grid md:grid-cols-2 border-t border-black'>
+                <div className='mx-4  flex flex-col pb-20'>
+                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >Impulsamos tu negocio en internet</h2>
+                    <p className='text-lg font-extralight py-4'>
+                        Somos una empresa de tecnología especialista en diseño web de alta calidad y diseño de tiendas online.Ayudamos a tener:
+                    </p>
+                    <ul className='py-2 font-extralight'>
+                        <li>Presencia en internet</li>
+                        <li>Potenciar la visibilidad </li>
+                        <li>Mejorar las ventas</li>
+                        <li>Posicionamiento SEO </li>
+                    </ul>
+                </div>
+                <div className='flex justify-center items-center pt-10'>
+                    <Image
+                        alt='clientes utilizando tecnologia'
+                        src='/demo.gif'
+                        width={80}
+                        height={1520}
+                    />
+                </div>
+            </div>
+
         </div>
     )
 }
 
 export default Mission
-
-
-{/* <div className=''>
-            <div className='flex grid grid-cols-2'>
-                <h2 className={garamond.className} style={{ fontSize: "35px" }}>Tecnología e innovación</h2>
-
-                <p>Nuestra dedicación para ofrecer una experiencia excepcional al cliente requiere una comprensión profunda de sus necesidades y expectativas, así como una consideración cuidadosa del impacto en su satisfacción y lealtad.</p>
-            </div>
-            <Image
-                alt='clientes utilizando tecnologia'
-                src={mission}
-                width={2080}
-                height={2080} />
-        </div> */}

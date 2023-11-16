@@ -39,11 +39,8 @@ const Header = () => {
                         Creamos los sitios web de alta calidad  para atraer más clientes, mejorar la convercion y generar más ventas
                     </p>
                     <div className=' py-10 md:py-5 md: flex flex-col md:flex-row gap-4'>
-                        <Link  className='bg-[#3C46FF] text-white  text-center w-full py-1' href='/contacto'>
-                            Ver demostración
-                        </Link>
                         <Link  className='bg-[#fff] text-black border border-black text-center w-full py-1' href='/contacto'>
-                            Ver funcionalidades
+                           Contacto
                         </Link>
                     </div>
                 </div>

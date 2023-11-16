@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "GraphicWeb",
-  description: "GraphicWeb",
+  description: "Diseño Web",
 };
 
 export default function RootLayout({
@@ -25,19 +25,19 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link
+        {/* <link
           href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
           rel="stylesheet"
-        />
+        /> */}
       </head>
       <body className={poppins.className}>
 
         {children}
 
-        <script
+        {/* <script
           async // Agrega la propiedad async para cargar el script de forma asíncrona
           src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
-        ></script>
+        ></script> */}
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
         <Script id="google-analytics">
           {`
