@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import NavBar from './nav-bar'
+import Link from 'next/link'
 
 
 const Header = () => {
@@ -25,20 +26,47 @@ const Header = () => {
     
     return (
         
-       <section className={` h-screen  bg-cover  sm:h-auto  flex justify-center `} 
-       style={{ backgroundImage: 'url("header.jpg")' , backgroundPosition: '-60px 0'  }}
-     >
-        <div className={` ${bgColor} fixed top-0 w-full z-10`} >
-        <NavBar/>
+        <section className='
+        px-4'>
+        <NavBar />
+        <div className='grid grid-cols-1 sm:grid-cols-2 sm:h-auto gap-10'>
+            <div className=' col-span-1 sm:h-screen sm:h-[calc(100vh-100px)] flex justify-center items-center'>
+                <div className='w-full'>
+                    <h1 className='font-medium text-xl  lg:text-6xl py-10  md:py-5'>
+                    Aumenta tus ventas y mejorar tu reputación de marca con diseño web profesional
+                    </h1>
+                    <p>
+                        Creamos los sitios web de alta calidad  para atraer más clientes, mejorar la convercion y generar más ventas
+                    </p>
+                    <div className=' py-10 md:py-5 md: flex flex-col md:flex-row gap-4'>
+                        <Link  className='bg-[#fff] text-black border border-black text-center w-full py-1' href='/contacto'>
+                           Contacto
+                        </Link>
+                    </div>
+                </div>
+            </div>
+            <div className="col-span-1 sm:h-[calc(100vh-100px)] flex ">
+                    <div className=' flex flex-col items-end justify-end'>
+                        <Image
+                            src='/porcen.svg'
+                            alt="porcentaje de incremento de ventas"
+                            className="object-contain   rounded-lg"
+                            width={150}
+                            height={50}
+                        />
+                        <span className='text-6xl font-black'>64%</span>
+                        <span className='text-black'>De aumento del valor medio de los pedidos eléctronicos</span>
+                    </div>
+                    <Image
+                        src='/hero.jpg'
+                        alt="empresaria sonriendo"
+                        className="object-contain "
+                        width={1000}
+                        height={1000}
+                    />
+            </div>
         </div>
-
-        <div className='flex flex-col mx-auto max-w-5xl  px-4 gap-6 absolute  bottom-0 mb-6'>
-         <h1 className=' text-4xl md:text-5xl '>Soluciones digitales para mejorar la competitividad de tu empresa</h1>  
-         <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className=' text-blue border w-[200px]' target="_blank">
-            <p className='text-center text-blue font-[16px] '>Conocer más</p>           
-        </a>
-        </div>
-        </section>
+    </section>
     )
 }
 

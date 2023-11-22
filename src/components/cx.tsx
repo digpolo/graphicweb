@@ -9,6 +9,7 @@ const Cx = () => {
     ]
     return (
         <div className='lg-4 md:flex mx-4 gap-10 pt-12'>
+            <h1>Nuestras actualizaciones</h1>
             {cxs.map(cx => {
                 return <Card key={cx.id} card={cx} />
             })}
