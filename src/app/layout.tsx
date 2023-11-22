@@ -11,10 +11,9 @@ const poppins = Poppins({
   subsets: ["latin-ext"],
 });
 
-
 export const metadata = {
   title: "GraphicWeb",
-  description: "Diseño Web",
+  description: "Desarrollo web",
 };
 
 export default function RootLayout({
@@ -31,13 +30,8 @@ export default function RootLayout({
         /> */}
       </head>
       <body className={poppins.className}>
-      <div id="example"></div>
-    <script src="build/index.js"></script> 
         {children}
-        <script src="https://www.google.com/recaptcha/api.js"></script>
-
-
-        
+        <script src="https://www.google.com/recaptcha/api.js"></script>    
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
         <Script id="google-analytics">
           {`
@@ -48,7 +42,6 @@ export default function RootLayout({
             gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
           `}
         </Script>
-
       </body>
     </html>
   );
