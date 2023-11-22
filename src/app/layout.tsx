@@ -29,12 +29,6 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
           rel="stylesheet"
         /> */}
-        <head>
-        <title>reCAPTCHA demo: Simple page</title>
-    <script src="build/react.js"></script> 
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-
-        </head>
       </head>
       <body className={poppins.className}>
       <div id="example"></div>

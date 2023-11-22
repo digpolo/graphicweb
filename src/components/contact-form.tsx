@@ -1,8 +1,6 @@
 'use client'
 import React, { useState, FormEvent } from "react"
-import InputSelect from "./input-select"
-import Recapcha from "@/components/recapcha"
-
+import InputSelect from "./input-select-country"
 
 interface FormDetails {
     firstName: string;
@@ -56,8 +54,25 @@ const ContactForm: React.FC = () => {
     };
     var callback = function () {
         console.log('Done!!!!');
-      };
+    };
 
+    const [selectedValue, setSelectedValue] = useState<string>('');
+
+    const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedValue(event.target.value);
+        // Otros manejadores de cambio que puedas necesitar
+    };
+
+    const company = [
+        {value: '1 - 50', label: '1 - 50'},
+        {value: '51 - 100', label: '51 - 100'},
+        {value: '101 - 500', label: '101 - 500'},
+        {value: '501 - 1,000', label: '501 - 1,000'},
+        {value: '1,001 - 5,000', label: '1,001 - 5,000'},
+        {value: '5,001 - 10,000', label: '5,001 - 10,000'},
+        {value: '10,000 - 20,000', label: '10,000 - 20,000'},
+        {value: '+ 20,000', label: '+ 20,000'}
+    ]
 
     return (
         <div className="flex flex-col text-black">
@@ -141,7 +156,12 @@ const ContactForm: React.FC = () => {
                             className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         />
                     </div>
-                    <InputSelect onChange={(e) => onFormUpdate("country", e.target.value)} />
+                    <InputSelect
+                        label="Pais"
+                        name="country"
+                        value={selectedValue}
+                        onChange={handleSelectChange}
+                    />
                 </div>
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                     <div className="row">
@@ -159,7 +179,13 @@ const ContactForm: React.FC = () => {
                             className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         />
                     </div>
-                    <InputSelect onChange={(e) => onFormUpdate("country", e.target.value)} />
+                    <InputSelect
+                        label="Tamaño de la compañía"
+                        name="company"
+                        value={selectedValue}
+                        onChange={handleSelectChange}
+                        options={company}
+                    />
                 </div>
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                     <div className="row">
@@ -177,7 +203,12 @@ const ContactForm: React.FC = () => {
                             className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         />
                     </div>
-                    <InputSelect onChange={(e) => onFormUpdate("country", e.target.value)} />
+                    <InputSelect
+                        label="Industria"
+                        name="Industry"
+                        value={selectedValue}
+                        onChange={handleSelectChange}
+                    />
                 </div>
 
                 <div className='flex gap-4'>
@@ -190,14 +221,9 @@ const ContactForm: React.FC = () => {
                         onChange={(e) => onFormUpdate("check", e.target.value)}
                         className="h-6 w-6 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                     />
-
-
-
-                    <label>Me gustaria registrarme con mi número de celular para recibir el boletín  de Graphicweb con actualizaciones, recursos valiosos y consejos útiles.</label>
+                    <label className="text-xs">Me gustaria registrarme con mi E-mail para recibir el boletín  de Graphicweb con actualizaciones, recursos valiosos y consejos útiles.</label>
                 </div>
-
-                <div className="g-recaptcha" data-sitekey="6LeVsxcpAAAAAFqo8TsBMfohbjx0f4ImbhoJBQEy"></div>
-
+                <span className="text-xs">Al completar este formulario, aceptas que estás de acuerdo con la política de confidencialidad de Globant.</span>
                 <button className="bg-blue-700 py-4 rounded-lg my-5 font-medium text-lg  py-10 text-white" type="submit">{buttonText}</button>
                 {status.message && (
                     <div className="row text-center text-blue">
@@ -206,7 +232,7 @@ const ContactForm: React.FC = () => {
                         </p>
                     </div>
                 )}
-            
+
             </form>
 
 
