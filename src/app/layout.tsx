@@ -29,15 +29,21 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
           rel="stylesheet"
         /> */}
+        <head>
+        <title>reCAPTCHA demo: Simple page</title>
+    <script src="build/react.js"></script> 
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
+        </head>
       </head>
       <body className={poppins.className}>
-
+      <div id="example"></div>
+    <script src="build/index.js"></script> 
         {children}
+        <script src="https://www.google.com/recaptcha/api.js"></script>
 
-        {/* <script
-          async // Agrega la propiedad async para cargar el script de forma asíncrona
-          src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"
-        ></script> */}
+
+        
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
         <Script id="google-analytics">
           {`
@@ -48,7 +54,7 @@ export default function RootLayout({
             gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
           `}
         </Script>
-      
+
       </body>
     </html>
   );
