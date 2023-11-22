@@ -74,6 +74,40 @@ const ContactForm: React.FC = () => {
         {value: '+ 20,000', label: '+ 20,000'}
     ]
 
+    const industry= [
+        {value: 'Publicidad / Marketing', label: 'Publicidad / Marketing'},
+        {value: 'Agricultura', label: 'Agricultura'},
+        {value: 'Aerolíneas, Aeropuertos & Servicios aéreos', label: 'Aerolíneas, Aeropuertos & Servicios aéreos'},
+        {value: 'Servicios Bancarios', label: 'Servicios Bancarios'},
+        {value: 'Químicos', label: 'Químicos'},
+        {value: 'Colegios & Universidades', label: 'Colegios & Universidades'},
+        {value: 'Software de computador', label: 'Software de computador'},
+        {value: 'Educación', label: 'Educación'},
+        {value: 'Servicios de Electricidad, aceite & gas', label: 'Servicios de Electricidad, aceite & gas'},
+        {value: 'Entretenimiento', label: 'Entretenimiento'},
+        {value: 'Comidas y Bebidas', label: 'Comidas y Bebidas'},
+        {value: 'Gubernamental', label: 'Gubernamental'},
+        {value: 'Cuidado de la salud', label: 'Cuidado de la salud'},
+        {value: 'Recursos humanos', label: 'Recursos humanos'},
+        {value: 'Servicios legales', label: 'Servicios legales'},
+        {value: 'Logística & transporte', label: 'Logística & transporte'},
+        {value: 'Consultoría', label: 'Consultoría'},
+        {value: 'Manufacturación', label: 'Manufacturación'},
+        {value: 'Minerales y minería', label: 'Minerales y minería'},
+        {value: 'Periódicos y revistas', label: 'Periódicos y revistas'},
+        {value: 'Sin fines de lucro', label: 'Sin fines de lucro'},
+        {value: 'Farmacéuticos', label: 'Farmacéuticos'},
+        {value: 'Servicios profesionales', label: 'Servicios profesionales'},
+        {value: 'Vienes raíces', label: 'Vienes raíces'},
+        {value: 'Investigación y desarrollo ', label: 'Investigación y desarrollo'},
+        {value: 'Minorista', label: 'Minorista'},
+        {value: 'Servicios', label: 'Servicios'},
+        {value: 'Telecomunicaciones y servicios de comunicación', label: 'Telecomunicaciones y servicios de comunicación'},
+        {value: 'Viajes y ocio', label: 'Viajes y ocio'},
+        {value: 'Venta al por mayor', label: 'Venta al por mayor'},
+
+    ]
+
     return (
         <div className="flex flex-col text-black">
             <h2 className=' font-semibold text-[30px] text-white'>Cuéntanos cómo podemos ayudarte</h2>
@@ -208,6 +242,7 @@ const ContactForm: React.FC = () => {
                         name="Industry"
                         value={selectedValue}
                         onChange={handleSelectChange}
+                        options={industry}
                     />
                 </div>
 
