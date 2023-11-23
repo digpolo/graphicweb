@@ -37,11 +37,15 @@ app.post('/api/contact', bodyParser.urlencoded({ extended: false }), (req, res) 
   const name = req.body.firstName + req.body.lastName
   const check = req.body.check
   const message = req.body.message
-  const phone = req.body.phone
   const email = req.body.email
-  const country  = req.body.country
+
+  const phone = req.body.phone
+  const country = req.body.country
+
+  const company = req.body.company
   const companySize = req.body.companySize
-  const company  = req.body.company
+
+  const jobTitle = req.body.jobTitle
   const industry = req.body.industry
 
   const mail = {
@@ -49,13 +53,19 @@ app.post('/api/contact', bodyParser.urlencoded({ extended: false }), (req, res) 
     to: process.env.EMAIL_ADDRESS,
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
-           <p>Phone: ${phone}</p>
+  
            <p>Email: ${email}</p>
            <p>Message: ${message}</p>
+
+           <p>Phone: ${phone}</p>
            <p>Country: ${country}</p>
+
            <p>Company: ${company}</p>
            <p>Company Size: ${companySize}</p>
+
+           <p>jobTitle: ${jobTitle}</p>
            <p>Industry: ${industry}</p>
+
            <p>Check: ${check}</p>`,
   };
 

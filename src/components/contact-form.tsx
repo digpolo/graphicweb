@@ -1,6 +1,6 @@
 'use client'
-import React, { useState, FormEvent } from "react"
-import InputSelect from "./input-select-country"
+import React, { useState, FormEvent, ChangeEvent } from "react"
+import { countries } from 'countries-list';
 import CustomSelect from "./input-select"
 
 interface FormDetails {
@@ -65,55 +65,16 @@ const ContactForm: React.FC = () => {
         console.log('Done!!!!');
     };
 
-    const [selectedOption, setSelectedOption] = useState<string>('Opción 1');
-
-    const handleSelectChange = (value: string) => {
-        setSelectedOption(value);
-    };
-
-    const company = [
-        { value: '1 - 50', label: '1 - 50' },
-        { value: '51 - 100', label: '51 - 100' },
-        { value: '101 - 500', label: '101 - 500' },
-        { value: '501 - 1,000', label: '501 - 1,000' },
-        { value: '1,001 - 5,000', label: '1,001 - 5,000' },
-        { value: '5,001 - 10,000', label: '5,001 - 10,000' },
-        { value: '10,000 - 20,000', label: '10,000 - 20,000' },
-        { value: '+ 20,000', label: '+ 20,000' }
-    ]
-
-    const industry = [
-        { value: 'Publicidad / Marketing', label: 'Publicidad / Marketing' },
-        { value: 'Agricultura', label: 'Agricultura' },
-        { value: 'Aerolíneas, Aeropuertos & Servicios aéreos', label: 'Aerolíneas, Aeropuertos & Servicios aéreos' },
-        { value: 'Servicios Bancarios', label: 'Servicios Bancarios' },
-        { value: 'Químicos', label: 'Químicos' },
-        { value: 'Colegios & Universidades', label: 'Colegios & Universidades' },
-        { value: 'Software de computador', label: 'Software de computador' },
-        { value: 'Educación', label: 'Educación' },
-        { value: 'Servicios de Electricidad, aceite & gas', label: 'Servicios de Electricidad, aceite & gas' },
-        { value: 'Entretenimiento', label: 'Entretenimiento' },
-        { value: 'Comidas y Bebidas', label: 'Comidas y Bebidas' },
-        { value: 'Gubernamental', label: 'Gubernamental' },
-        { value: 'Cuidado de la salud', label: 'Cuidado de la salud' },
-        { value: 'Recursos humanos', label: 'Recursos humanos' },
-        { value: 'Servicios legales', label: 'Servicios legales' },
-        { value: 'Logística & transporte', label: 'Logística & transporte' },
-        { value: 'Consultoría', label: 'Consultoría' },
-        { value: 'Manufacturación', label: 'Manufacturación' },
-        { value: 'Minerales y minería', label: 'Minerales y minería' },
-        { value: 'Periódicos y revistas', label: 'Periódicos y revistas' },
-        { value: 'Sin fines de lucro', label: 'Sin fines de lucro' },
-        { value: 'Farmacéuticos', label: 'Farmacéuticos' },
-        { value: 'Servicios profesionales', label: 'Servicios profesionales' },
-        { value: 'Vienes raíces', label: 'Vienes raíces' },
-        { value: 'Investigación y desarrollo ', label: 'Investigación y desarrollo' },
-        { value: 'Minorista', label: 'Minorista' },
-        { value: 'Servicios', label: 'Servicios' },
-        { value: 'Telecomunicaciones y servicios de comunicación', label: 'Telecomunicaciones y servicios de comunicación' },
-        { value: 'Viajes y ocio', label: 'Viajes y ocio' },
-        { value: 'Venta al por mayor', label: 'Venta al por mayor' },
-
+    const countryOptions = Object.keys(countries);
+    const companyOptions= [
+        '1 - 50',
+        '51 - 100',
+        '101 - 500',
+        '501 - 1,000',
+        '1,001 - 5,000',
+        '5,001 - 10,000',
+        '10,000 - 20,000',
+        '+ 20,000'
     ]
     const industryOptions = [
         'Publicidad / Marketing',
@@ -147,9 +108,9 @@ const ContactForm: React.FC = () => {
         'Viajes y ocio',
         'Venta al por mayor',
     ]
+  
 
-
-
+    
     return (
         <div className="flex flex-col text-black">
             <h2 className=' font-semibold text-[30px] text-white'>Cuéntanos cómo podemos ayudarte</h2>
@@ -180,7 +141,6 @@ const ContactForm: React.FC = () => {
                         <input
                             type="text"
                             value={formDetails.firstName}
-
                             onChange={(e) => onFormUpdate("firstName", e.target.value)}
                             className={`w-full rounded-xl bg-[#f2f2f2] border-none font-medium text-[16px] pl-3 my-2 text-[#A7A7AB] py-4 `}
                         />
@@ -195,7 +155,6 @@ const ContactForm: React.FC = () => {
                         <input
                             type="text"
                             value={formDetails.lastName}
-
                             onChange={(e) => onFormUpdate("lastName", e.target.value)}
                             className={`w-full rounded-xl bg-[#f2f2f2] border-none font-medium text-[16px] pl-3 my-2 text-[#A7A7AB] py-4 `}
                         />
@@ -230,12 +189,7 @@ const ContactForm: React.FC = () => {
                             className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         />
                     </div>
-                    {/* <InputSelect
-                        label="Pais"
-                        name="country"
-                        value={selectedValue}
-                        onChange={(e) => onFormUpdate("country", e.target.value)}
-                    /> */}
+                    <CustomSelect onChange={(e) => onFormUpdate("country", e.target.value)} options={countryOptions} value={formDetails.country} label="Pais" />
                 </div>
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                     <div className="row">
@@ -252,13 +206,7 @@ const ContactForm: React.FC = () => {
                             className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         />
                     </div>
-                    {/* <InputSelect
-                        label="Tamaño de la compañía"
-                        name="companySize"
-                        value={selectedValue}
-                        onChange={(e) => onFormUpdate("companySize", e.target.value)}
-                        options={company}
-                    /> */}
+                    <CustomSelect onChange={(e) => onFormUpdate("companySize", e.target.value)} options={companyOptions} value={formDetails.companySize} label="Tamaño de la compañía" />
                 </div>
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                     <div className="row">
@@ -275,16 +223,8 @@ const ContactForm: React.FC = () => {
                             className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         />
                     </div>
-                    {/* <InputSelect
-                        label="Industria"
-                        name="industry"
-                        value={selectedValue}
-                        onChange={(e) => onFormUpdate("industry", e.target.value)}
-                        options={industry}
-                    /> */}
+                    <CustomSelect onChange={(e) => onFormUpdate("industry", e.target.value)} options={industryOptions} value={formDetails.industry} label="Industria" />
                 </div>
-                <CustomSelect onChange={(e) => onFormUpdate("industry", e.target.value)} options={industryOptions} value={selectedOption} />
-
                 <div className='flex gap-4'>
                     <input
                         id="comments"
