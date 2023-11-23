@@ -1,14 +1,19 @@
 'use client'
 import React, { useState, FormEvent } from "react"
 import InputSelect from "./input-select-country"
+import CustomSelect from "./input-select"
 
 interface FormDetails {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phone: string;
-    message: string;
+    firstName: string
+    lastName: string
+    email: string
+    phone: string
+    message: string
     country: string
+    company: string
+    companySize: string
+    jobTitle: string
+    industry: string
     check: string
 }
 
@@ -19,6 +24,10 @@ const ContactForm: React.FC = () => {
         email: "",
         phone: "",
         country: "",
+        company: "",
+        companySize: "",
+        jobTitle: "",
+        industry: "",
         message: "",
         check: ''
     };
@@ -36,13 +45,13 @@ const ContactForm: React.FC = () => {
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         setButtonText("Enviando datos...");
-        let response = await fetch("https://us-central1-serverapi-92b0d.cloudfunctions.net/app/api/contact", {
+        let response = await fetch("http://localhost:5000/drhernanjojoa-c6928/us-central1/app/api/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
             },
             body: JSON.stringify(formDetails),
-        });
+        }); 0
         setButtonText("Datos enviados");
         let result = await response.json();
         setFormDetails(formInitialDetails);
@@ -56,57 +65,90 @@ const ContactForm: React.FC = () => {
         console.log('Done!!!!');
     };
 
-    const [selectedValue, setSelectedValue] = useState<string>('');
+    const [selectedOption, setSelectedOption] = useState<string>('Opción 1');
 
-    const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setSelectedValue(event.target.value);
-        // Otros manejadores de cambio que puedas necesitar
+    const handleSelectChange = (value: string) => {
+        setSelectedOption(value);
     };
 
     const company = [
-        {value: '1 - 50', label: '1 - 50'},
-        {value: '51 - 100', label: '51 - 100'},
-        {value: '101 - 500', label: '101 - 500'},
-        {value: '501 - 1,000', label: '501 - 1,000'},
-        {value: '1,001 - 5,000', label: '1,001 - 5,000'},
-        {value: '5,001 - 10,000', label: '5,001 - 10,000'},
-        {value: '10,000 - 20,000', label: '10,000 - 20,000'},
-        {value: '+ 20,000', label: '+ 20,000'}
+        { value: '1 - 50', label: '1 - 50' },
+        { value: '51 - 100', label: '51 - 100' },
+        { value: '101 - 500', label: '101 - 500' },
+        { value: '501 - 1,000', label: '501 - 1,000' },
+        { value: '1,001 - 5,000', label: '1,001 - 5,000' },
+        { value: '5,001 - 10,000', label: '5,001 - 10,000' },
+        { value: '10,000 - 20,000', label: '10,000 - 20,000' },
+        { value: '+ 20,000', label: '+ 20,000' }
     ]
 
-    const industry= [
-        {value: 'Publicidad / Marketing', label: 'Publicidad / Marketing'},
-        {value: 'Agricultura', label: 'Agricultura'},
-        {value: 'Aerolíneas, Aeropuertos & Servicios aéreos', label: 'Aerolíneas, Aeropuertos & Servicios aéreos'},
-        {value: 'Servicios Bancarios', label: 'Servicios Bancarios'},
-        {value: 'Químicos', label: 'Químicos'},
-        {value: 'Colegios & Universidades', label: 'Colegios & Universidades'},
-        {value: 'Software de computador', label: 'Software de computador'},
-        {value: 'Educación', label: 'Educación'},
-        {value: 'Servicios de Electricidad, aceite & gas', label: 'Servicios de Electricidad, aceite & gas'},
-        {value: 'Entretenimiento', label: 'Entretenimiento'},
-        {value: 'Comidas y Bebidas', label: 'Comidas y Bebidas'},
-        {value: 'Gubernamental', label: 'Gubernamental'},
-        {value: 'Cuidado de la salud', label: 'Cuidado de la salud'},
-        {value: 'Recursos humanos', label: 'Recursos humanos'},
-        {value: 'Servicios legales', label: 'Servicios legales'},
-        {value: 'Logística & transporte', label: 'Logística & transporte'},
-        {value: 'Consultoría', label: 'Consultoría'},
-        {value: 'Manufacturación', label: 'Manufacturación'},
-        {value: 'Minerales y minería', label: 'Minerales y minería'},
-        {value: 'Periódicos y revistas', label: 'Periódicos y revistas'},
-        {value: 'Sin fines de lucro', label: 'Sin fines de lucro'},
-        {value: 'Farmacéuticos', label: 'Farmacéuticos'},
-        {value: 'Servicios profesionales', label: 'Servicios profesionales'},
-        {value: 'Vienes raíces', label: 'Vienes raíces'},
-        {value: 'Investigación y desarrollo ', label: 'Investigación y desarrollo'},
-        {value: 'Minorista', label: 'Minorista'},
-        {value: 'Servicios', label: 'Servicios'},
-        {value: 'Telecomunicaciones y servicios de comunicación', label: 'Telecomunicaciones y servicios de comunicación'},
-        {value: 'Viajes y ocio', label: 'Viajes y ocio'},
-        {value: 'Venta al por mayor', label: 'Venta al por mayor'},
+    const industry = [
+        { value: 'Publicidad / Marketing', label: 'Publicidad / Marketing' },
+        { value: 'Agricultura', label: 'Agricultura' },
+        { value: 'Aerolíneas, Aeropuertos & Servicios aéreos', label: 'Aerolíneas, Aeropuertos & Servicios aéreos' },
+        { value: 'Servicios Bancarios', label: 'Servicios Bancarios' },
+        { value: 'Químicos', label: 'Químicos' },
+        { value: 'Colegios & Universidades', label: 'Colegios & Universidades' },
+        { value: 'Software de computador', label: 'Software de computador' },
+        { value: 'Educación', label: 'Educación' },
+        { value: 'Servicios de Electricidad, aceite & gas', label: 'Servicios de Electricidad, aceite & gas' },
+        { value: 'Entretenimiento', label: 'Entretenimiento' },
+        { value: 'Comidas y Bebidas', label: 'Comidas y Bebidas' },
+        { value: 'Gubernamental', label: 'Gubernamental' },
+        { value: 'Cuidado de la salud', label: 'Cuidado de la salud' },
+        { value: 'Recursos humanos', label: 'Recursos humanos' },
+        { value: 'Servicios legales', label: 'Servicios legales' },
+        { value: 'Logística & transporte', label: 'Logística & transporte' },
+        { value: 'Consultoría', label: 'Consultoría' },
+        { value: 'Manufacturación', label: 'Manufacturación' },
+        { value: 'Minerales y minería', label: 'Minerales y minería' },
+        { value: 'Periódicos y revistas', label: 'Periódicos y revistas' },
+        { value: 'Sin fines de lucro', label: 'Sin fines de lucro' },
+        { value: 'Farmacéuticos', label: 'Farmacéuticos' },
+        { value: 'Servicios profesionales', label: 'Servicios profesionales' },
+        { value: 'Vienes raíces', label: 'Vienes raíces' },
+        { value: 'Investigación y desarrollo ', label: 'Investigación y desarrollo' },
+        { value: 'Minorista', label: 'Minorista' },
+        { value: 'Servicios', label: 'Servicios' },
+        { value: 'Telecomunicaciones y servicios de comunicación', label: 'Telecomunicaciones y servicios de comunicación' },
+        { value: 'Viajes y ocio', label: 'Viajes y ocio' },
+        { value: 'Venta al por mayor', label: 'Venta al por mayor' },
 
     ]
+    const industryOptions = [
+        'Publicidad / Marketing',
+        'Agricultura',
+        'Aerolíneas, Aeropuertos & Servicios aéreos',
+        'Servicios Bancarios',
+        'Químicos',
+        'Colegios & Universidades',
+        'Software de computador',
+        'Educación',
+        'Servicios de Electricidad, aceite & gas',
+        'Entretenimiento',
+        'Comidas y Bebidas',
+        'Gubernamental',
+        'Cuidado de la salud',
+        'Recursos humanos',
+        'Servicios legales',
+        'Logística & transporte',
+        'Consultoría',
+        'Manufacturación',
+        'Minerales y minería',
+        'Periódicos y revistas',
+        'Sin fines de lucro',
+        'Farmacéuticos',
+        'Servicios profesionales',
+        'Vienes raíces',
+        'Investigación y desarrollo',
+        'Minorista',
+        'Servicios',
+        'Telecomunicaciones y servicios de comunicación',
+        'Viajes y ocio',
+        'Venta al por mayor',
+    ]
+
+
 
     return (
         <div className="flex flex-col text-black">
@@ -169,7 +211,6 @@ const ContactForm: React.FC = () => {
                     <input
                         type="email"
                         value={formDetails.email}
-
                         onChange={(e) => onFormUpdate("email", e.target.value)}
                         className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                     />
@@ -185,17 +226,16 @@ const ContactForm: React.FC = () => {
                         <input
                             type="tel"
                             value={formDetails.phone}
-
                             onChange={(e) => onFormUpdate("phone", e.target.value)}
                             className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         />
                     </div>
-                    <InputSelect
+                    {/* <InputSelect
                         label="Pais"
                         name="country"
                         value={selectedValue}
-                        onChange={handleSelectChange}
-                    />
+                        onChange={(e) => onFormUpdate("country", e.target.value)}
+                    /> */}
                 </div>
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                     <div className="row">
@@ -206,45 +246,44 @@ const ContactForm: React.FC = () => {
                             Empresa
                         </label>
                         <input
-                            type="tel"
-                            value={formDetails.phone}
-
-                            onChange={(e) => onFormUpdate("phone", e.target.value)}
+                            type="text"
+                            value={formDetails.company}
+                            onChange={(e) => onFormUpdate("company", e.target.value)}
                             className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         />
                     </div>
-                    <InputSelect
+                    {/* <InputSelect
                         label="Tamaño de la compañía"
-                        name="company"
+                        name="companySize"
                         value={selectedValue}
-                        onChange={handleSelectChange}
+                        onChange={(e) => onFormUpdate("companySize", e.target.value)}
                         options={company}
-                    />
+                    /> */}
                 </div>
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                     <div className="row">
                         <label
-                            htmlFor={"name"}
+                            htmlFor={"jobTitle"}
                             className={`block text-sm font-light`}
                         >
                             Cargo
                         </label>
                         <input
                             type="tel"
-                            value={formDetails.phone}
-
-                            onChange={(e) => onFormUpdate("phone", e.target.value)}
+                            value={formDetails.jobTitle}
+                            onChange={(e) => onFormUpdate("jobTitle", e.target.value)}
                             className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         />
                     </div>
-                    <InputSelect
+                    {/* <InputSelect
                         label="Industria"
-                        name="Industry"
+                        name="industry"
                         value={selectedValue}
-                        onChange={handleSelectChange}
+                        onChange={(e) => onFormUpdate("industry", e.target.value)}
                         options={industry}
-                    />
+                    /> */}
                 </div>
+                <CustomSelect onChange={(e) => onFormUpdate("industry", e.target.value)} options={industryOptions} value={selectedOption} />
 
                 <div className='flex gap-4'>
                     <input
@@ -267,10 +306,7 @@ const ContactForm: React.FC = () => {
                         </p>
                     </div>
                 )}
-
             </form>
-
-
         </div>
     )
 }
