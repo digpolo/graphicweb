@@ -9,8 +9,6 @@ interface SelectProps {
 
 const CustomSelect: React.FC<SelectProps> = ({ options, value, label, onChange }) => {
   
-  
-
   return (
     <label>
       {label}
@@ -22,7 +20,7 @@ const CustomSelect: React.FC<SelectProps> = ({ options, value, label, onChange }
         ))}
       </select>
     </label>
-  );
-};
+  )
+}
 
-export default CustomSelect;
+export default CustomSelect

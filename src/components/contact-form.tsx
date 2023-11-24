@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, FormEvent, ChangeEvent } from "react"
-import { countries } from 'countries-list';
+import { countries,  TCountries } from 'countries-list';
 import CustomSelect from "./input-select"
 
 interface FormDetails {
@@ -65,8 +65,12 @@ const ContactForm: React.FC = () => {
         console.log('Done!!!!');
     };
 
-    const countryOptions = Object.keys(countries);
-    const companyOptions= [
+    const countryOptions: (keyof TCountries)[] = Object.keys(countries) as (keyof TCountries)[];
+
+// Crear un nuevo array con los nombres de los países
+const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries): string => countries[countryCode].name);
+
+    const companyOptions = [
         '1 - 50',
         '51 - 100',
         '101 - 500',
@@ -108,9 +112,9 @@ const ContactForm: React.FC = () => {
         'Viajes y ocio',
         'Venta al por mayor',
     ]
-  
+   
 
-    
+
     return (
         <div className="flex flex-col text-black">
             <h2 className=' font-semibold text-[30px] text-white'>Cuéntanos cómo podemos ayudarte</h2>
@@ -189,7 +193,7 @@ const ContactForm: React.FC = () => {
                             className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         />
                     </div>
-                    <CustomSelect onChange={(e) => onFormUpdate("country", e.target.value)} options={countryOptions} value={formDetails.country} label="Pais" />
+                    <CustomSelect onChange={(e) => onFormUpdate("country", e.target.value)} options={countryNames} value={formDetails.country} label="Pais" />
                 </div>
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                     <div className="row">
