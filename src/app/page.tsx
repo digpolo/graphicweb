@@ -41,23 +41,16 @@ const sections = [
 
 export default function Home() {
   return (
-    <div className='bg-white text-black'>
+    <div className='bg-black text-white'>
       <Header />
-      {/* <Mission /> */}
-      
-      {sections.map(section => {
+      <Mission/>
+
+  {sections.map(section => {
         return <HomeSection key={section.id} card={section} />
-      })}
-<Cx />
-      {/* <Services colorText='white'/> */}
+      })} 
+      <Cx />
+  {/* <Services colorText='white'/> */}
       <Footer bgClass='black' colorText='[#FFFFFF]' src='/logo.svg' />
     </div>
   )
 }
-
-
-
-// ' ✓ Presencia en internet',
-//       ' ✓ Potenciar la visibilidad',
-//       ' ✓ Mejorar las ventas',
-//       ' ✓ Posicionamiento SEO'
