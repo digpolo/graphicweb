@@ -67,7 +67,7 @@ const Hero: React.FC<Props> = ({ card }) => {
               </Link>
             </div>
           </div>
-          <div className='flex flex-col justify-center items-center gap-4 flex-1 mx-4 pb-10'>
+          <div className='flex flex-col  gap-4 flex-1 mx-4 pb-10'>
             <div className='grid grid-cols-1 lg:grid-cols-1 pt-60 md:pb-20'>
               <h1 className='font-medium text-[90px] md:text-[150px]  text-white pr-10'>{card.title}</h1>
               <div>
