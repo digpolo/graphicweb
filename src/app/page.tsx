@@ -3,7 +3,7 @@ import Footer from '@/components/footer'
 import Header from '@/components/header'
 import HomeSection from '@/components/home-section'
 import Mission from '@/components/mission'
-import Mission2 from '@/components/mission2'
+
 
 const sections = [
   {
@@ -45,7 +45,6 @@ export default function Home() {
     <div className='bg-black text-white'>
       <Header />
       <Mission/>
-      <Mission2/>
 
 
   {sections.map(section => {
