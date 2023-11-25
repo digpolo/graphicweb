@@ -9,7 +9,7 @@ import Image from 'next/image'
 const sections = [
   {
     id: 1,
-    title: "Diseño web",
+    title: "Sitio web",
     p: "Somos una empresa de tecnología especialista en diseño web de alta calidad y diseño de tiendas online.",
     list: [
       ' ✓ Diseño web profesional',
@@ -50,7 +50,7 @@ export default function Home() {
       })} 
       <Cx />
   {/* <Services colorText='white'/> */}
-      <Footer bgClass='black' colorText='[#FFFFFF]' src='/logo.svg' />
+      <Footer bgClass='black' colorText='[#FFFFFF]' src='/logo5.svg' />
     </div>
   )
 }
