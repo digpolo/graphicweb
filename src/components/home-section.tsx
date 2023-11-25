@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { EB_Garamond } from "next/font/google"
+import Link from 'next/link';
 
 const garamond = EB_Garamond({
   display: "swap",
@@ -13,6 +14,7 @@ const garamond = EB_Garamond({
 type HomeSection = {
   title: string;
   p: string;
+  cta: string
   list: string[];
   src: string;
   alt: string;
@@ -30,7 +32,9 @@ const HomeSection: React.FC<CardProps> = ({ card }) => {
           <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >{card.title}</h2>
           <div>
             <p className='text-2xl py-4'>{card.p}</p>
+            <Link href={card.cta}>
             <p className='underline text-lg focus'>Explorar más</p>
+            </Link>
           </div>
         </div>
         <div className='flex justify-center items-center grid md:grid-cols-2 gap-10 py-4'>

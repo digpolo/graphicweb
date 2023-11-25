@@ -10,7 +10,8 @@ const sections = [
   {
     id: 1,
     title: "Sitio web",
-    p: "Somos una empresa de tecnología especialista en diseño web de alta calidad y diseño de tiendas online.",
+    p: "Crea una web profesional que te ayude a vender más y a convertirte en una marca líder en tu sector",
+    cta: "/sitio-web",
     list: [
       ' ✓ Diseño web profesional',
       ' ✓ Responsive y autogestionable',
@@ -25,7 +26,8 @@ const sections = [
   {
     id: 2,
     title: "Tiendas online",
-    p: "Nuestra dedicación para ofrecer una experiencia excepcional al cliente requiere una comprensión profunda de sus necesidades y expectativas, así como una consideración cuidadosa del impacto en su satisfacción y lealtad.",
+    p: "Aprovecha el veneficio de llegar a una audiencia global, reducir costos operativos y proporcionar una mejor experiencia de compra para tus clientes",
+    cta: "/tienda-online",
     list: [
       ' ✓ Diseñador de tienda online experto',
       ' ✓ Proceso de compra sencillo',

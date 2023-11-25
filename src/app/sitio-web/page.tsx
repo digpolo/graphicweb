@@ -7,7 +7,7 @@ import Services from '@/components/services'
 let product = {
     id: 1,
     logo: 'logo5.svg',
-    title: "Sitio-web",
+    title: "SITIO WEB",
     subtitle: "Una solución sencilla y eficaz para que tus clientes hagan sus pedidos desde casa",
     src: "/orders.jpg",
     alt: "cliente usando tecnologia",
