@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import mission from '../../public/mission.jpg'
 import { EB_Garamond } from "next/font/google";
 
 const garamond = EB_Garamond({
