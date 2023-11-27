@@ -45,7 +45,6 @@ const Page = () => {
           <ul>
             <li>- Facilita que los clientes realicen pedidos desde cualquier lugar.</li>
             <li>- Ofrece una amplia gama de opciones de comida y bebida.</li>
-            <li>- Ofrece promociones y descuentos.</li>
           </ul>
           <h3 className='font-black pt-2'>Ahorro de dinero</h3>
           <ul>

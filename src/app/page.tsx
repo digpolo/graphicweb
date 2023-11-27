@@ -9,7 +9,7 @@ const sections = [
   {
     id: 1,
     title: "Sitio web",
-    p: "Crea una web profesional que te ayude a vender más y a convertirte en una marca líder en tu sector",
+    p: "Creamos tu sitio web profesional que te ayude a vender más y a convertirte en una marca líder en tu sector",
     cta: "/sitio-web",
     list: [
       ' ✓ Diseño web profesional',
