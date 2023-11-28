@@ -73,7 +73,7 @@ const Hero: React.FC<Props> = ({ card }) => {
               <div>
                 <h2 className='text-white text-xl md:text-4xl '>{card.subtitle}</h2>
                 <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' target="_blank">
-                  <p className='font-[16px] text-s'>Solicitar producto</p>
+                  <p className='font-[16px] text-s'>Contáctame</p>
                 </a>
               </div>
             </div>
