@@ -5,6 +5,7 @@ import Footer from '@/components/footer'
 import CardPricing from '@/components/card-pricing'
 import Location from '@/components/location'
 import ContactForm from '@/components/contact-form'
+import Pricing from '@/components/pricingshop'
 
 let product = {
     id: 1,
@@ -117,11 +118,9 @@ const Page = () => {
     <div>
         <Hero card={product} />
         <Content/>
-        <div className='mx-4 flex justify-between gap-10 border-t border-black'>
-            <CardPricing card={basic} />
-            <CardPricing card={intermediate} />
-            <CardPricing card={advanced} />
-        </div>
+        <div className='mx-4'>
+        <Pricing />
+      </div>
         <div className='grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-10'>
         <ContactForm />
         <Location />

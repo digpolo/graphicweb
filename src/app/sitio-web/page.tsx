@@ -4,7 +4,7 @@ import React from 'react'
 import Footer from '@/components/footer'
 import Services from '@/components/services'
 import { EB_Garamond } from "next/font/google"
-import Pricing from '@/components/pricing'
+import Pricing from '@/components/pricingweb'
 import Location from '@/components/location'
 import ContactForm from '@/components/contact-form'
 import CardPricing from '@/components/card-pricing'
