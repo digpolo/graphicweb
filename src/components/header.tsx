@@ -30,7 +30,7 @@ const Header = () => {
        style={{ backgroundImage: 'url("header.jpg")' , backgroundPosition: '-00px 0'  }}
      >
         <div className={` ${bgColor} fixed top-0 w-full z-10`} >
-        <NavBar/>
+        <NavBar logo='logo5.svg'/>
         </div>
 
         <div className='flex flex-col mx-auto max-w-5xl  px-4 gap-6 absolute  bottom-0 mb-6'>

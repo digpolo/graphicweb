@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
-import logo from '../../public/logo5.svg'
 import Link from 'next/link'
 
-const NavBar = () => {
+interface colorLogo {
+  logo: string
+}
+
+const NavBar: React.FC<colorLogo> = ({ logo }) => {
   return (
     <div className='flex justify-center items-center py-4 md:py-8 '>
       <Link href={'/'}>

@@ -8,7 +8,7 @@ import Location from '@/components/location'
 const Page = () => {
     return (
         <div className='mx-4'>
-            <NavBar />
+            <NavBar logo='/logo5black.svg'/>
             <div className='mx-4 mx-auto max-w-6xl text-center'>
                 <h1 className='font-medium text-2xl py-2'>Contacta con nosotros</h1>
                 <p>Si quieres pedirnos presupuesto para tu proyecto, solicitarnos más información sobre alguno de nuestros servicios o comentarnos algo, ¡somos todo oídos! Tan sólo rellena este formulario con tu petición</p>

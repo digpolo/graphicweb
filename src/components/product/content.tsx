@@ -3,7 +3,7 @@ import { EB_Garamond } from "next/font/google"
 import Image from 'next/image'
 import orderoniline1 from '../../../public/orderoniline1.png'
 import orderoniline2 from '../../../public/orderoniline2.png'
-import Footer from '../footer'
+import Link from 'next/link'
 
 const garamond = EB_Garamond({
   display: "swap",
@@ -57,9 +57,9 @@ const Content = () => {
           <p>Selecciona las pasarelas de pago que se ajusten perfectamente a tus necesidades y las de tus clientes. Te ofrecemos diversas opciones de pago seguras, proporcionándote la confianza necesaria para que tus usuarios realicen compras desde la comodidad de sus hogares a través de tu tienda online</p>
         </div>
       </section>
-      <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
+      <Link href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
         <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
-      </a>    
+      </Link>    
     </div>
   )
 }

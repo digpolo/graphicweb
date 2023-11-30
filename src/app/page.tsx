@@ -10,7 +10,7 @@ const sections = [
     id: 1,
     title: "Sitio web",
     p: "Creamos tu sitio web profesional que te ayude a vender más y a convertirte en una marca líder en tu sector",
-    cta: "/sitio-web",
+    cta: "/pagina-web",
     list: [
       ' ✓ Diseño web profesional',
       ' ✓ Responsive y autogestionable',
@@ -26,7 +26,7 @@ const sections = [
     id: 2,
     title: "Tiendas online",
     p: "Aprovecha el veneficio de llegar a una audiencia global, reducir costos operativos y proporcionar una mejor experiencia de compra para tus clientes",
-    cta: "/tienda-online",
+    cta: "/tienda-virtual",
     list: [
       ' ✓ Diseñador de tienda online experto',
       ' ✓ Proceso de compra sencillo',

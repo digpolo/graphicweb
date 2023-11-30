@@ -7,33 +7,50 @@ interface CustomBackgroundProps {
     bgClass: string;
     colorText: string
     src: string
-  }
+}
 
-const Footer: React.FC<CustomBackgroundProps> = ({bgClass, colorText, src}) => {
+const Footer: React.FC<CustomBackgroundProps> = ({ bgClass, colorText, src }) => {
     return (
         <section className={`p-6 mt-10 bg-${bgClass} text-${colorText}`}>
-            <div className=' mx-auto grid grid-cols-1 md:grid-cols-4 max-w-10xl gap-10'>
+            <div className=' mx-auto grid grid-cols-1 md:grid-cols-5 max-w-10xl gap-10'>
                 <div className='flex flex-col items-center mt-10'>
                     <a href="/" >
-                        <Image 
-                        alt='logo graphic web' 
-                        src={src} 
-                        width={200} 
-                        height={300} 
+                        <Image
+                            alt='logo graphic web'
+                            src={src}
+                            width={200}
+                            height={300}
                         />
                     </a>
                 </div>
                 <div>
                     <h2 className='py-3 font-black text-[16px]'>Experiencia del cliente</h2>
                     <ul className='gap-3 flex flex-col font-light'>
-                        <li>
-                            <Link href='/diseño-estrategico/sitio-web'>
-                            Sitio Web
+                    <li>
+                            <Link href='/pagina-web'>
+                                Pagina web
                             </Link>
                         </li>
                         <li>
-                        <Link href='/tienda-virtual'>
-                           Tienda Virtual
+                            <Link href='/tienda-virtual'>
+                                Tienda Virtual
+                            </Link>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div>
+                    <h2 className='py-3 font-black text-[16px]'>Contacto</h2>
+                    <ul className='gap-3 flex flex-col font-light'>
+                    <li>
+                            <Link href='/pagina-web'>
+                                Cra. 13 # 93-35, Chapinero
+                                Bogotá, Colombia
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='/tienda-virtual'>
+                            info@graphicweb
                             </Link>
                         </li>
                     </ul>
@@ -42,8 +59,8 @@ const Footer: React.FC<CustomBackgroundProps> = ({bgClass, colorText, src}) => {
                     <h2 className='py-3 font-black text-[16px]'>Siguenos</h2>
                     <ul className='gap-3 flex flex-col font-thin'>
                         <li className='font-light'>
-                        <Link href="https://www.instagram.com/graphicweb/" target="_blank" rel="noopener noreferrer">
-                            Instagram
+                            <Link href="https://www.instagram.com/graphicweb/" target="_blank" rel="noopener noreferrer">
+                                Instagram
                             </Link>
                         </li>
                         <li>
