@@ -1,5 +1,16 @@
-import React from 'react'
+'use client'
 import CardPricing from './card-pricing'
+import React, { Component,  } from "react";
+import Slider from "react-slick";
+import { EB_Garamond } from "next/font/google"
+
+const garamond = EB_Garamond({
+    display: "swap",
+    weight: ["400", "500", "600", "700"],
+    style: ["normal", "italic"],
+    subsets: ["latin-ext"],
+    variable: '--font-garamond'
+  });
 
 let basic = {
     title: "Pagina web basica",
@@ -82,14 +93,54 @@ let advanced = {
     ]
 }
 
-const Pricing = () => {
-    return (
-        <div className='mx-4 flex justify-between gap-10 border-t border-black'>
-            <CardPricing card={basic} />
-            <CardPricing card={intermediate} />
-            <CardPricing card={advanced} />
-        </div>
-    )
-}
+export default class SimpleSlider extends Component {
+   
+    render() {
+        const settings = {
+            
+            dots: true,
+            infinite: false,
+            speed: 500,
+            slidesToShow:  3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+              ]
+            
 
-export default Pricing
+        };
+        return (
+            <div className='border-t border-black px-4'>
+                <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >¿Cuáles son nuestros planes para la creación de tienda online?</h2>
+                <Slider {...settings}>
+                    <CardPricing card={basic} />
+                    <CardPricing card={intermediate} />
+                    <CardPricing card={advanced} />
+                </Slider>
+            </div>
+        )
+    }
+}

@@ -116,8 +116,8 @@ const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries
 
 
     return (
-        <div className="flex flex-col text-black">
-            <h2 className=' font-semibold text-[30px] text-white'>Cuéntanos cómo podemos ayudarte</h2>
+        <div className="flex flex-col text-black mx-4 mt-10">
+            <h2 className=' font-semibold text-[30px]'>Cuéntanos cómo podemos ayudarte</h2>
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                 <div className="row">
                     <label
