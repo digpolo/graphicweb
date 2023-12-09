@@ -67,14 +67,14 @@ const Hero: React.FC<Props> = ({ card }) => {
               </Link>
             </div>
           </div>
-          <div className='flex flex-col justify-center items-center gap-4 flex-1 mx-4 pb-10'>
+          <div className='flex flex-col  gap-4 flex-1 mx-4 pb-10'>
             <div className='grid grid-cols-1 lg:grid-cols-1 pt-60 md:pb-20'>
               <h1 className='font-medium text-[90px] md:text-[150px]  text-white pr-10'>{card.title}</h1>
               <div>
                 <h2 className='text-white text-xl md:text-4xl '>{card.subtitle}</h2>
-                <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' target="_blank">
-                  <p className='font-[16px] text-s'>Solicitar producto</p>
-                </a>
+                <Link href='/contacto' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' >
+                  <p className='font-[16px] text-s'>Contáctame</p>
+                </Link>
               </div>
             </div>
             <div className='flex justify-center'>

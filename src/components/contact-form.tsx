@@ -45,7 +45,7 @@ const ContactForm: React.FC = () => {
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         setButtonText("Enviando datos...");
-        let response = await fetch("http://localhost:5000/drhernanjojoa-c6928/us-central1/app/api/contact", {
+        let response = await fetch("https://us-central1-graphicweb-2d251.cloudfunctions.net/app/api/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
@@ -116,8 +116,8 @@ const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries
 
 
     return (
-        <div className="flex flex-col text-black">
-            <h2 className=' font-semibold text-[30px] text-white'>Cuéntanos cómo podemos ayudarte</h2>
+        <div className="flex flex-col text-black mx-4 mt-10">
+            <h2 className=' font-semibold text-[30px]'>Cuéntanos cómo podemos ayudarte</h2>
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                 <div className="row">
                     <label
@@ -241,7 +241,7 @@ const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries
                     />
                     <label className="text-xs">Me gustaria registrarme con mi E-mail para recibir el boletín  de Graphicweb con actualizaciones, recursos valiosos y consejos útiles.</label>
                 </div>
-                <span className="text-xs">Al completar este formulario, aceptas que estás de acuerdo con la política de confidencialidad de Globant.</span>
+                <span className="text-xs">Al completar este formulario, aceptas que estás de acuerdo con la política de confidencialidad de GraphicWeb.</span>
                 <button className="bg-blue-700 py-4 rounded-lg my-5 font-medium text-lg  py-10 text-white" type="submit">{buttonText}</button>
                 {status.message && (
                     <div className="row text-center text-blue">

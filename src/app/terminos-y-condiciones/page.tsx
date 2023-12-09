@@ -7,7 +7,7 @@ const page = () => {
     return (
         <section>
      <div className='bg-black'>
-            <NavBar/>
+            <NavBar logo='/logo5.svg'/>
             </div>
             <NavBarPrivacy />
             <div className='mx-4'>

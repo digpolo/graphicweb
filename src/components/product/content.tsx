@@ -3,7 +3,7 @@ import { EB_Garamond } from "next/font/google"
 import Image from 'next/image'
 import orderoniline1 from '../../../public/orderoniline1.png'
 import orderoniline2 from '../../../public/orderoniline2.png'
-import Footer from '../footer'
+import Link from 'next/link'
 
 const garamond = EB_Garamond({
   display: "swap",
@@ -43,34 +43,23 @@ const Content = () => {
       <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
         <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >Potenciomos empresas con el poder del software</h2>
         <div>
-          <h3 className='font-black pt-2'>Mejora la eficiencia</h3>
+          <h3 className='font-black pt-2'>ALta Calidad en diseño web</h3>
           <ul>
-            <li>- Reduce el tiempo que los empleados pasan atendiendo pedidos por teléfono o en persona.</li>
-            <li>- Genera informes detallados sobre las ventas y el comportamiento de los clientes.</li>
-            <li>- Automatiza tareas como la gestión de inventario y el procesamiento de pagos.</li>
+            <p>Mediante el diseño incrementamos la experiencia de usuarios para crear experiencias memorables</p>
           </ul>
-          <h3 className='font-black pt-2'>Aumento de ventas</h3>
-          <ul>
-            <li>- Facilita que los clientes realicen pedidos desde cualquier lugar.</li>
-            <li>- Ofrece una amplia gama de opciones de comida y bebida.</li>
-            <li>- Ofrece promociones y descuentos.</li>
-          </ul>
-          <h3 className='font-black pt-2'>Ahorro de dinero</h3>
-          <ul>
-            <li>- Reduce los costos de marketing y publicidad.</li>
-            <li>- Reduce los costos de procesamiento de pedidos.</li>
-          </ul>
-          <h3 className='font-black pt-2'>Potenciamos la experiencia del consumidor</h3>
-          <ul>
-            <li>- Tu marca siempre visible</li>
-            <li>- Experiencias memorable</li>
-            <li>- Aumento de la felicidad del consumidor</li>
-          </ul>
+          <h3 className='font-black pt-2'>Proceso de compra sencillo</h3>
+          <p>Una tienda online con un diseño atractivo, fácil de usar y totalmente responsive para cualquier dispositivo. Nuestra prioridad es ofrecer a los usuarios una experiencia de compra sencilla e intuitiva, mediante un diseño optimizado que favorece las compras y garantiza una excelente experiencia de usuario</p>
+          <h3 className='font-black pt-2'>Dominio y hosting incluidos </h3>
+          <p>Con nosotros, podrás elegir el dominio que mejor identifique a tu empresa y te ayude a posicionarte en los resultados de búsqueda. Además, te asesoraremos en todo el proceso y te ofreceremos el hosting para alojar tu web.</p>
+          <h3 className='font-black pt-2'>Catálogo de productos </h3>
+          <p>Comercializa tus productos de manera eficiente a través de un catálogo en línea perfectamente organizado, proporcionando a tus clientes información detallada en completas fichas de producto</p>
+          <h3 className='font-black pt-2'>Pasarela de pago segura</h3>
+          <p>Selecciona las pasarelas de pago que se ajusten perfectamente a tus necesidades y las de tus clientes. Te ofrecemos diversas opciones de pago seguras, proporcionándote la confianza necesaria para que tus usuarios realicen compras desde la comodidad de sus hogares a través de tu tienda online</p>
         </div>
       </section>
-      <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
+      <Link href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
         <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
-      </a>    
+      </Link>    
     </div>
   )
 }

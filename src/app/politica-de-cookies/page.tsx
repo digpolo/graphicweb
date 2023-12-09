@@ -8,7 +8,7 @@ const page = () => {
         <section>
           
           <div className='bg-black'>
-            <NavBar/>
+            <NavBar logo='/logo5.svg'/>
             </div>
       
             <NavBarPrivacy />

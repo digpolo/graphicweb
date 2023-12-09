@@ -3,14 +3,14 @@ import Footer from '@/components/footer'
 import Header from '@/components/header'
 import HomeSection from '@/components/home-section'
 import Mission from '@/components/mission'
-import Services from '@/components/services'
-import Image from 'next/image'
+
 
 const sections = [
   {
     id: 1,
-    title: "Diseño web",
-    p: "Somos una empresa de tecnología especialista en diseño web de alta calidad y diseño de tiendas online.",
+    title: "Sitio web",
+    p: "Creamos tu sitio web profesional que te ayude a vender más y a convertirte en una marca líder en tu sector",
+    cta: "/pagina-web",
     list: [
       ' ✓ Diseño web profesional',
       ' ✓ Responsive y autogestionable',
@@ -25,7 +25,8 @@ const sections = [
   {
     id: 2,
     title: "Tiendas online",
-    p: "Nuestra dedicación para ofrecer una experiencia excepcional al cliente requiere una comprensión profunda de sus necesidades y expectativas, así como una consideración cuidadosa del impacto en su satisfacción y lealtad.",
+    p: "Aprovecha el veneficio de llegar a una audiencia global, reducir costos operativos y proporcionar una mejor experiencia de compra para tus clientes",
+    cta: "/tienda-virtual",
     list: [
       ' ✓ Diseñador de tienda online experto',
       ' ✓ Proceso de compra sencillo',
@@ -41,23 +42,17 @@ const sections = [
 
 export default function Home() {
   return (
-    <div className='bg-white text-black'>
+    <div className='bg-black text-white'>
       <Header />
-      {/* <Mission /> */}
-      
-      {sections.map(section => {
+      <Mission/>
+
+
+  {sections.map(section => {
         return <HomeSection key={section.id} card={section} />
-      })}
-<Cx />
-      {/* <Services colorText='white'/> */}
-      <Footer bgClass='black' colorText='[#FFFFFF]' src='/logo.svg' />
+      })} 
+      <Cx />
+  {/* <Services colorText='white'/> */}
+      <Footer bgClass='black' colorText='[#FFFFFF]' src='/logo5.svg' />
     </div>
   )
 }
-
-
-
-// ' ✓ Presencia en internet',
-//       ' ✓ Potenciar la visibilidad',
-//       ' ✓ Mejorar las ventas',
-//       ' ✓ Posicionamiento SEO'
