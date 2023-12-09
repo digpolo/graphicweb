@@ -7,13 +7,24 @@ const NavBar = () => {
   return (
     <div className='flex justify-center items-center py-4 md:py-8 '>
       <Link href={'/'}>
-        <Image 
-        alt='logo graphic web' 
-        src={logo} 
-        width={200} 
-        height={300}
-        className="text-[#0000FF]"/>
-        </Link>
+        <Image
+          alt='logo graphic web'
+          src={logo}
+          width={200}
+          height={300}
+          className="text-[#0000FF]" />
+      </Link>
+      <ul>
+        <li>
+          Página web
+        </li>
+        <li>
+          Tienda online
+        </li>
+        <li>
+          blog
+        </li>
+      </ul>
     </div>
   )
 }
