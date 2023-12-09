@@ -1,7 +1,5 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import NavBar from "@/components/nav-bar";
-import Footer from "@/components/footer";
 import Script from "next/script";
 
 const poppins = Poppins({
@@ -34,7 +32,7 @@ export default function RootLayout({
       </head>
       <body className={poppins.className}>
         {children}
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+        {/* <script src="https://www.google.com/recaptcha/api.js"></script> */}
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
         <Script id="google-analytics">
           {`

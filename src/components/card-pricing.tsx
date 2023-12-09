@@ -14,7 +14,7 @@ const CardPricing: React.FC<Props> = ({ card }) => {
     <div className='py-10'>
         <h2 className='font-black py-2'>{card.title}</h2>
         {card.items.map((item, index)=>(
-            <p className='py-2 border-t'>{item}</p>
+            <p key={index} className='py-2 border-t'>{item}</p>
         ))}
     </div>
   )
