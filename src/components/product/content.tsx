@@ -43,7 +43,7 @@ const Content = () => {
       <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
         <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >Potenciomos empresas con el poder del software</h2>
         <div>
-          <h3 className='font-black pt-2'>ALta Calidad en diseño web</h3>
+          <h3 className='font-black pt-2'>Alta Calidad en diseño web</h3>
           <ul>
             <p>Mediante el diseño incrementamos la experiencia de usuarios para crear experiencias memorables</p>
           </ul>
