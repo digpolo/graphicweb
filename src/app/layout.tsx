@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import Script from "next/script";
+import { FacebookPixel } from '../components/facebook-pixel'
 
 const poppins = Poppins({
   display: "swap",
@@ -29,8 +30,15 @@ export default function RootLayout({
         {/* <style>
           .container {margin: 0 auto; padding: 40px; width: 80%; color: #333; background: #419be0; }
         </style> */}
+      
+      
+
+
+
+      
       </head>
       <body className={poppins.className}>
+      <FacebookPixel />
         {children}
         {/* <script src="https://www.google.com/recaptcha/api.js"></script> */}
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
