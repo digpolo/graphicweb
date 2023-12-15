@@ -16,13 +16,12 @@ const Mission = () => {
     return (
         <div className='my-10 '>
             <div className='mx-4 border-t border-white flex grid md:grid-cols-2 pb-20 gap-10'>
-                <h2 className={`${garamond.variable} font-garamond text-4xl py-4`} >Somos una empresa de tecnología pionera en y desarrollo web de alta calidad para fortalecer organizaciones.</h2>
+                <h2 className={`${garamond.variable} font-garamond text-4xl py-4`} >Ofrecemos una mirada estratégica que integra: usuarios, negocio y mercado. Generamos valor en los negocios</h2>
                 <ul className={`text-xl  py-2 font-extralight`}>
                     <h2 className='font-bold'>Nos especializamos en: </h2>
-                    <li>Presencia en internet</li>
-                    <li>Potenciar la visibilidad </li>
-                    <li>Mejorar las ventas</li>
-                    <li>Posicionamiento SEO </li>
+                    <li>Diseño de producto</li>
+                    <li>Diseño de servicios</li>
+                    <li>Diseño experiencia de cliente(CX)</li>
                 </ul>
             </div>
             <Image
