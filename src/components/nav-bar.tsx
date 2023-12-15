@@ -34,7 +34,7 @@ const NavBar: React.FC<colorLogo> = ({ logo }) => {
              <li className='flex gap-6 items-center'>
                  <Link href={'/pagina-web'}>Página web</Link>
                  <Link href={'/tienda-virtual'}>Tienda online</Link>
-                 <Link href={'/blog'}>Blog</Link>
+                 {/* <Link href={'/blog'}>Blog</Link> */}
             </li>
       
          </ul>
