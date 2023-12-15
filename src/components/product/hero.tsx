@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { EB_Garamond } from "next/font/google";
+import NavBar from '../nav-bar';
 
 type cxPage = {
   id: number;
@@ -55,17 +56,8 @@ const Hero: React.FC<Props> = ({ card }) => {
     
       <div className='bg-black'>
         <div className='bg-black'>
-          <div className='fixed top-0 w-full z-10'>
-            <div className={` flex justify-center items-center py-4 md:py-4 ${bgColor}`}>
-              <Link href={'/'}>
-                <Image
-                  alt='logo graphic web'
-                  src={card.logo}
-                  width={300}
-                  height={300}
-                  className="text-[#0000FF]" />
-              </Link>
-            </div>
+        <div className={` ${bgColor} fixed top-0 w-full z-10 text-white`} >
+            <NavBar logo='logo5.svg'/>
           </div>
           <div className='flex flex-col  gap-4 flex-1 mx-4 pb-10'>
             <div className='grid grid-cols-1 lg:grid-cols-1 pt-60 md:pb-20'>

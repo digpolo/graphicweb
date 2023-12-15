@@ -36,7 +36,11 @@ const Footer: React.FC<CustomBackgroundProps> = ({ bgClass, colorText, src }) =>
                                 Tienda Virtual
                             </Link>
                         </li>
-                       
+                        <li>
+                            <Link href='/tienda-virtual'>
+                                Blog
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -44,13 +48,13 @@ const Footer: React.FC<CustomBackgroundProps> = ({ bgClass, colorText, src }) =>
                     <ul className='gap-3 flex flex-col font-light'>
                     <li>
                             <Link href='/pagina-web'>
-                                Cra. 13 # 93-35, Chapinero
+                                Cra. 13 # 93-35, Localidad de Chapinero
                                 Bogotá, Colombia
                             </Link>
                         </li>
                         <li>
                             <Link href='/tienda-virtual'>
-                            info@graphicweb
+                            negocios@thegraphicweb.com
                             </Link>
                         </li>
                     </ul>
