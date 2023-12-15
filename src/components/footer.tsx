@@ -36,11 +36,11 @@ const Footer: React.FC<CustomBackgroundProps> = ({ bgClass, colorText, src }) =>
                                 Tienda Virtual
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href='/tienda-virtual'>
                                 Blog
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div>

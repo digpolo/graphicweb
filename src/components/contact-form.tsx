@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, FormEvent, ChangeEvent } from "react"
-import { countries,  TCountries } from 'countries-list';
+import { countries, TCountries } from 'countries-list';
 import CustomSelect from "./input-select"
 
 interface FormDetails {
@@ -67,8 +67,8 @@ const ContactForm: React.FC = () => {
 
     const countryOptions: (keyof TCountries)[] = Object.keys(countries) as (keyof TCountries)[];
 
-// Crear un nuevo array con los nombres de los países
-const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries): string => countries[countryCode].name);
+    // Crear un nuevo array con los nombres de los países
+    const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries): string => countries[countryCode].name);
 
     const companyOptions = [
         '1 - 50',
@@ -112,7 +112,7 @@ const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries
         'Viajes y ocio',
         'Venta al por mayor',
     ]
-   
+
 
 
     return (
@@ -178,7 +178,7 @@ const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries
                         className={`w-full rounded-xl border-none  bg-[#f2f2f2] font-medium text-[16px] pl-3 my-2  py-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500`}
                     />
                 </div>
-                <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
+               {/*    <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                     <div className="row">
                         <label
                             htmlFor={"name"}
@@ -194,7 +194,7 @@ const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries
                         />
                     </div>
                     <CustomSelect onChange={(e) => onFormUpdate("country", e.target.value)} options={countryNames} value={formDetails.country} label="Pais" />
-                </div>
+                </div>*/}
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                     <div className="row">
                         <label
@@ -212,7 +212,7 @@ const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries
                     </div>
                     <CustomSelect onChange={(e) => onFormUpdate("companySize", e.target.value)} options={companyOptions} value={formDetails.companySize} label="Tamaño de la compañía" />
                 </div>
-                <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
+                {/* <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
                     <div className="row">
                         <label
                             htmlFor={"jobTitle"}
@@ -228,7 +228,7 @@ const countryNames: string[] = countryOptions.map((countryCode: keyof TCountries
                         />
                     </div>
                     <CustomSelect onChange={(e) => onFormUpdate("industry", e.target.value)} options={industryOptions} value={formDetails.industry} label="Industria" />
-                </div>
+                </div> */}
                 <div className='flex gap-4'>
                     <input
                         id="comments"
