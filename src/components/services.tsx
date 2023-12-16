@@ -16,9 +16,9 @@ interface Props {
 
 const Services: React.FC<Props> = ({ colorText }) => {
     let products = [
-        { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "ORDERS", description: 'Simplificamos la manera en que tus clientes realizan pedidos', hrefa: './orders'},
-        { id: 2, alt: "imagen de gafas de realidad virtual", src: 'metaverso.svg', title: "EFICIENCIA", description: 'Tus trabajadores más eficientes en la atención del cliente', hrefa: './eficiencia' },
-        { id: 3, alt: "imagen de chatbot", src: 'chatbot.svg', title: "ATENCION 24/7", description: 'Programación de chat de WhatsApp para brindar una mejor atención al cliente', hrefa: './atencion' },
+        { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "CMS vs. Diseño Web Personalizado", date: '16 de diciembre de 2023', hrefa: './blog/cms-vs-desarrollo-web'},
+        { id: 2, alt: "imagen de gafas de realidad virtual", src: 'metaverso.svg', title: "¿Cómo la personalización de experiencia impacta negocios?", date: '29 de noviembre de 2023', hrefa: './blog/personalizacion' },
+        { id: 3, alt: "imagen de chatbot", src: 'chatbot.svg', title: "ATENCION 24/7", date: 'Programación de chat de WhatsApp para brindar una mejor atención al cliente', hrefa: './atencion' },
     ]
 
     return (

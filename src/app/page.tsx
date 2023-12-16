@@ -3,6 +3,7 @@ import Footer from '@/components/footer'
 import Header from '@/components/header'
 import HomeSection from '@/components/home-section'
 import Mission from '@/components/mission'
+import Services from '@/components/services'
 
 
 const sections = [
@@ -44,6 +45,7 @@ export default function Home() {
   return (
     <div className='bg-black text-white'>
       <Header />
+      <Services colorText='white'/> 
       <Mission/>
 
 
@@ -51,7 +53,7 @@ export default function Home() {
         return <HomeSection key={section.id} card={section} />
       })} 
       <Cx />
-  {/* <Services colorText='white'/> */}
+
       <Footer bgClass='black' colorText='[#FFFFFF]' src='/logo5.svg' />
     </div>
   )
