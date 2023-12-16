@@ -5,6 +5,9 @@ import Image from 'next/image'
 import Services from '@/components/services'
 import { EB_Garamond } from "next/font/google";
 import Footer from '@/components/footer'
+import NavBar from '@/components/nav-bar'
+import webDevelop from '../../../../public/web-develop.png'
+import cmsDevelop from '../../../../public/cms-develop.png'
 
 const garamond = EB_Garamond({
     display: "swap",
@@ -18,8 +21,8 @@ const Page = () => {
     let customization = {
         id: 1,
         logo: '/logo-blue.svg',
-        title: "Cómo la personalización excepcional puede generar valor para tu negocio",
-        subtitle: "En un mundo cada vez más competitivo, las empresas se esfuerzan por ofrecer una experiencia de cliente excepcional. La personalización es una de las tendencias más importantes en este ámbito, ya que permite a las empresas adaptar sus productos y servicios a las necesidades y preferencias individuales de los clientes.",
+        title: "Landing Pages: CMS vs. Desarrollo Web",
+        subtitle: "Las landing pages son páginas web diseñadas para convertir visitantes en clientes potenciales. Son una parte esencial de cualquier estrategia de marketing digital y pueden ser muy efectivas para aumentar las conversiones.",
         src: "/customization.jpg",
         alt: "grupo de personas utilizando tecnologia",
         enfoque1: "Mejora la experiencia del cliente",
@@ -51,17 +54,8 @@ const Page = () => {
     return (
         <div className='bg-white '>
             <div className=' bg-[#FFF0D6] '>
-                <div className='fixed top-0 w-full z-10'>
-                    <div className={` flex justify-center items-center py-4 md:py-8 ${bgColor}`}>
-                        <Link href={'/'}>
-                            <Image
-                                alt='logo de graphic web'
-                                src={customization.logo}
-                                width={200}
-                                height={300}
-                                className="text-[#0000FF]" />
-                        </Link>
-                    </div>
+                <div className={` ${bgColor} fixed top-0 w-full z-10`} >
+                    <NavBar logo='logo5black.svg' />
                 </div>
                 <div className='flex flex-col gap-4 flex-1 m-4 pb-10'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 pt-60 md:pb-20'>
@@ -79,64 +73,100 @@ const Page = () => {
                         </div>
                     </div>
 
-                    <Image
-                        alt={customization.src}
-                        src={customization.src}
-                        width={2500}
-                        height={200}
-                    />
+                    <div className='flex flex-col items-center md:flex-row'>
+                        <div className='text-center'>
+                            <span className='text-lg font-bold'>Desarrollo web profesional</span>
+                            <Image alt='icono de diseño web personalizado' src={webDevelop} width={500} height={500} />
+                        </div>
+                        <span className='text-[100px] m-4 border-2 border-dashed border-gray-500 rounded-full w-[170px] h-[170px] flex justify-center text-center'>vs</span>
+                        <Image alt='icono de diseño cms' src={cmsDevelop} width={500} height={500} />
+                    </div>
                 </div>
             </div>
             <div className='bg-white grid grid-col md:grid-cols-2 mx-4 gap-4'>
-                <div className=''>
-                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} > La personalización de la experiecia del cliente agrega valor en tu negocio</h2>
-                    <ul className='text-black font-extralight flex flex-col gap-4'>
-                        <li>
-                            <strong>Mejora la satisfacción del cliente</strong>: Los clientes están más satisfechos cuando sienten que las empresas entienden sus necesidades y preferencias. La personalización puede ayudar a las empresas a crear una experiencia más personalizada y relevante para cada cliente.
-                        </li>
-                        <li>
-                            <strong>Aumenta la lealtad del cliente</strong>: Los clientes satisfechos son más propensos a repetir negocios con una empresa. La personalización puede ayudar a las empresas a crear relaciones más sólidas con sus clientes y aumentar la lealtad.
-                        </li>
-                        <li>
-                            <strong>Reduce los costes</strong>: La personalización puede ayudar a las empresas a optimizar sus procesos y reducir los costes. Por ejemplo, la personalización puede ayudar a las empresas a dirigir sus esfuerzos de marketing a los clientes más propensos a comprar sus productos o servicios.
-                        </li>
-                    </ul>
-                </div>
                 <div>
-                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} >Cómo implementar la personalización en tu empresa</h2>
+                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} >Desarollo web</h2>
                     <p>
-                        Para implementar la personalización excepcional, las empresas deben recopilar datos sobre sus clientes. Estos datos pueden incluir información demográfica, historial de compras, intereses y preferencias. Las empresas pueden utilizar estos datos para crear perfiles de clientes y adaptar sus productos y servicios en consecuencia.
+                        El diseño web personalizado es el proceso de crear una página web desde cero, utilizando código personalizado. Esta opción ofrece un mayor control sobre el diseño y el funcionamiento de tu landing page.
                     </p>
-                    <p>
-                        Existen muchas maneras de personalizar la experiencia del cliente. Algunas técnicas comunes incluyen:
-                    </p>
-                    <ul className='text-black font-extralight flex flex-col gap-4'>
+                    <h4 className='font-black pt-2'>Ventajas del desarrollo web personalizado</h4>
+                    <ul className='text-black font-light flex flex-col gap-4'>
                         <li>
-                            <strong>Recomendaciones personalizadas</strong>: Las empresas pueden utilizar la personalización para recomendar productos y servicios que sean relevantes para las necesidades y preferencias de los clientes.
+                            Ofrece un control total sobre el diseño y el funcionamiento de tu landing page.
                         </li>
                         <li>
-                            <strong>Contenido personalizado</strong>: Las empresas pueden utilizar la personalización para crear contenido que sea relevante para los intereses de los clientes.
+                            Es más escalable que los CMS, especialmente si tienes un gran volumen de tráfico.
                         </li>
                         <li>
-                            <strong>Ofertas personalizadas</strong>: Las empresas pueden utilizar la personalización para ofrecer ofertas especiales que sean atractivas para los clientes individuales.
+                            Puede ser más atractivo y profesional que las landing pages creadas con un CMS.
+                        </li>
+                    </ul>
+                    <h4 className='font-black pt-2'>Deventajas del desarrollo web personalizado</h4>
+                    <ul className='text-black font-light flex flex-col gap-4'>
+                        <li>
+                            Es más complejo y requiere conocimientos de programación.
+                        </li>
+                        <li>
+                            Puede ser más caro que utilizar un CMS.
+                        </li>
+                        <li>
+                            El desarrollo web profesional puede llevar más tiempo que utilizar un CMS. Esto se debe a que el desarrollo web profesional requiere más planificación, diseño y codificación.
                         </li>
                     </ul>
                 </div>
-                <section className='py-10'>
-                    <p>
-                        La personalización excepcional es una herramienta poderosa que puede ayudar a las empresas a generar valor para su negocio. Al recopilar datos sobre sus clientes y adaptar sus productos y servicios en consecuencia, las empresas pueden crear una experiencia de cliente más personalizada, satisfactoria y rentable.
-                    </p>
-                    <p className='my-10'>
-                        Descargarga el ebook para ver las ultimas actualizaciones de Cómo crear una experiencia de cliente única y memorable.
-                    </p>
-                </section>
+                <div className=''>
+                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} >CMS</h2>
+                    <p>Un CMS, o sistema de gestión de contenido, es una plataforma que te permite crear y gestionar contenido web sin necesidad de conocimientos de programación. Existen muchos CMS populares disponibles, como WordPress, Wix y Squarespace.</p>
+                    <h4 className='font-black pt-2'>Ventajas de utilizar un CMS</h4>
+                    <ul className='text-black font-extralight flex flex-col gap-4'>
+                        <li>
+                            - Son relativamente fáciles de usar, incluso para personas sin conocimientos de programación.
+                        </li>
+                        <li>
+                            - Son flexibles y te permiten personalizar tu landing page según tus necesidades.
+                        </li>
+                        <li>
+                            - Existen muchos temas y plugins disponibles que pueden ayudarte a crear una landing page profesional.
+                        </li>
+                    </ul>
+                    <h4 className='font-black pt-2'>Desventajas de utilizar un CMS</h4>
+                    <ul className='text-black font-light flex flex-col gap-4'>
+                        <li>
+                            - Pueden ser menos flexibles que el diseño web personalizado.
+                        </li>
+                        <li>
+                            - Pueden ser más difíciles de escalar, especialmente si tienes un gran volumen de tráfico.
+                        </li>
+                        <li>
+                            - Seguridad: Los CMS pueden ser vulnerables a los ataques cibernéticos. Esto se debe a que los CMS suelen utilizar código abierto, lo que significa que está disponible para que cualquiera lo vea y lo modifique.
+                        </li>
+                        <li>
+                            - Los CMS pueden ser limitados en cuanto a la cantidad de personalización que permiten.
+                        </li>
+                        <li>
+                            - El soporte para CMS puede ser limitado. Esto se debe a que los CMS son utilizados por millones de personas en todo el mundo, lo que puede dificultar que los desarrolladores de CMS proporcionen soporte personalizado. Si necesita ayuda con su página web, es posible que tenga que recurrir a la comunidad en línea para obtener ayuda.
+                        </li>
+                    </ul>
+                </div>
+
 
             </div>
-            <a href='/ebooks/ebook-graphicweb.pdf' download="graphicweb.pdf" className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
-                <p className='text-center text-black font-[16px] text-s'>Descargar ebook</p>
+            <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
+                <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >¿Cuál es la mejor opción para ti?
+
+                </h2>
+                <div>
+
+                    <p>La mejor opción para ti dependerá de tus necesidades específicas. Si buscas una opción fácil de usar y flexible, un CMS puede ser una buena opción. Si buscas un mayor control sobre el diseño y el funcionamiento de tu landing page, el diseño web personalizado puede ser la mejor opción.
+
+                        En última instancia, la mejor manera de decidir cuál es la mejor opción para ti es experimentar con ambas. Crea una landing page con un CMS y otra con diseño web personalizado y compara los resultados.</p>
+                </div>
+            </section>
+            <a href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
+                <p className='text-center text-black font-[16px] text-s'>Contacto</p>
 
             </a>
-            <Services colorText='black' />
+
 
             <Footer bgClass='[#FFF0D6]' colorText='[#0000FF]' src='/logo-blue.svg' />
 
