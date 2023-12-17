@@ -7,7 +7,7 @@ type services = {
     alt: string
     src: string
     title: string;
-    description: string
+    date: string
     hrefa: string
     
 
@@ -23,7 +23,7 @@ const CardServices: React.FC<CardServiceProps> = ({ cardProduct }) => {
                 <Image alt={cardProduct.alt} src={cardProduct.src} width={1000} height={1000} />
                 
                     <h3 className='font-medium text-xl pb-1 py-2'>{cardProduct.title}</h3>
-                    <p>{cardProduct.description}</p>
+                    <p>{cardProduct.date}</p>
                 
             </Link>
         </div>
