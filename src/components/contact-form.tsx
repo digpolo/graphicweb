@@ -195,7 +195,7 @@ const ContactForm: React.FC = () => {
                     </div>
                     <CustomSelect onChange={(e) => onFormUpdate("country", e.target.value)} options={countryNames} value={formDetails.country} label="Pais" />
                 </div>*/}
-                <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
+                <div className="flex flex-col  gap-4">
                     <div className="row">
                         <label
                             htmlFor={"name"}
