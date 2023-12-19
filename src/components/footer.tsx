@@ -47,13 +47,13 @@ const Footer: React.FC<CustomBackgroundProps> = ({ bgClass, colorText, src }) =>
                     <h2 className='py-3 font-black text-[16px]'>Contacto</h2>
                     <ul className='gap-3 flex flex-col font-light'>
                     <li>
-                            <Link href='/pagina-web'>
+                            <Link href='https://maps.app.goo.gl/4i884VCEheYm7Xwz5' target='blanck'>
                                 Cra. 13 # 93-35, Localidad de Chapinero
                                 Bogotá, Colombia
                             </Link>
                         </li>
                         <li>
-                            <Link href='/tienda-virtual'>
+                            <Link href='mailto:negocios@thegraphicweb.com'>
                             negocios@thegraphicweb.com
                             </Link>
                         </li>

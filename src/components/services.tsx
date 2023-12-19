@@ -23,7 +23,7 @@ const Services: React.FC<Props> = ({ colorText }) => {
 
     return (
         <div className={`mx-4 `}>
-            <h2 className={`${garamond.variable} text-[${colorText}] font-garamond text-3xl lg:text-6xl py-4 border-t border-white`} >Descubre como podemos potenciar tu empresa</h2>
+            <h2 className={`${garamond.variable} text-[${colorText}] font-garamond text-3xl lg:text-6xl py-4 border-t border-white`} >Últimas actualizaciones</h2>
             <div className='lg-4  md:flex gap-10'>
                 {products.map(product => {
                     return <CardServices key={product.id} cardProduct={product} />

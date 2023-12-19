@@ -7,7 +7,7 @@ const Location = () => {
     return (
         <div className='mt-16'>
             <div className='w-full'>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1988.2689432038817!2d-74.05092931998644!3d4.676142550184563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ba5413e676b%3A0xb554fa8be67b3d01!2sCounity%20-%20Coworking%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1699812568609!5m2!1ses!2sco" width="1820" height="450" loading="lazy" className='w-full' ></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d576.76938750024!2d-74.04998451571396!3d4.675757339222344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b9ea2ca9e27%3A0x519fdbe66d10b917!2sGraphicWeb!5e0!3m2!1ses-419!2sco!4v1703025482321!5m2!1ses-419!2sco" width="600" height="450" className="border:0;"  loading="lazy"></iframe>
             </div>
             {/* <address className='flex flex-col gap-2 not-italic py-10'>
                 <div className='flex gap-4'>
