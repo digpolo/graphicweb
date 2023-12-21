@@ -1,0 +1,73 @@
+[debug] [2023-12-21T04:27:19.352Z] ----------------------------------------------------------------------
+[debug] [2023-12-21T04:27:19.354Z] Command:       /home/diego/.nvm/versions/node/v20.8.1/bin/node /home/diego/.nvm/versions/node/v20.8.1/bin/firebase deploy
+[debug] [2023-12-21T04:27:19.354Z] CLI Version:   13.0.2
+[debug] [2023-12-21T04:27:19.354Z] Platform:      linux
+[debug] [2023-12-21T04:27:19.354Z] Node Version:  v20.8.1
+[debug] [2023-12-21T04:27:19.354Z] Time:          Wed Dec 20 2023 23:27:19 GMT-0500 (Colombia Standard Time)
+[debug] [2023-12-21T04:27:19.354Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-21T04:27:19.422Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-21T04:27:19.422Z] > authorizing via signed-in user (diegopolodev@gmail.com)
+[debug] [2023-12-21T04:27:19.422Z] [iam] checking project graphicweb-2d251 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-21T04:27:19.423Z] > refreshing access token with scopes: []
+[debug] [2023-12-21T04:27:19.425Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-12-21T04:27:19.425Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-21T04:27:20.808Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-12-21T04:27:20.808Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-21T04:27:20.824Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions [none]
+[debug] [2023-12-21T04:27:20.824Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions x-goog-quota-user=projects/graphicweb-2d251
+[debug] [2023-12-21T04:27:20.824Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-21T04:27:21.720Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions 200
+[debug] [2023-12-21T04:27:21.720Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-21T04:27:21.721Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/graphicweb-2d251/serviceAccounts/graphicweb-2d251@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-12-21T04:27:21.721Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/graphicweb-2d251/serviceAccounts/graphicweb-2d251@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-12-21T04:27:23.773Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/graphicweb-2d251/serviceAccounts/graphicweb-2d251@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-12-21T04:27:23.774Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/graphicweb-2d251/serviceAccounts/graphicweb-2d251@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-12-21T04:27:23.775Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/graphicweb-2d251 [none]
+[debug] [2023-12-21T04:27:30.633Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/graphicweb-2d251 200
+[debug] [2023-12-21T04:27:30.633Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/graphicweb-2d251 {"projectId":"graphicweb-2d251","projectNumber":"216355403940","displayName":"graphicweb","name":"projects/graphicweb-2d251","resources":{"hostingSite":"graphicweb-2d251"},"state":"ACTIVE","etag":"1_44a11d1f-ef2d-408f-87e9-b6ee6703ff87"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-21T04:27:36.019Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/graphicweb-2d251/sites/graphicweb-2d251 [none]
+[debug] [2023-12-21T04:49:37.832Z] ----------------------------------------------------------------------
+[debug] [2023-12-21T04:49:37.834Z] Command:       /home/diego/.nvm/versions/node/v20.8.1/bin/node /home/diego/.nvm/versions/node/v20.8.1/bin/firebase deploy
+[debug] [2023-12-21T04:49:37.834Z] CLI Version:   13.0.2
+[debug] [2023-12-21T04:49:37.835Z] Platform:      linux
+[debug] [2023-12-21T04:49:37.835Z] Node Version:  v20.8.1
+[debug] [2023-12-21T04:49:37.835Z] Time:          Wed Dec 20 2023 23:49:37 GMT-0500 (Colombia Standard Time)
+[debug] [2023-12-21T04:49:37.835Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-21T04:49:37.893Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-21T04:49:37.893Z] > authorizing via signed-in user (diegopolodev@gmail.com)
+[debug] [2023-12-21T04:49:37.894Z] [iam] checking project graphicweb-2d251 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-21T04:49:37.895Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions [none]
+[debug] [2023-12-21T04:49:37.895Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions x-goog-quota-user=projects/graphicweb-2d251
+[debug] [2023-12-21T04:49:37.896Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-21T04:49:43.110Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions 200
+[debug] [2023-12-21T04:49:43.111Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/graphicweb-2d251:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-21T04:49:43.112Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/graphicweb-2d251/serviceAccounts/graphicweb-2d251@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-12-21T04:49:43.112Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/graphicweb-2d251/serviceAccounts/graphicweb-2d251@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-12-21T04:49:43.721Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/graphicweb-2d251/serviceAccounts/graphicweb-2d251@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-12-21T04:49:43.721Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/graphicweb-2d251/serviceAccounts/graphicweb-2d251@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-12-21T04:49:43.722Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/graphicweb-2d251 [none]
+[debug] [2023-12-21T04:49:44.217Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/graphicweb-2d251 200
+[debug] [2023-12-21T04:49:44.217Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/graphicweb-2d251 {"projectId":"graphicweb-2d251","projectNumber":"216355403940","displayName":"graphicweb","name":"projects/graphicweb-2d251","resources":{"hostingSite":"graphicweb-2d251"},"state":"ACTIVE","etag":"1_44a11d1f-ef2d-408f-87e9-b6ee6703ff87"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-21T04:49:49.609Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/graphicweb-2d251/sites/graphicweb-2d251 [none]
