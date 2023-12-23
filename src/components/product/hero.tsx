@@ -18,6 +18,8 @@ type cxPage = {
   enfoque4: string
   enfoque5: string
   enfoque6: string
+  shouldImg: boolean
+  shouldContact: boolean
 }
 
 interface Props {
@@ -69,6 +71,7 @@ const Hero: React.FC<Props> = ({ card }) => {
                 </Link>
               </div>
             </div>
+            {card.shouldImg ? (
             <div className='flex justify-center'>
               <Image
                 alt={card.src}
@@ -77,6 +80,7 @@ const Hero: React.FC<Props> = ({ card }) => {
                 height={2500}
               />
             </div>
+            ) :  null}
           </div>
         </div>
       </div>
