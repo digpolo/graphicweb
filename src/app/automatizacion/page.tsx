@@ -103,7 +103,7 @@ const Page = () => {
       <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
         <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
       </a>
-      <Services colorText='black' />
+      <Services/>
       <Footer bgClass='[#FEE6FF]' colorText='[#2D7129]' src='/logo-green.svg' />
     </div>
   )

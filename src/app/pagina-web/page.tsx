@@ -31,7 +31,9 @@ let product = {
   enfoque3: "Reduce los costes de marketing",
   enfoque4: "Integración con múltiples canales",
   enfoque5: "Datos unificados",
-  enfoque6: "Mayor competitividad"
+  enfoque6: "Mayor competitividad",
+  shouldImg: true,
+  shouldContact: true
 }
 
 let basic = {

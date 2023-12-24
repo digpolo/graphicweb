@@ -58,7 +58,7 @@ const Hero: React.FC<Props> = ({ card }) => {
     <div className='bg-black'>
       <div className='bg-black'>
         <div className={` ${bgColor} fixed top-0 w-full z-10 text-white`} >
-          <NavBar logo='logo5.svg' />
+          <NavBar logo='logo5.svg' color=''/>
         </div>
         <div className='flex flex-col  gap-4 flex-1 mx-4 pb-10'>
           <div className='grid grid-cols-1 lg:grid-cols-1 pt-60 md:pb-20'>
