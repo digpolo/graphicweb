@@ -1,10 +1,11 @@
 'use client'
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import Services from '@/components/services'
 import { EB_Garamond } from "next/font/google";
 import Footer from '@/components/footer'
+import NavBar from '@/components/nav-bar'
+import logo from '../../../../public/logo-blue.svg'
 
 const garamond = EB_Garamond({
     display: "swap",
@@ -49,20 +50,12 @@ const Page = () => {
 
 
     return (
-        <div className='bg-white '>
+        
+        <div className=''>
             <div className=' bg-[#FFF0D6] '>
-                <div className='fixed top-0 w-full z-10'>
-                    <div className={` flex justify-center items-center py-4 md:py-8 ${bgColor}`}>
-                        <Link href={'/'}>
-                            <Image
-                                alt='logo de graphic web'
-                                src={customization.logo}
-                                width={200}
-                                height={300}
-                                className="text-[#0000FF]" />
-                        </Link>
-                    </div>
-                </div>
+            <div className={` ${bgColor} fixed top-0 w-full z-10 text-[#0000FF]`} >
+                <NavBar logo={logo} color='[#0000FF]'/>
+            </div>
                 <div className='flex flex-col gap-4 flex-1 m-4 pb-10'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 pt-60 md:pb-20'>
                         <h1 className='font-medium text-[35px] md:text-[60px]  text-[#0000FF] pr-10'>{customization.title}</h1>
@@ -136,7 +129,7 @@ const Page = () => {
                 <p className='text-center text-black font-[16px] text-s'>Descargar ebook</p>
 
             </a>
-            <Services colorText='black' />
+            <Services colorText='white' />
 
             <Footer bgClass='[#FFF0D6]' colorText='[#0000FF]' src='/logo-blue.svg' />
 

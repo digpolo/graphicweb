@@ -17,7 +17,8 @@ let product = {
     enfoque4: "Integración con múltiples canales",
     enfoque5: "Datos unificados",
     enfoque6: "Mayor competitividad",
-    shouldImg: false
+    shouldImg: false,
+    shouldContact: false
   }
   
 
