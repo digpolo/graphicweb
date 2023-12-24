@@ -58,7 +58,10 @@ const Page = () => {
             </div>
         <div className='flex flex-col gap-4 flex-1 m-4 pb-10'>
           <div className='grid grid-cols-1 lg:grid-cols-2 pt-60 md:pb-20'>
+            <div className='flex flex-col'>
+              <span className='text-white'>Blog</span>
             <h1 className='font-medium text-[35px] md:text-[60px]  text-white pr-10'>{customization.title}</h1>
+            </div>
             <div>
               <h2 className='text-white text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
               <a href='/contacto' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' target="_blank">
