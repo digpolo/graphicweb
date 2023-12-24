@@ -114,7 +114,7 @@ const Page = () => {
         <p className='text-center text-black font-[16px] text-s'>Contactarme</p>
       </a> */}
       <Services />
-      <Footer bgClass='[#0000FF]' colorText='white' src='/logo.svg' />
+      <Footer bgClass='[#0000FF]' colorText='white' src={logo} />
     </div>
   )
 }
