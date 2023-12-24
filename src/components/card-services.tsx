@@ -21,10 +21,8 @@ const CardServices: React.FC<CardServiceProps> = ({ cardProduct }) => {
         <div className='py-4'>
             <Link href={cardProduct.hrefa}>
                 <Image alt={cardProduct.alt} src={cardProduct.src} width={1000} height={1000} />
-                
                     <h3 className='font-medium text-xl pb-1 py-2'>{cardProduct.title}</h3>
                     <p>{cardProduct.date}</p>
-                
             </Link>
         </div>
     )
