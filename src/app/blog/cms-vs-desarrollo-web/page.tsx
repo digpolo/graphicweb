@@ -166,7 +166,7 @@ const Page = () => {
 
             </a>
             <div>
-                <Services colorText='black' />
+                <Services  />
             </div>
             <Footer bgClass='[#FFF0D6]' colorText='[#0000FF]' src='/logo-blue.svg' />
 

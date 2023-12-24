@@ -129,7 +129,7 @@ const Page = () => {
                 <p className='text-center text-black font-[16px] text-s'>Descargar ebook</p>
 
             </a>
-            <Services colorText='white' />
+            <Services  />
 
             <Footer bgClass='[#FFF0D6]' colorText='[#0000FF]' src='/logo-blue.svg' />
 

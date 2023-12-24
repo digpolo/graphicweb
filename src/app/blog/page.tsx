@@ -26,7 +26,7 @@ const Page = () => {
   return (
     <div>
         <Hero card={product} />
-        <Services colorText='black'/>
+        <Services />
         <Footer bgClass='white' colorText='black' src={logo}/>
     </div>
   )
