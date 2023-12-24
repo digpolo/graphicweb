@@ -156,13 +156,13 @@ const Page = () => {
                 <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >¿Cuál es la mejor opción para ti?
                 </h2>
                 <div>
-                    <p>La mejor opción para ti dependerá de tus necesidades específicas. Si buscas una opción fácil de usar y flexible, un CMS puede ser una buena opción. Si buscas un mayor control sobre el diseño y el funcionamiento de tu landing page, el diseño web personalizado puede ser la mejor opción.
+                    <p className='pt-10'>La mejor opción para ti dependerá de tus necesidades específicas. Si buscas una opción fácil de usar y flexible, un CMS puede ser una buena opción. Si buscas un mayor control sobre el diseño y el funcionamiento de tu landing page, el diseño web personalizado puede ser la mejor opción.
 
                         En última instancia, la mejor manera de decidir cuál es la mejor opción para ti es experimentar con ambas. Crea una landing page con un CMS y otra con diseño web personalizado y compara los resultados.</p>
                 </div>
             </section>
             <a href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
-                <p className='text-center text-black font-[16px] text-s'>Contacto</p>
+                <p className='text-center text-black font-[16px] text-s'>Contactarme</p>
 
             </a>
             <div>

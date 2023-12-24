@@ -19,7 +19,7 @@ const Page = () => {
     let customization = {
         id: 1,
         logo: '/logo-blue.svg',
-        title: "Cómo la personalización excepcional puede generar valor para tu negocio",
+        title: "Omnicanalidad en tecnología: ¿qué es y cómo implementarla?",
         subtitle: "En un mundo cada vez más competitivo, las empresas se esfuerzan por ofrecer una experiencia de cliente excepcional. La personalización es una de las tendencias más importantes en este ámbito, ya que permite a las empresas adaptar sus productos y servicios a las necesidades y preferencias individuales de los clientes.",
         src: "/customization.jpg",
         alt: "grupo de personas utilizando tecnologia",
@@ -67,7 +67,6 @@ const Page = () => {
                             </p>
                             <a href='/ebooks/ebook-graphicweb.pdf' download="graphicweb.pdf" className='my-8 flex justify-center py-1 text-[#0000FF] border border-[#0000FF] w-[300px]' target="_blank">
                                 <p className='font-[16px] text-s'>Descargar ebook</p>
-
                             </a>
                         </div>
                     </div>

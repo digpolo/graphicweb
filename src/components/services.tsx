@@ -5,7 +5,7 @@ const Services = () => {
     let products = [
         { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "CMS vs. Diseño Web Personalizado", date: '16 de diciembre de 2023', hrefa: './blog/cms-vs-desarrollo-web'},
         { id: 2, alt: "imagen de gafas de realidad virtual", src: '/metaverso.svg', title: "¿Cómo la personalización de experiencia impacta negocios?", date: '29 de noviembre de 2023', hrefa: './blog/personalizacion' },
-        { id: 3, alt: "imagen de chatbot", src: '/chatbot.svg', title: "ATENCION 24/7", date: 'Programación de chat de WhatsApp para brindar una mejor atención al cliente', hrefa: './atencion' },
+        { id: 3, alt: "imagen de chatbot", src: '/chatbot.svg', title: "Omnicanalidad en tecnología: ¿qué es y cómo implementarla?", date: '4 de agosto de 2023', hrefa: './blog/omnicanalidad' },
     ]
 
     return (
