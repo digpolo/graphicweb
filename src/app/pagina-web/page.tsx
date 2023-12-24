@@ -31,7 +31,9 @@ let product = {
   enfoque3: "Reduce los costes de marketing",
   enfoque4: "Integración con múltiples canales",
   enfoque5: "Datos unificados",
-  enfoque6: "Mayor competitividad"
+  enfoque6: "Mayor competitividad",
+  shouldImg: true,
+  shouldContact: true
 }
 
 let basic = {
@@ -136,9 +138,9 @@ const Page = () => {
           <p>Disfruta de modificaciones gratuitas mensuales para asegurarte de que tu sitio siempre refleje tus preferencias y esté actualizado. Podrás realizar ajustes no estructurales, actualizar textos y elementos multimedia para mantener tu web al día.</p>
         </div>
       </section>
-      <div className='mx-4'>
+      {/* <div className='mx-4'>
         <Pricing />
-      </div>
+      </div> */}
       <div className='grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-10'>
         <ContactForm />
         <Location />

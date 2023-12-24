@@ -1,11 +1,11 @@
 'use client'
-import CxPage from '@/components/cx-page'
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import Services from '@/components/services'
 import { EB_Garamond } from "next/font/google"
 import Footer from '@/components/footer'
+import NavBar from '@/components/nav-bar'
+import logo from '../../../../public/logo5.svg'
 
 
 const garamond = EB_Garamond({
@@ -53,25 +53,16 @@ const Page = () => {
   return (
     <div className='bg-white'>
       <div className='  bg-[#0000FF]'>
-        <div className='fixed top-0 w-full z-10'>
-          <div className={` flex justify-center items-center py-4 md:py-8 ${bgColor}`}>
-            <Link href={'/'}>
-              <Image
-                alt='logo graphic web'
-                src={customization.logo}
-                width={200}
-                height={300}
-                className="text-[#0000FF]" />
-            </Link>
-          </div>
-        </div>
+      <div className={` ${bgColor} fixed top-0 w-full z-10 text-[#FFFFFF]`} >
+                <NavBar logo={logo} color='white'/>
+            </div>
         <div className='flex flex-col gap-4 flex-1 m-4 pb-10'>
           <div className='grid grid-cols-1 lg:grid-cols-2 pt-60 md:pb-20'>
             <h1 className='font-medium text-[35px] md:text-[60px]  text-white pr-10'>{customization.title}</h1>
             <div>
               <h2 className='text-white text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
-              <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' target="_blank">
-                <p className='font-[16px] text-s'>Solicitar producto</p>
+              <a href='/contacto' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' target="_blank">
+                <p className='font-[16px] text-s'>Contactarme</p>
               </a>
             </div>
           </div>
@@ -83,6 +74,24 @@ const Page = () => {
           />
         </div>
       </div>
+      <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 items-center'>
+                <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >Introducción
+                </h2>
+                <div>
+                    <p className='text-black font-extralight pt-10'>
+                    En la actualidad, los consumidores están cada vez más acostumbrados a interactuar con las marcas a través de diferentes canales, como sitios web, aplicaciones móviles, redes sociales, tiendas físicas, etc. Esta tendencia ha llevado al desarrollo de la omnicanalidad, una estrategia que busca brindar a los clientes una experiencia fluida y consistente a través de todos los canales disponibles.
+                    </p>
+                </div>
+            </section>
+            <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
+                <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >Definición de omnicanalidad:
+                </h2>
+                <div>
+                    <p className='text-black font-extralight pt-10'>
+                    La omnicanalidad se puede definir como la integración de los diferentes canales de comunicación y venta de una empresa para ofrecer una experiencia única y coherente al cliente. El objetivo es que el cliente pueda interactuar con la marca de la misma manera, independientemente del canal que utilice.
+                    </p>
+                </div>
+            </section>
       <div className='bg-white grid grid-col md:grid-cols-2 mx-4'>
         <div className=''>
           <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} >Áreas de enfoque</h2>
@@ -101,10 +110,10 @@ const Page = () => {
           </ul>
         </div>
       </div>
-      <a href='https://wa.me/573127550201?text=Hola,%20deseo%20solicitar%20un%20producto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
-        <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
-      </a>
-      <Services colorText='black' />
+      {/* <a href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
+        <p className='text-center text-black font-[16px] text-s'>Contactarme</p>
+      </a> */}
+      <Services />
       <Footer bgClass='[#0000FF]' colorText='white' src='/logo.svg' />
     </div>
   )

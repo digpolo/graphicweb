@@ -19,7 +19,9 @@ let product = {
     enfoque3: "Reduce los costes de marketing",
     enfoque4: "Integración con múltiples canales",
     enfoque5: "Datos unificados",
-    enfoque6: "Mayor competitividad"
+    enfoque6: "Mayor competitividad",
+    shouldImg: true,
+  shouldContact: true
   }
 
   let basic = {
@@ -119,7 +121,7 @@ const Page = () => {
         <Hero card={product} />
         <Content/>
         <div className='mx-4'>
-        <Pricing />
+        {/* <Pricing /> */}
       </div>
         <div className='grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-10'>
         <ContactForm />

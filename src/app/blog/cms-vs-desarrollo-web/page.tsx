@@ -9,6 +9,7 @@ import NavBar from '@/components/nav-bar'
 import webDevelop from '../../../../public/web-develop.png'
 import cmsDevelop from '../../../../public/cms-develop.png'
 import logo from "../../../../public/logo-blue.svg"
+
 const garamond = EB_Garamond({
     display: "swap",
     weight: ["400", "500", "600", "700"],
@@ -52,10 +53,10 @@ const Page = () => {
 
 
     return (
-        <div className='bg-white '>
+        <div className='bg-white'>
             <div className=' bg-[#FFF0D6] '>
-                <div className={` ${bgColor} fixed top-0 w-full z-10`} >
-                    <NavBar logo={logo} />
+                <div className={`${bgColor} fixed top-0 w-full z-10 text-[#0000FF]`} >
+                    <NavBar logo={logo} color='[#0000FF]' />
                 </div>
                 <div className='flex flex-col gap-4 flex-1 m-4 pb-10'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 pt-60 md:pb-20'>
@@ -64,11 +65,10 @@ const Page = () => {
                             <h2 className='text-[#0000FF] text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
 
                             <p className='my-10 text-[#0000FF]'>
-                                Descargarga el ebook para ver las ultimas actualizaciones de Cómo crear una experiencia de cliente única y memorable.
+                                Descargarga el ebook para ver las ultimas actualizaciones de cómo crear una experiencia de cliente única y memorable.
                             </p>
                             <a href='/ebooks/ebook-graphicweb.pdf' download="graphicweb.pdf" className='my-8 flex justify-center py-1 text-[#0000FF] border border-[#0000FF] w-[300px]' target="_blank">
                                 <p className='font-[16px] text-s'>Descargar ebook</p>
-
                             </a>
                         </div>
                     </div>
@@ -79,7 +79,10 @@ const Page = () => {
                             <Image alt='icono de diseño web personalizado' src={webDevelop} width={500} height={500} />
                         </div>
                         <span className='text-[100px] m-4 border-2 border-dashed border-gray-500 rounded-full w-[170px] h-[170px] flex justify-center text-center'>vs</span>
-                        <Image alt='icono de diseño cms' src={cmsDevelop} width={500} height={500} />
+                        <div className='flex flex-col justify-center items-center'>
+                            <span className='text-lg font-bold'>CMS</span>
+                            <Image alt='icono de diseño cms' src={cmsDevelop} width={500} height={500} />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,26 +151,23 @@ const Page = () => {
                         </li>
                     </ul>
                 </div>
-
-
             </div>
             <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
                 <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >¿Cuál es la mejor opción para ti?
-
                 </h2>
                 <div>
-
-                    <p>La mejor opción para ti dependerá de tus necesidades específicas. Si buscas una opción fácil de usar y flexible, un CMS puede ser una buena opción. Si buscas un mayor control sobre el diseño y el funcionamiento de tu landing page, el diseño web personalizado puede ser la mejor opción.
+                    <p className='pt-10'>La mejor opción para ti dependerá de tus necesidades específicas. Si buscas una opción fácil de usar y flexible, un CMS puede ser una buena opción. Si buscas un mayor control sobre el diseño y el funcionamiento de tu landing page, el diseño web personalizado puede ser la mejor opción.
 
                         En última instancia, la mejor manera de decidir cuál es la mejor opción para ti es experimentar con ambas. Crea una landing page con un CMS y otra con diseño web personalizado y compara los resultados.</p>
                 </div>
             </section>
             <a href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
-                <p className='text-center text-black font-[16px] text-s'>Contacto</p>
+                <p className='text-center text-black font-[16px] text-s'>Contactarme</p>
 
             </a>
-
-
+            <div>
+                <Services  />
+            </div>
             <Footer bgClass='[#FFF0D6]' colorText='[#0000FF]' src='/logo-blue.svg' />
 
         </div>

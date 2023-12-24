@@ -7,99 +7,100 @@ import Image from 'next/image'
 
 interface colorLogo {
   logo: string
+  color: string
 }
 
-const NavBar: React.FC<colorLogo> = ({ logo }) => {
+const NavBar: React.FC<colorLogo> = ({ logo, color }) => {
   let titles = ['Página web', 'Tienda virtual', 'Blog']
   return (
     <Disclosure as="nav" className="">
-    {({ open }) => (
-      <>
-        <div className="mx-4 ">
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center">
-              <Link href={'/'} className="flex-shrink-0">
-                <Image
-                  className="h-8 w-auto"
-                  src={logo}
-                  alt="Your Company"
-                  width={'100'}
-                  height={'100'}
-                />
-              </Link>
-              <div className="hidden sm:ml-6 sm:block">
-                <div className="flex space-x-4">
-                <ul className='flex gap-6'>
-         
-             <li className='flex gap-6 items-center'>
-                 <Link href={'/pagina-web'}>Página web</Link>
-                 <Link href={'/tienda-virtual'}>Tienda online</Link>
-                 {/* <Link href={'/blog'}>Blog</Link> */}
-            </li>
-      
-         </ul>
+      {({ open }) => (
+        <>
+          <div className="mx-4 ">
+            <div className="flex h-16 items-center justify-between">
+              <div className="flex items-center">
+                <Link href={'/'} className="flex-shrink-0">
+                  <Image
+                    className="h-8 w-auto"
+                    src={logo}
+                    alt="Your Company"
+                    width={'100'}
+                    height={'100'}
+                  />
+                </Link>
+                <div className="hidden sm:ml-6 sm:block">
+                  <div className="flex space-x-4">
+                    <ul className='flex gap-6'>
+
+                      <li className='flex gap-6 items-center'>
+                        <Link href={'/pagina-web'}>Página web</Link>
+                        <Link href={'/tienda-virtual'}>Tienda online</Link>
+                        <Link href={'/blog'}>Blog</Link>
+                      </li>
+
+                    </ul>
+                  </div>
                 </div>
               </div>
+              <div className="hidden sm:ml-6 sm:block">
+                <Link href='/contacto' className={`flex justify-center py-1  border border-${color} w-[130px]`} >
+                  <p className='font-[16px] text-s'>Contáctarme</p>
+                </Link>
+              </div>
+              <div className="-mr-2 flex sm:hidden">
+                {/* Mobile menu button */}
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2  hover:text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="absolute -inset-0.5" />
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <h2 className="text-white" aria-hidden="true">Cerrar</h2>
+                  ) : (
+                    <h2 className="text-white" aria-hidden="true">Menu</h2>
+                  )}
+                </Disclosure.Button>
+              </div>
             </div>
-            <div className="hidden sm:ml-6 sm:block">
-            <Link href='/contacto' className=' flex justify-center py-1 text-white border border-white w-[130px]' >
-                      <p className='font-[16px] text-s'>Contáctarme</p>
-       </Link>
-            </div>
-            <div className="-mr-2 flex sm:hidden">
-              {/* Mobile menu button */}
-              <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2  hover:text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                <span className="absolute -inset-0.5" />
-                <span className="sr-only">Open main menu</span>
-                {open ? (
-                  <h2 className="text-white" aria-hidden="true">Cerrar</h2>
-                ) : (
-                  <h2 className="text-white" aria-hidden="true">Menu</h2>
-                )}
+          </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pb-3 pt-2">
+              {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="block rounded-md  px-3 py-2 text-base font-medium text-white"
+              >
+                <Link href={'/pagina-web'}>Página web</Link>
+
               </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >
+                <Link href={'/tienda-virtual'}>Tienda online</Link>
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >
+                <Link href={'/blog'}>Blog</Link>
+
+              </Disclosure.Button>
+
             </div>
-          </div>
-        </div>
+            <div className="border-t border-gray-700 pb-3 pt-4">
 
-        <Disclosure.Panel className="sm:hidden">
-          <div className="space-y-1 px-2 pb-3 pt-2">
-            {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-            <Disclosure.Button
-              as="a"
-              href="#"
-              className="block rounded-md  px-3 py-2 text-base font-medium text-white"
-            >
-              <Link href={'/pagina-web'}>Página web</Link>
-            
-            </Disclosure.Button>
-            <Disclosure.Button
-              as="a"
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >
-              <Link href={'/tienda-virtual'}>Tienda online</Link>
-            </Disclosure.Button>
-            <Disclosure.Button
-              as="a"
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >
-              <Link href={'/blog'}>Blog</Link>
+              <Link href='/contacto' className=' flex justify-center py-1 text-white border border-white w-[130px] mx-4' >
+                <p className='font-[16px] text-s'>Contáctarme</p>
+              </Link>
 
-            </Disclosure.Button>
-            
-          </div>
-          <div className="border-t border-gray-700 pb-3 pt-4">
-            
-          <Link href='/contacto' className=' flex justify-center py-1 text-white border border-white w-[130px] mx-4' >
-         <p className='font-[16px] text-s'>Contáctarme</p>
-       </Link>
-
-          </div>
-        </Disclosure.Panel>
-      </>
-    )}
-  </Disclosure>
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
   )
 }
 

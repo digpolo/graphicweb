@@ -18,6 +18,8 @@ type cxPage = {
   enfoque4: string
   enfoque5: string
   enfoque6: string
+  shouldImg: boolean
+  shouldContact: boolean
 }
 
 interface Props {
@@ -53,22 +55,24 @@ const Hero: React.FC<Props> = ({ card }) => {
 
 
   return (
-    
+    <div className='bg-black'>
       <div className='bg-black'>
-        <div className='bg-black'>
         <div className={` ${bgColor} fixed top-0 w-full z-10 text-white`} >
-            <NavBar logo='logo5.svg'/>
-          </div>
-          <div className='flex flex-col  gap-4 flex-1 mx-4 pb-10'>
-            <div className='grid grid-cols-1 lg:grid-cols-1 pt-60 md:pb-20'>
-              <h1 className='font-medium text-[90px] md:text-[150px]  text-white pr-10'>{card.title}</h1>
-              <div>
-                <h2 className='text-white text-xl md:text-4xl '>{card.subtitle}</h2>
-                <Link href='/contacto' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' >
-                  <p className='font-[16px] text-s'>Contáctame</p>
-                </Link>
-              </div>
+          <NavBar logo='logo5.svg' color=''/>
+        </div>
+        <div className='flex flex-col  gap-4 flex-1 mx-4 pb-10'>
+          <div className='grid grid-cols-1 lg:grid-cols-1 pt-60 md:pb-20'>
+            <h1 className='font-medium text-[90px] md:text-[150px]  text-white pr-10'>{card.title}</h1>
+            <div>
+              <h2 className='text-white text-xl md:text-4xl '>{card.subtitle}</h2>
+              {card.shouldContact ? ( 
+              <Link href='/contacto' className='my-8 flex justify-center py-1 text-white border border-white w-[300px]' >
+                <p className='font-[16px] text-s'>Contáctame</p>
+              </Link>
+              ) : null}
             </div>
+          </div>
+          {card.shouldImg ? (
             <div className='flex justify-center'>
               <Image
                 alt={card.src}
@@ -77,10 +81,11 @@ const Hero: React.FC<Props> = ({ card }) => {
                 height={2500}
               />
             </div>
-          </div>
+          ) : null}
         </div>
       </div>
-    
+    </div>
+
   )
 }
 
