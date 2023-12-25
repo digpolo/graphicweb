@@ -12,7 +12,7 @@ interface colorLogo {
   bg: string
 }
 
-const NavBar: React.FC<colorLogo> = ({ logo, color, bg}) => {
+const NavBar: React.FC<colorLogo> = ({ logo, color, bg }) => {
   let titles = ['Página web', 'Tienda virtual', 'Blog']
   return (
     <Disclosure as="nav" className="">
@@ -45,13 +45,22 @@ const NavBar: React.FC<colorLogo> = ({ logo, color, bg}) => {
                                 aria-hidden="true"
                               />
                             </Menu.Button>
-                            <Menu.Items className={` absolute bg-${bg} mt-10 w-56 origin-top-right  flex flex-col gap-4`}>
-                              <Link href={'/tienda-virtual'}>Landing page</Link>
-                              <Link href={'/tienda-virtual'}>Tienda online</Link>
-                            </Menu.Items>
+                            <Transition
+                              as={Fragment}
+                              enter="transition ease-out duration-100"
+                              enterFrom="transform opacity-0 scale-95"
+                              enterTo="transform opacity-100 scale-100"
+                              leave="transition ease-in duration-75"
+                              leaveFrom="transform opacity-100 scale-100"
+                              leaveTo="transform opacity-0 scale-95"
+                            >
+                              <Menu.Items className={`inline-flex  absolute ${bg} mt-10 px-2 py-2  text-center  flex flex-col gap-4`}>
+                                <Link href={'/tienda-virtual'}>Landing page</Link>
+                                <Link href={'/tienda-virtual'}>Tienda online</Link>
+                              </Menu.Items>
+                            </Transition>
                           </div>
                         </Menu>
-
                         <Link href={'/blog'}>Blog</Link>
                       </li>
 
@@ -79,38 +88,48 @@ const NavBar: React.FC<colorLogo> = ({ logo, color, bg}) => {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+          <Disclosure.Panel className="sm:hidden mx-2">
+            <div className="space-y-1 px-2 pb-3 pt-2 ">
               {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block rounded-md  px-3 py-2 text-base font-medium text-white"
-              >
-                <Link href={'/pagina-web'}>Página web</Link>
+              <Menu as="div" className={`px-3 inline-block text-left w-full`}>
+                <div className='flex flex-col'>
+                  <Menu.Button className="flex w-full">
+                    Nuestros servicios
+                    <ChevronDownIcon
+                      className={`mt-1 ml-1 h-5 w-5 text-${color} hover:text-violet-100`}
+                      aria-hidden="true"
+                    />
+                  </Menu.Button>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className={`inline-flex  ${bg} mt-2  py-2 flex flex-col gap-4`}>
+                      <Link href={'/tienda-virtual'}>Landing page</Link>
+                      <Link href={'/tienda-virtual'}>Tienda online</Link>
+                    </Menu.Items>
+                  </Transition>
+                </div>
+              </Menu>
 
-              </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >
-                <Link href={'/tienda-virtual'}>Tienda online</Link>
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                className={`block rounded-md px-3 py-2  font-medium  hover:bg-gray-700 hover:text-white   w-full`}
               >
                 <Link href={'/blog'}>Blog</Link>
 
               </Disclosure.Button>
 
             </div>
-            <div className="border-t border-gray-700 pb-3 pt-4">
-
-              <Link href='/contacto' className=' flex justify-center py-1 text-white border border-white w-[130px] mx-4' >
-                <p className='font-[16px] text-s'>Contáctarme</p>
+            <div className={`border-t border-${color} pb-3 pt-4`}>
+              <Link href='/contacto' className={`flex justify-center py-1 text-white border border-${color} w-[130px] mx-4`} >
+                <p className={`font-[16px] text-s text-${color}`}>Contáctarme</p>
               </Link>
 
             </div>

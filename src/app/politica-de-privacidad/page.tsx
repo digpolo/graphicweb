@@ -1,13 +1,31 @@
+'use client'
 import React from 'react'
 import NavBar from '@/components/nav-bar'
 import NavBarPrivacy from '@/components/nav-bar-privacy'
 import Footer from '@/components/footer'
 
-const page = () => {
+const Page = () => {
+    const [isScrolled, setIsScrolled] = React.useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+    
+const bgColor = isScrolled ? 'bg-white  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-transparent duration-300 ease-in-out transition-delay-300';
+
     return (
         <section>
             <div className='bg-black'>
-            <NavBar logo='/logo5.svg' color=''/>
+            <NavBar logo='/logo5.svg' color='' bg={bgColor}/>
             </div>
       
             <NavBarPrivacy />
@@ -57,4 +75,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

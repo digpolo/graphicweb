@@ -27,7 +27,7 @@ const Page = () => {
     return (
         <div className='bg-white flex flex-col'>
             <div className={` ${bgColor} fixed top-0 w-full z-10 text-black`} >
-                <NavBar logo='logo5black.svg' color='black'/>
+                <NavBar logo='logo5black.svg' color='black' bg={bgColor}/>
             </div>
             <div>
                 <div className='mx-4 mx-auto max-w-6xl text-center'>
