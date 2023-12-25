@@ -58,8 +58,8 @@ const Content = () => {
         </div>
       </section>
       <Link href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
-        <p className='text-center text-black font-[16px] text-s'>Solicitar producto</p>
-      </Link>    
+        <p className='text-center text-black font-[16px] text-s'>Contactarme</p>
+      </Link>
     </div>
   )
 }

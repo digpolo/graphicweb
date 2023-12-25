@@ -8,6 +8,7 @@ import Pricing from '@/components/pricingweb'
 import Location from '@/components/location'
 import ContactForm from '@/components/contact-form'
 import CardPricing from '@/components/card-pricing'
+import Link from 'next/link'
 
 
 
@@ -138,13 +139,16 @@ const Page = () => {
           <p>Disfruta de modificaciones gratuitas mensuales para asegurarte de que tu sitio siempre refleje tus preferencias y esté actualizado. Podrás realizar ajustes no estructurales, actualizar textos y elementos multimedia para mantener tu web al día.</p>
         </div>
       </section>
+      <Link href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
+        <p className='text-center text-black font-[16px] text-s'>Contactarme</p>
+      </Link>
       {/* <div className='mx-4'>
         <Pricing />
       </div> */}
-      <div className='grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-10'>
+      {/* <div className='grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-10'>
         <ContactForm />
         <Location />
-      </div>
+      </div> */}
       <Footer bgClass='white' colorText='black' src='/logo5black.svg' />
     </div>
   )
