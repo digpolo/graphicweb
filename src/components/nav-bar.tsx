@@ -4,13 +4,15 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import Image from 'next/image'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 interface colorLogo {
   logo: string
   color: string
+  bg: string
 }
 
-const NavBar: React.FC<colorLogo> = ({ logo, color }) => {
+const NavBar: React.FC<colorLogo> = ({ logo, color, bg}) => {
   let titles = ['Página web', 'Tienda virtual', 'Blog']
   return (
     <Disclosure as="nav" className="">
@@ -33,8 +35,23 @@ const NavBar: React.FC<colorLogo> = ({ logo, color }) => {
                     <ul className='flex gap-6'>
 
                       <li className='flex gap-6 items-center'>
-                        <Link href={'/pagina-web'}>Página web</Link>
-                        <Link href={'/tienda-virtual'}>Tienda online</Link>
+
+                        <Menu as="div" className="relative inline-block text-left">
+                          <div className='flex flex-col'>
+                            <Menu.Button className="flex w-full justify-center bg-">
+                              Nuestros servicios
+                              <ChevronDownIcon
+                                className={`mt-1 h-5 w-5 text-${color} hover:text-violet-100`}
+                                aria-hidden="true"
+                              />
+                            </Menu.Button>
+                            <Menu.Items className={` absolute bg-${bg} mt-10 w-56 origin-top-right  flex flex-col gap-4`}>
+                              <Link href={'/tienda-virtual'}>Landing page</Link>
+                              <Link href={'/tienda-virtual'}>Tienda online</Link>
+                            </Menu.Items>
+                          </div>
+                        </Menu>
+
                         <Link href={'/blog'}>Blog</Link>
                       </li>
 
@@ -105,6 +122,19 @@ const NavBar: React.FC<colorLogo> = ({ logo, color }) => {
 }
 
 export default NavBar
+
+
+// <Disclosure>
+// <div className='flex flex-col'>
+//   <Disclosure.Button className="py-2 ">
+//     Nuestros servicios
+//   </Disclosure.Button>
+//   <Disclosure.Panel className="text-white flex flex-col gap-4">
+//     <Link href={'/tienda-virtual'}>Landing page</Link>
+//     <Link href={'/tienda-virtual'}>Tienda online</Link>
+//   </Disclosure.Panel>
+// </div>
+// </Disclosure>
 
 
 
