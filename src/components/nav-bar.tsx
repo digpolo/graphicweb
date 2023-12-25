@@ -53,9 +53,9 @@ const NavBar: React.FC<colorLogo> = ({ logo, color }) => {
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <h2 className="text-white" aria-hidden="true">Cerrar</h2>
+                    <h2 className={`text-${color}`} aria-hidden="true">Cerrar</h2>
                   ) : (
-                    <h2 className="text-white" aria-hidden="true">Menu</h2>
+                    <h2 className={`text-${color}`} aria-hidden="true">Menu</h2>
                   )}
                 </Disclosure.Button>
               </div>
