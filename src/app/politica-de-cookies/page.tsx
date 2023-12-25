@@ -1,16 +1,35 @@
+'use client'
 import React from 'react'
 import NavBar from '@/components/nav-bar'
 import NavBarPrivacy from '@/components/nav-bar-privacy'
 import Footer from '@/components/footer'
 
-const page = () => {
+
+const Page = () => {
+    const [isScrolled, setIsScrolled] = React.useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const bgColor = isScrolled ? 'bg-black  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-transparent duration-300 ease-in-out transition-delay-300';
+
     return (
         <section>
-          
-          <div className='bg-black'>
-            <NavBar logo='/logo5.svg' color=''/>
+
+            <div className=''>
+                <NavBar logo='/logo5.svg' color='white' bg={bgColor} />
             </div>
-      
+
             <NavBarPrivacy />
             <div className='mx-4'>
                 <h3 className="my-5 text-green py-14 font-semibold text-[30px]">Políticas de cookies</h3>
@@ -19,19 +38,19 @@ const page = () => {
 
                 <h4 className="py-14 font-semibold text-[16px] text-green">1. ¿Qué son las Cookies?</h4>
                 <p className='font-extralight text-[16px]'>
-                Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita una página web o utiliza una aplicación. Estos archivos permiten que el sitio web o la aplicación recuerde sus acciones y preferencias durante un período de tiempo, lo que mejora su experiencia de navegación.
+                    Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita una página web o utiliza una aplicación. Estos archivos permiten que el sitio web o la aplicación recuerde sus acciones y preferencias durante un período de tiempo, lo que mejora su experiencia de navegación.
                 </p>
 
                 <h4 className="py-14 font-semibold text-[16px] text-green">2. ¿Cómo Utilizamos las Cookies?</h4>
                 <p className='font-extralight text-[16px]'>
-                Utilizamos cookies para varios fines, que incluyen:
+                    Utilizamos cookies para varios fines, que incluyen:
                 </p>
                 <ul className='font-extralight text-[16px]'>
                     <li>Cookies de Sesión: Estas cookies se eliminan automáticamente cuando cierra la Aplicación. Son temporales y se utilizan para almacenar información temporal, como su carrito de compras en línea.</li>
                     <li>Rendimiento y Analíticas: Utilizamos cookies para recopilar información sobre cómo los usuarios interactúan con la Aplicación. Esto nos ayuda a mejorar la calidad y el rendimiento de nuestros servicios.</li>
                     <li>Publicidad: Podemos utilizar cookies para mostrar anuncios personalizados y relevantes en la Aplicación y en otros sitios web y aplicaciones.</li>
                 </ul>
-                
+
 
                 <h4 className="py-14 font-semibold text-[16px] text-green">3. Tipo de cookies que utilizamos</h4>
                 <ul className='font-extralight text-[16px]'>
@@ -41,22 +60,22 @@ const page = () => {
 
                 <h4 className="py-14 font-semibold text-[16px] text-green">4. Control de Cookies</h4>
                 <p className='font-extralight text-[16px]'>
-                Puede controlar y administrar las cookies en su dispositivo a través de la configuración de su navegador o la configuración de la Aplicación. Puede optar por bloquear o eliminar cookies en cualquier momento. Sin embargo, tenga en cuenta que deshabilitar las cookies puede afectar la funcionalidad de la Aplicación y limitar su experiencia de usuario.
+                    Puede controlar y administrar las cookies en su dispositivo a través de la configuración de su navegador o la configuración de la Aplicación. Puede optar por bloquear o eliminar cookies en cualquier momento. Sin embargo, tenga en cuenta que deshabilitar las cookies puede afectar la funcionalidad de la Aplicación y limitar su experiencia de usuario.
                 </p>
                 <h4 className="py-14 font-semibold text-[16px] text-green">5.  Cambios en la Política de Cookies</h4>
                 <p className='font-extralight text-[16px]'>
-                Nos reservamos el derecho de actualizar o modificar esta Política de Cookies en cualquier momento. Cualquier cambio significativo se comunicará a través de la Aplicación.
+                    Nos reservamos el derecho de actualizar o modificar esta Política de Cookies en cualquier momento. Cualquier cambio significativo se comunicará a través de la Aplicación.
 
                 </p>
                 <h4 className="py-14 font-semibold text-[16px] text-green">6. Preguntas y contacto</h4>
                 <p className='font-extralight text-[16px]'>
-                Si tiene alguna pregunta sobre nuestra Política de Cookies o desea obtener más información sobre cómo utilizamos las cookies en la Aplicación, no dude en ponerse en contacto con nosotros a través de los datos de contacto proporcionados en la Aplicación.
+                    Si tiene alguna pregunta sobre nuestra Política de Cookies o desea obtener más información sobre cómo utilizamos las cookies en la Aplicación, no dude en ponerse en contacto con nosotros a través de los datos de contacto proporcionados en la Aplicación.
                 </p >
             </div>
-            <Footer bgClass='black' colorText='white' src='logo.svg'/>
- 
+            <Footer bgClass='black' colorText='white' src='logo.svg' />
+
         </section>
     )
 }
 
-export default page
+export default Page

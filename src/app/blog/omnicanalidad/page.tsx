@@ -54,7 +54,7 @@ const Page = () => {
     <div className='bg-white'>
       <div className='  bg-[#0000FF]'>
       <div className={` ${bgColor} fixed top-0 w-full z-10 text-[#FFFFFF]`} >
-                <NavBar logo={logo} color='white'/>
+                <NavBar logo={logo} color='white' bg={bgColor}/>
             </div>
         <div className='flex flex-col gap-4 flex-1 m-4 pb-10'>
           <div className='grid grid-cols-1 lg:grid-cols-2 pt-60 md:pb-20'>
