@@ -3,6 +3,7 @@ import React from 'react'
 import NavBar from '@/components/nav-bar'
 import NavBarPrivacy from '@/components/nav-bar-privacy'
 import Footer from '@/components/footer'
+import logo from '../../../public/logo5.svg'
 
 const Page = () => {
     const [isScrolled, setIsScrolled] = React.useState(false);
@@ -74,7 +75,7 @@ const Page = () => {
                     Si tienes alguna pregunta o inquietud con respecto a estos términos y condiciones, puedes ponerte en contacto con nosotros a través de nuestros canales de comunicación.
                 </p>
             </div>
-            <Footer bgClass='black' colorText='white' src='logo.svg' />
+            <Footer bgClass='black' colorText='white' src={logo} />
 
         </section>
     )

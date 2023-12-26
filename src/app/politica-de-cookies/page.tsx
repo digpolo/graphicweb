@@ -3,6 +3,7 @@ import React from 'react'
 import NavBar from '@/components/nav-bar'
 import NavBarPrivacy from '@/components/nav-bar-privacy'
 import Footer from '@/components/footer'
+import logo from '../../../public/logo5.svg'
 
 
 const Page = () => {
@@ -72,7 +73,7 @@ const Page = () => {
                     Si tiene alguna pregunta sobre nuestra Política de Cookies o desea obtener más información sobre cómo utilizamos las cookies en la Aplicación, no dude en ponerse en contacto con nosotros a través de los datos de contacto proporcionados en la Aplicación.
                 </p >
             </div>
-            <Footer bgClass='black' colorText='white' src='logo.svg' />
+            <Footer bgClass='black' colorText='white' src={logo} />
 
         </section>
     )
