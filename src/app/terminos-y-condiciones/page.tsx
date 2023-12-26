@@ -25,8 +25,8 @@ const Page = () => {
 
     return (
         <section>
-            <div className='bg-black'>
-                <NavBar logo='/logo5.svg' color='' bg={bgColor} />
+            <div className='bg-black text-white'>
+                <NavBar logo='/logo5.svg' color='whote' bg={bgColor} />
             </div>
             <NavBarPrivacy />
             <div className='mx-4'>

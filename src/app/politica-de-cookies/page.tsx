@@ -22,13 +22,13 @@ const Page = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const bgColor = isScrolled ? 'bg-black  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-transparent duration-300 ease-in-out transition-delay-300';
+    const bgColor = isScrolled ? 'bg-  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-transparent duration-300 ease-in-out transition-delay-300';
 
     return (
         <section>
 
-            <div className=''>
-                <NavBar logo='/logo5.svg' color='white' bg={bgColor} />
+            <div className='bg-black text-white'>
+                <NavBar logo={logo} color='white' bg={bgColor} />
             </div>
 
             <NavBarPrivacy />

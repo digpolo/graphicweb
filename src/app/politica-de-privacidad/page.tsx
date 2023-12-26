@@ -24,9 +24,9 @@ const Page = () => {
 const bgColor = isScrolled ? 'bg-white  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-transparent duration-300 ease-in-out transition-delay-300';
 
     return (
-        <section>
-            <div className='bg-black'>
-            <NavBar logo='/logo5.svg' color='' bg={bgColor}/>
+        <section> 
+            <div className='bg-black text-white'>
+            <NavBar logo='/logo5.svg' color='text-white' bg={bgColor}/>
             </div>
       
             <NavBarPrivacy />
