@@ -8,7 +8,7 @@ import Footer from '@/components/footer'
 import NavBar from '@/components/nav-bar'
 import webDevelop from '../../../../public/web-develop.png'
 import cmsDevelop from '../../../../public/cms-develop.png'
-import logo from "../../../../public/logo-blue.svg"
+import logo from "../../../public/logo-green2.svg"
 
 const garamond = EB_Garamond({
     display: "swap",
@@ -49,20 +49,20 @@ const Page = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const bgColor = isScrolled ? 'bg-white  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#FFF0D6] duration-300 ease-in-out transition-delay-300';
+    const bgColor = isScrolled ? 'bg-white  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#004D4D] duration-300 ease-in-out transition-delay-300';
 
 
     return (
         <div className='bg-white'>
-            <div className=' bg-[#FFF0D6] '>
-                <div className={`${bgColor} fixed top-0 w-full z-10 text-[#0000FF]`} >
-                    <NavBar logo={logo} color='[#0000FF]' bg={bgColor}/>
+            <div className=' bg-[#004D4D] '>
+                <div className={`${bgColor} fixed top-0 w-full z-10 text-[#ECFF8C]`} >
+                    <NavBar logo={logo} color='[#ECFF8C]' bg={bgColor}/>
                 </div>
-                <div className='flex flex-col gap-4 flex-1 m-4 pb-10'>
+                <div className='flex flex-col gap-4 flex-1 m-4 pb-10 text-[#ECFF8C] '>
                     <div className='grid grid-cols-1 lg:grid-cols-2 pt-60 md:pb-20'>
                         <div className='flex flex-col'>
                             <span className='text-[#0000FF]'>Blog</span>
-                        <h1 className='font-medium text-[35px] md:text-[60px]  text-[#0000FF]   '>{customization.title}</h1>
+                        <h1 className='font-medium text-[35px] md:text-[60px]  text-[#ECFF8C]   '>{customization.title}</h1>
                         </div>
                         <div>
                             <h2 className='text-[#0000FF] text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
@@ -76,17 +76,7 @@ const Page = () => {
                         </div>
                     </div>
 
-                    <div className='flex flex-col items-center md:flex-row'>
-                        <div className='text-center'>
-                            <span className='text-lg font-bold'>Desarrollo web profesional</span>
-                            <Image alt='icono de diseño web personalizado' src={webDevelop} width={500} height={500} />
-                        </div>
-                        <span className='text-[100px] m-4 border-2 border-dashed border-gray-500 rounded-full w-[170px] h-[170px] flex justify-center text-center'>vs</span>
-                        <div className='flex flex-col justify-center items-center'>
-                            <span className='text-lg font-bold'>CMS</span>
-                            <Image alt='icono de diseño cms' src={cmsDevelop} width={500} height={500} />
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
             <div className='bg-white grid grid-col md:grid-cols-2 mx-4 gap-4'>

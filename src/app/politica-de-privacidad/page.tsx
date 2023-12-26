@@ -3,6 +3,7 @@ import React from 'react'
 import NavBar from '@/components/nav-bar'
 import NavBarPrivacy from '@/components/nav-bar-privacy'
 import Footer from '@/components/footer'
+import logo from '../../../public/logo5.svg'
 
 const Page = () => {
     const [isScrolled, setIsScrolled] = React.useState(false);
@@ -69,7 +70,7 @@ const bgColor = isScrolled ? 'bg-white  transition-all duration-300 ease-in-out 
                 Le agradecemos su confianza en nosotros y su elección de utilizar nuestros servicios. Estamos comprometidos en mantener la privacidad y seguridad de su información personal.
                 </p>
             </div>
-            <Footer bgClass='black' colorText='white' src='logo.svg'/>
+            <Footer bgClass='black' colorText='white' src={logo}/>
     
         </section >
     )
