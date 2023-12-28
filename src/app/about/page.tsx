@@ -9,6 +9,9 @@ import NavBar from '@/components/nav-bar'
 import webDevelop from '../../../../public/web-develop.png'
 import cmsDevelop from '../../../../public/cms-develop.png'
 import logo from "../../../public/logo-green2.svg"
+import ourVision from '../../../public/our-vision.png'
+import bussines from '../../../public/bussines.jpg'
+import CardServices from '@/components/card-services'
 
 const garamond = EB_Garamond({
     display: "swap",
@@ -22,8 +25,8 @@ const Page = () => {
     let customization = {
         id: 1,
         logo: '/logo-blue.svg',
-        title: "Landing Pages: CMS vs. Desarrollo Web",
-        subtitle: "Las landing pages son páginas web diseñadas para convertir visitantes en clientes potenciales. Son una parte esencial de cualquier estrategia de marketing digital y pueden ser muy efectivas para aumentar las conversiones.",
+        title: "Acerca de",
+        subtitle: "En GraphicWeb, nos dedicamos a impulsar la competitividad de las empresas con soluciones tecnológicas innovadoras. Nuestro objetivo es capacitar a las empresas para llegar a nuevos clientes, optimizar su eficiencia operativa y aumentar sus ventas. ",
         src: "/customization.jpg",
         alt: "grupo de personas utilizando tecnologia",
         enfoque1: "Mejora la experiencia del cliente",
@@ -51,112 +54,63 @@ const Page = () => {
 
     const bgColor = isScrolled ? 'bg-white  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#004D4D] duration-300 ease-in-out transition-delay-300';
 
+        let products = [
+            { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "CMS vs. Diseño Web Personalizado", date: '16 de diciembre de 2023', hrefa: '/blog/cms-vs-desarrollo-web'},
+            { id: 2, alt: "imagen de gafas de realidad virtual", src: '/metaverso.svg', title: "¿Cómo la personalización de experiencia impacta negocios?", date: '29 de noviembre de 2023', hrefa: '/blog/personalizacion' },
+            { id: 3, alt: "imagen de chatbot", src: '/chatbot.svg', title: "Omnicanalidad en tecnología: ¿qué es y cómo implementarla?", date: '4 de agosto de 2023', hrefa: '/blog/omnicanalidad' },
+        ]
 
     return (
         <div className='bg-white'>
             <div className=' bg-[#004D4D] '>
                 <div className={`${bgColor} fixed top-0 w-full z-10 text-[#ECFF8C]`} >
-                    <NavBar logo={logo} color='[#ECFF8C]' bg={bgColor}/>
+                    <NavBar logo={logo} color='[#ECFF8C]' bg={bgColor} />
                 </div>
                 <div className='flex flex-col gap-4 flex-1 m-4 pb-10 text-[#ECFF8C] '>
                     <div className='grid grid-cols-1 lg:grid-cols-2 pt-60 md:pb-20'>
                         <div className='flex flex-col'>
-                            <span className='text-[#0000FF]'>Acerca de</span>
-                        <h1 className='font-medium text-[35px] md:text-[60px]  text-[#ECFF8C]   '>{customization.title}</h1>
+                            {/* <span className='text-[#0000FF]'>Acerca de</span> */}
+                            <h1 className='font-medium text-[35px] md:text-[60px]  text-[#ECFF8C]   '>{customization.title}</h1>
                         </div>
                         <div>
-                            <h2 className='text-[#0000FF] text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
-
-                            <p className='my-10 text-[#0000FF]'>
-                                Descargarga el ebook para ver las ultimas actualizaciones de cómo crear una experiencia de cliente única y memorable.
-                            </p>
-                            <a href='/ebooks/ebook-graphicweb.pdf' download="graphicweb.pdf" className='my-8 flex justify-center py-1 text-[#0000FF] border border-[#0000FF] w-[300px]' target="_blank">
-                                <p className='font-[16px] text-s'>Descargar ebook</p>
-                            </a>
+                            <h2 className='text-[#ECFF8C] text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                   
-                </div>
-            </div>
-            <div className='bg-white grid grid-col md:grid-cols-2 mx-4 gap-4'>
-                <div>
-                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} >Desarollo web</h2>
-                    <p>
-                        El diseño web personalizado es el proceso de crear una página web desde cero, utilizando código personalizado. Esta opción ofrece un mayor control sobre el diseño y el funcionamiento de tu landing page.
-                    </p>
-                    <h4 className='font-black pt-2'>Ventajas del desarrollo web personalizado</h4>
-                    <ul className='text-black font-light flex flex-col gap-4'>
-                        <li>
-                            Ofrece un control total sobre el diseño y el funcionamiento de tu landing page.
-                        </li>
-                        <li>
-                            Es más escalable que los CMS, especialmente si tienes un gran volumen de tráfico.
-                        </li>
-                        <li>
-                            Puede ser más atractivo y profesional que las landing pages creadas con un CMS.
-                        </li>
-                    </ul>
-                    <h4 className='font-black pt-2'>Deventajas del desarrollo web personalizado</h4>
-                    <ul className='text-black font-light flex flex-col gap-4'>
-                        <li>
-                            Es más complejo y requiere conocimientos de programación.
-                        </li>
-                        <li>
-                            Puede ser más caro que utilizar un CMS.
-                        </li>
-                        <li>
-                            El desarrollo web profesional puede llevar más tiempo que utilizar un CMS. Esto se debe a que el desarrollo web profesional requiere más planificación, diseño y codificación.
-                        </li>
-                    </ul>
-                </div>
-                <div className=''>
-                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4 border-t border-black text-black my-6`} >CMS</h2>
-                    <p>Un CMS, o sistema de gestión de contenido, es una plataforma que te permite crear y gestionar contenido web sin necesidad de conocimientos de programación. Existen muchos CMS populares disponibles, como WordPress, Wix y Squarespace.</p>
-                    <h4 className='font-black pt-2'>Ventajas de utilizar un CMS</h4>
-                    <ul className='text-black font-extralight flex flex-col gap-4'>
-                        <li>
-                            - Son relativamente fáciles de usar, incluso para personas sin conocimientos de programación.
-                        </li>
-                        <li>
-                            - Son flexibles y te permiten personalizar tu landing page según tus necesidades.
-                        </li>
-                        <li>
-                            - Existen muchos temas y plugins disponibles que pueden ayudarte a crear una landing page profesional.
-                        </li>
-                    </ul>
-                    <h4 className='font-black pt-2'>Desventajas de utilizar un CMS</h4>
-                    <ul className='text-black font-light flex flex-col gap-4'>
-                        <li>
-                            - Pueden ser menos flexibles que el diseño web personalizado.
-                        </li>
-                        <li>
-                            - Pueden ser más difíciles de escalar, especialmente si tienes un gran volumen de tráfico.
-                        </li>
-                        <li>
-                            - Seguridad: Los CMS pueden ser vulnerables a los ataques cibernéticos. Esto se debe a que los CMS suelen utilizar código abierto, lo que significa que está disponible para que cualquiera lo vea y lo modifique.
-                        </li>
-                        <li>
-                            - Los CMS pueden ser limitados en cuanto a la cantidad de personalización que permiten.
-                        </li>
-                        <li>
-                            - El soporte para CMS puede ser limitado. Esto se debe a que los CMS son utilizados por millones de personas en todo el mundo, lo que puede dificultar que los desarrolladores de CMS proporcionen soporte personalizado. Si necesita ayuda con su página web, es posible que tenga que recurrir a la comunidad en línea para obtener ayuda.
-                        </li>
-                    </ul>
-                </div>
-            </div>
             <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
-                <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >¿Cuál es la mejor opción para ti?
-                </h2>
                 <div>
-                    <p className='pt-10'>La mejor opción para ti dependerá de tus necesidades específicas. Si buscas una opción fácil de usar y flexible, un CMS puede ser una buena opción. Si buscas un mayor control sobre el diseño y el funcionamiento de tu landing page, el diseño web personalizado puede ser la mejor opción.
+                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >
+                        Nuestra vision para el futuro en negocios de productos y servicios
+                    </h2>
+                    <p className='pt-10 mb-6'>
+                        Nuestra visión para el futuro es garantizar que las empresas de productos y servicios se transformen con soluciones tecnológicas para llegar a nuevos clientes, optimizar su eficiencia operativa y aumentar sus ventas
+                    </p>
+                    <Link href={'/blog/our-vision'} className='my-10'>
+                        <span className='underline my-10'>Lea nuestro plan para las empresas</span>
+                    </Link>
+                </div>
+                <div>
+                    <Image alt='imagen de nuestra vision' src={ourVision} width={1200} height={0} className='py-6' />
+                </div>
+            </section>
+            <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid '>
+                <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >
+                    Estamos construyendo herramientas tecnológicas en el campo digital para el beneficio de negocios de productos y servicios. Consideramos cumplida nuestra misión si nuestro trabajo ayuda a otros a lograr este resultado
+                </h2>
+                <Image alt='imagen de nuestra vision' src={bussines} width={1600} height={0} className='py-6' />
+            </section>
 
-                        En última instancia, la mejor manera de decidir cuál es la mejor opción para ti es experimentar con ambas. Crea una landing page con un CMS y otra con diseño web personalizado y compara los resultados.</p>
+            <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid '>
+                <div className='lg-4  md:flex gap-4'>
+                    {products.map(product => {
+                        return <CardServices key={product.id} cardProduct={product} />
+                    })}
                 </div>
             </section>
             <a href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
                 <p className='text-center text-black font-[16px] text-s'>Contactarme</p>
-
             </a>
             <div>
                 <Services />
