@@ -1,5 +1,16 @@
 import React from 'react'
 import CardServices from './card-services'
+import { EB_Garamond } from "next/font/google";
+
+
+const garamond = EB_Garamond({
+    display: "swap",
+    weight: ["400", "500", "600", "700"],
+    style: ["normal", "italic"],
+    subsets: ["latin-ext"],
+    variable: '--font-garamond'
+});
+
 
 const Services = () => {
     let products = [
@@ -10,7 +21,7 @@ const Services = () => {
 
     return (
         <div className={`mx-4 `}>
-            <h2 className={`font-garamond  text-3xl lg:text-6xl py-4 border-t border-white`} >Últimas actualizaciones</h2>
+            <h2 className={`${garamond.variable} font-garamond  text-3xl lg:text-6xl py-4 border-t border-white`} >Últimas actualizaciones</h2>
             <div className='lg-4  md:flex gap-4'>
                 {products.map(product => {
                     return <CardServices key={product.id} cardProduct={product} />

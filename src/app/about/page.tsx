@@ -13,6 +13,10 @@ import ourVision from '../../../public/our-vision.png'
 import bussines from '../../../public/bussines.jpg'
 import CardServices from '@/components/card-services'
 
+import readyToPickUp from '../../../public/ready-to-pick-up.png'
+import digitalComerce from '../../../public/digital-comerce.png'
+
+
 const garamond = EB_Garamond({
     display: "swap",
     weight: ["400", "500", "600", "700"],
@@ -52,17 +56,19 @@ const Page = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const bgColor = isScrolled ? 'bg-white  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#004D4D] duration-300 ease-in-out transition-delay-300';
+    const bgColor = isScrolled ? 'bg-[#004D4D]  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#004D4D] duration-300 ease-in-out transition-delay-300';
 
         let products = [
-            { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "CMS vs. Diseño Web Personalizado", date: '16 de diciembre de 2023', hrefa: '/blog/cms-vs-desarrollo-web'},
-            { id: 2, alt: "imagen de gafas de realidad virtual", src: '/metaverso.svg', title: "¿Cómo la personalización de experiencia impacta negocios?", date: '29 de noviembre de 2023', hrefa: '/blog/personalizacion' },
-            { id: 3, alt: "imagen de chatbot", src: '/chatbot.svg', title: "Omnicanalidad en tecnología: ¿qué es y cómo implementarla?", date: '4 de agosto de 2023', hrefa: '/blog/omnicanalidad' },
+            { id: 1, alt: "ilustración de una persona dejando un pedido", src: "/ready-to-pick-up.png", title: "La manera de potenciar los restaurantes con Ready to pick up", date: 'Dic 24, 2023', hrefa: '/blog/ready-to-pick-up'},
+            { id: 2, alt: "imagen de abstracción de icono de carrito de compras", src: '/digital-comerce.png', title: "¿Cómo la personalización de experiencia impacta negocios?", date: 'Dic 6, 2023', hrefa: '/blog/personalizacion' },
+            { id: 3, alt: "imagen de clientes", src: "/cx.svg", title: "CMS vs. Diseño Web Personalizado", date: 'Dic 16, 2023', hrefa: '/blog/cms-vs-desarrollo-web'},
+            { id: 4, alt: "imagen de gafas de realidad virtual", src: '/metaverso.svg', title: "¿Cómo la personalización de experiencia impacta negocios?", date: 'Nov 29, 2023', hrefa: '/blog/personalizacion' },
+            
         ]
 
     return (
         <div className='bg-white'>
-            <div className=' bg-[#004D4D] '>
+            <div className=' bg-[#004D4D] text-[#ECFF8C]'>
                 <div className={`${bgColor} fixed top-0 w-full z-10 text-[#ECFF8C]`} >
                     <NavBar logo={logo} color='[#ECFF8C]' bg={bgColor} />
                 </div>
@@ -103,23 +109,17 @@ const Page = () => {
             </section>
 
             <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid '>
+            <h2 className={`${garamond.variable} font-garamond  text-3xl lg:text-6xl py-4 border-t border-white`} >Nuestros productos</h2>
                 <div className='lg-4  md:flex gap-4'>
                     {products.map(product => {
                         return <CardServices key={product.id} cardProduct={product} />
                     })}
                 </div>
             </section>
-            <a href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
-                <p className='text-center text-black font-[16px] text-s'>Contactarme</p>
-            </a>
-            <div>
-                <Services />
-            </div>
-            <Footer bgClass='[#FFF0D6]' colorText='[#0000FF]' src='/logo-blue.svg' />
+            <Footer bgClass='[#004D4D]' colorText='[#ECFF8C]' src={logo}/>
 
         </div>
     )
 }
-
 
 export default Page

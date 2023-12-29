@@ -68,7 +68,7 @@ const NavBar: React.FC<colorLogo> = ({ logo, color, bg }) => {
                   </div>
                 </div>
               </div>
-              <div className="hidden sm:ml-6 sm:block">
+              <div className={`hidden sm:ml-6 sm:block pb-3 pt-4`}>
                 <Link href='/contacto' className={`flex justify-center py-1  border border-${color} w-[130px]`} >
                   <p className='font-[16px] text-s'>Contáctarme</p>
                 </Link>
@@ -127,11 +127,10 @@ const NavBar: React.FC<colorLogo> = ({ logo, color, bg }) => {
               </Disclosure.Button>
 
             </div>
-            <div className={`border-t border-${color} pb-3 pt-4`}>
-              <Link href='/contacto' className={`flex justify-center py-1 text-white border border-${color} w-[130px] mx-4`} >
-                <p className={`font-[16px] text-s text-${color}`}>Contáctarme</p>
+            <div className={`pb-3 pt-4`}>
+              <Link href='/contacto' className={`flex justify-center py-1 w-[130px] mx-4`} >
+                <span className={`font-[16px] text-s border border-${color} text-${color}`}>Contáctarme</span>
               </Link>
-
             </div>
           </Disclosure.Panel>
         </>
