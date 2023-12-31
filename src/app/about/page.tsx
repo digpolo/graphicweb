@@ -30,7 +30,7 @@ const Page = () => {
         id: 1,
         logo: '/logo-blue.svg',
         title: "Acerca de",
-        subtitle: "En GraphicWeb, nos dedicamos a impulsar la competitividad de las empresas con soluciones tecnológicas innovadoras. Nuestro objetivo es capacitar a las empresas para llegar a nuevos clientes, optimizar su eficiencia operativa y aumentar sus ventas. ",
+        subtitle: "En GraphicWeb, nos dedicamos a hacer empresas más competitivas con soluciones tecnológicas aplicadas en el campo de negocios de productos y servicios",
         src: "/customization.jpg",
         alt: "grupo de personas utilizando tecnologia",
         enfoque1: "Mejora la experiencia del cliente",
@@ -84,7 +84,6 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-
             
             <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid '>
                 <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >
@@ -102,7 +101,6 @@ const Page = () => {
                 </div>
             </section>
             <Footer bgClass='[#004D4D]' colorText='[#ECFF8C]' src={logo}/>
-
         </div>
     )
 }

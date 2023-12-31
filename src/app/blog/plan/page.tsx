@@ -41,6 +41,13 @@ const Page = () => {
         enfoque6: "Diferenciación competitiva"
     }
 
+    let blogs = [
+        { id: 1, title: "", p: "Nuestra mision es agregar valor a los negocios mediante la tecnologia digital, desde la estrategia, la ejecución y la medición del impacto, para un servicio que logre transformación en las empresas" },
+        { id: 1, title: "", p: "Consideramos la tecnología digital como el motor que impulsa el crecimiento económico a escala global y que, al mismo tiempo, potencia la competitividad entre las empresas. En un mundo donde la conectividad y la innovación son clave, la adopción inteligente de soluciones digitales se convierte en un diferenciador crucial." },
+        { id: 2, title: "", p: "Nuestro enfoque estratégico se centra en dos pilares fundamentales: mejorar la eficiencia en las ventas y procesos, y elevar la experiencia del cliente a niveles excepcionales. Creemos que la eficiencia operativa no solo reduce costos, sino que también libera recursos para la innovación y el crecimiento. Asimismo, entendemos que la experiencia del cliente es el corazón de cualquier estrategia empresarial exitosa." },
+        { id: 3, title: "", p: "Ofrecemos una mirada estratégica integral que integra a tres actores clave: el usuario, los negocios y el mercado. Este enfoque holístico nos permite diseñar soluciones personalizadas que no solo satisfacen las necesidades presentes de las empresas, sino que también las posicionan para el futuro. A continuación, destacamos algunos aspectos clave de nuestro enfoque:" },
+    ]
+
     const [isScrolled, setIsScrolled] = useState(false);
 
     const handleScroll = () => {
@@ -57,13 +64,6 @@ const Page = () => {
     }, []);
 
     const bgColor = isScrolled ? 'bg-[#343321]  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#343321] duration-300 ease-in-out transition-delay-300';
-
-    let blogs = [
-        { id: 1, title: "ilustración de una persona dejando un pedido", p: "/ready-to-pick-up.png"},
-        { id: 2, title: "ilustración de una persona dejando un pedido", p: "/ready-to-pick-up.png"},
-        { id: 3, title: "ilustración de una persona dejando un pedido", p: "/ready-to-pick-up.png"},
-  
-    ]
 
     return (
         <div className='bg-white'>
@@ -82,19 +82,41 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className='flex flex-col items-center md:flex-row m-4'>                                      
-                        <Image alt='composion artistica' src={ourVision} width={2500} height={2500} />
+                <div className='flex flex-col items-center md:flex-row m-4'>
+                    <Image alt='composion artistica' src={ourVision} width={2500} height={2500} />
                 </div>
-            </div> 
-           
+            </div>
+            <div className='border-t mx-4 border-black '>
                 {blogs.map(blog => {
                     return <CardBlog key={blog.id} cardBlog={blog} />
                 })}
-                            
-            <Footer bgClass='[#004D4D]' colorText='[#ECFF8C]' src={logo} />
-
-        </div>
+            </div>
+            <div className='my-6 mx-4 md:px-80 ml-8 flex flex-col gap-8'>
+                <h3>
+                    1. Diseño centrado en el usuario
+                    <ul>
+                        <li>Desarrollamos soluciones que tienen en cuenta las necesidades, expectativas y comportamientos de los usuarios finales.</li>
+                        <li>Utilizamos técnicas de diseño centrado en el usuario para crear interfaces intuitivas y experiencias atractivas.</li>
+                    </ul>
+                </h3>
+                <h3>
+                    2. Enfoque Empresarial:
+                    <ul>
+                        <li>Comprendemos a fondo los objetivos y procesos internos de las empresas</li>
+                        <li>Diseñamos soluciones que mejoran la eficiencia operativa, facilitan la toma de decisiones y fomentan la innovación.</li>
+                    </ul>
+                </h3>
+                <h4>
+                    3. Análisis de Mercado:
+                    <ul>
+                        <li>Realizamos un análisis detallado del mercado para identificar oportunidades y desafíos.</li>
+                        <li>Adaptamos nuestras soluciones para mantener la relevancia en un entorno empresarial en constante cambio.</li>
+                    </ul>
+                </h4>
+                <p>Nuestra misión va más allá de ser simplemente proveedores de tecnología; somos colaboradores estratégicos comprometidos con la transformación integral de las empresas. Creemos en el poder de la tecnología digital para impulsar la innovación, mejorar la eficiencia y elevar la experiencia del cliente. Con nuestra mirada estratégica que integra usuario, negocios y mercado, estamos listos para ser su socio en el viaje hacia el futuro empresarial digital.</p>
+            </div>
+            <Footer bgClass='[#343321]' colorText='[#E5F1FE]' src={logo} />
+        </div >
     )
 }
 
