@@ -8,9 +8,9 @@ import Footer from '@/components/footer'
 import NavBar from '@/components/nav-bar'
 import webDevelop from '../../../../public/web-develop.png'
 import cmsDevelop from '../../../../public/cms-develop.png'
-import logo from "../../../public/logo-green2.svg"
-import ourVision from '../../../public/our-vision.png'
-import bussines from '../../../public/bussines.jpg'
+import logo from "../../../../public/logo-green2.svg"
+import ourVision from '../../../../public/our-vision.png'
+import bussines from '../../../../public/bussines.jpg'
 import CardServices from '@/components/card-services'
 
 import readyToPickUp from '../../../public/ready-to-pick-up.png'
@@ -29,8 +29,8 @@ const Page = () => {
     let customization = {
         id: 1,
         logo: '/logo-blue.svg',
-        title: "Acerca de",
-        subtitle: "En GraphicWeb, nos dedicamos a hacer empresas más competitivas con soluciones tecnológicas aplicadas en el campo de negocios de productos y servicios",
+        title: "La manera de potenciar los restaurantes con Ready to pick up",
+        subtitle: "",
         src: "/customization.jpg",
         alt: "grupo de personas utilizando tecnologia",
         enfoque1: "Mejora la experiencia del cliente",
@@ -84,7 +84,23 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            
+
+            <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
+                <div>
+                    <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >
+                        Nuestra vision para el futuro en negocios de productos y servicios
+                    </h2>
+                    <p className='pt-10 mb-6'>
+                        Nuestra visión para el futuro es garantizar que las empresas de productos y servicios se transformen con soluciones tecnológicas para llegar a nuevos clientes, optimizar su eficiencia operativa y aumentar sus ventas
+                    </p>
+                    <Link href={'/blog/our-vision'} className='my-10'>
+                        <span className='underline my-10'>Lea nuestro plan para las empresas</span>
+                    </Link>
+                </div>
+                <div>
+                    <Image alt='imagen de nuestra vision' src={ourVision} width={1200} height={0} className='py-6' />
+                </div>
+            </section>
             <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid '>
                 <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >
                     Estamos construyendo herramientas tecnológicas en el campo digital para el beneficio de negocios de productos y servicios. Consideramos cumplida nuestra misión si nuestro trabajo ayuda a otros a lograr este resultado
@@ -101,6 +117,7 @@ const Page = () => {
                 </div>
             </section>
             <Footer bgClass='[#004D4D]' colorText='[#ECFF8C]' src={logo}/>
+
         </div>
     )
 }
