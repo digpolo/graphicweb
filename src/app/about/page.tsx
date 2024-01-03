@@ -93,7 +93,7 @@ const Page = () => {
                     <p className='pt-10 mb-6'>
                         Nuestra visión para el futuro es garantizar que las empresas de productos y servicios se transformen con soluciones tecnológicas para llegar a nuevos clientes, optimizar su eficiencia operativa y aumentar sus ventas
                     </p>
-                    <Link href={'/blog/our-vision'} className='my-10'>
+                    <Link href={'/blog/plan'} className='my-10'>
                         <span className='underline my-10'>Lea nuestro plan para las empresas</span>
                     </Link>
                 </div>

@@ -136,11 +136,11 @@ const NavBar: React.FC<colorLogo> = ({ logo, color, bg }) => {
 
 
             </div>
-            <div className={`pb-3 pt-4`}>
-              <Link href='/contacto' className={`flex justify-center py-1 w-[130px] mx-4`} >
-                <span className={`font-[16px] text-s border border-${color} text-${color}`}>Contáctarme</span>
-              </Link>
-            </div>
+            <div className={`hidden sm:ml-6 sm:block pb-3 pt-4`}>
+  <Link href="/contacto" className={`flex justify-center py-1 border border-${color} text-${color} w-[130px]`}>
+    <p className="font-[16px] text-s">Contáctarme</p>
+  </Link>
+</div>
           </Disclosure.Panel>
         </>
       )}
