@@ -117,7 +117,6 @@ const Page = () => {
                 </div>
             </section>
             <Footer bgClass='[#004D4D]' colorText='[#ECFF8C]' src={logo}/>
-
         </div>
     )
 }
