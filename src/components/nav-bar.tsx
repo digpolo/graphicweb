@@ -61,6 +61,7 @@ const NavBar: React.FC<colorLogo> = ({ logo, color, bg }) => {
                             </Transition>
                           </div>
                         </Menu>
+                        <Link href={'/about'}>Acerca de</Link>
                         <Link href={'/blog'}>Blog</Link>
                       </li>
 
@@ -116,7 +117,14 @@ const NavBar: React.FC<colorLogo> = ({ logo, color, bg }) => {
                   </Transition>
                 </div>
               </Menu>
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className={`block rounded-md px-3 py-2  font-medium  hover:bg-gray-700 hover:text-white   w-full`}
+              >
+                <Link href={'/about'}>Acerca de</Link>
 
+              </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
@@ -125,6 +133,7 @@ const NavBar: React.FC<colorLogo> = ({ logo, color, bg }) => {
                 <Link href={'/blog'}>Blog</Link>
 
               </Disclosure.Button>
+
 
             </div>
             <div className={`pb-3 pt-4`}>

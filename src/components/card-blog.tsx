@@ -12,11 +12,11 @@ interface BlogProps {
 
 const CardBlog: React.FC<BlogProps>= ({cardBlog}) => {
     return (
-        <section className='my-6 mx-4 md:px-80 '>
-            <h2 className={`text-xl font-bold `} >
+        <section className='my-6 mx-4 lg:px-80 '>
+            <h2 className={`text-xl font-bold py-4`} >
                {cardBlog.title}
             </h2>
-            <p className=' mb-6'>
+            <p className=' mb-6 font-extralight'>
                {cardBlog.p}
             </p>
         </section>

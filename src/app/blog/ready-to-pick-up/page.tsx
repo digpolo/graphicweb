@@ -8,12 +8,13 @@ import Footer from '@/components/footer'
 import NavBar from '@/components/nav-bar'
 import webDevelop from '../../../../public/web-develop.png'
 import cmsDevelop from '../../../../public/cms-develop.png'
-import logo from "../../../../public/logo-green2.svg"
-import ourVision from '../../../../public/our-vision.png'
+import logo from "../../../../public/logo5.svg"
+import readyToPickUp from '../../../../public/ready-to-pick-up.png'
+import readyToPickUp2 from '../../../../public/ready-to-pick-up2.jpg'
 import bussines from '../../../../public/bussines.jpg'
 import CardServices from '@/components/card-services'
 
-import readyToPickUp from '../../../public/ready-to-pick-up.png'
+
 import digitalComerce from '../../../public/digital-comerce.png'
 
 
@@ -31,7 +32,7 @@ const Page = () => {
         logo: '/logo-blue.svg',
         title: "La manera de potenciar los restaurantes con Ready to pick up",
         subtitle: "",
-        src: "/customization.jpg",
+        src: "/ready-to-pick-up.png",
         alt: "grupo de personas utilizando tecnologia",
         enfoque1: "Mejora la experiencia del cliente",
         enfoque2: "Aumenta las ventas",
@@ -56,30 +57,33 @@ const Page = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const bgColor = isScrolled ? 'bg-[#004D4D]  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#004D4D] duration-300 ease-in-out transition-delay-300';
+    const bgColor = isScrolled ? 'bg-[#A0522D]  transition-all duration-300 ease-in-out transition-delay-300' : 'bg-[#A0522D] duration-300 ease-in-out transition-delay-300';
 
-        let products = [
-            { id: 1, alt: "ilustración de una persona dejando un pedido", src: "/ready-to-pick-up.png", title: "La manera de potenciar los restaurantes con Ready to pick up", date: 'Dic 24, 2023', hrefa: '/blog/ready-to-pick-up'},
-            { id: 2, alt: "imagen de abstracción de icono de carrito de compras", src: '/digital-comerce.png', title: "¿Cómo la personalización de experiencia impacta negocios?", date: 'Dic 6, 2023', hrefa: '/blog/personalizacion' },
-            { id: 3, alt: "imagen de clientes", src: "/cx.svg", title: "CMS vs. Diseño Web Personalizado", date: 'Dic 16, 2023', hrefa: '/blog/cms-vs-desarrollo-web'},
-            { id: 4, alt: "imagen de gafas de realidad virtual", src: '/metaverso.svg', title: "¿Cómo la personalización de experiencia impacta negocios?", date: 'Nov 29, 2023', hrefa: '/blog/personalizacion' },
-            
-        ]
+    let products = [
+        { id: 1, alt: "ilustración de una persona dejando un pedido", src: "/ready-to-pick-up.png", title: "La manera de potenciar los restaurantes con Ready to pick up", date: 'Dic 24, 2023', hrefa: '/blog/ready-to-pick-up' },
+        { id: 2, alt: "imagen de abstracción de icono de carrito de compras", src: '/digital-comerce.png', title: "5 tendencias tecnologicas para este 2024", date: 'Ene 2, 2023', hrefa: '/blog/tech-trends-2024' },
+        { id: 3, alt: "imagen de clientes", src: "/cx.svg", title: "CMS vs. Diseño Web Personalizado", date: 'Dic 16, 2023', hrefa: '/blog/cms-vs-desarrollo-web' },
+        { id: 4, alt: "imagen de gafas de realidad virtual", src: '/metaverso.svg', title: "¿Cómo la personalización de experiencia impacta negocios?", date: 'Nov 29, 2023', hrefa: '/blog/personalizacion' },
+
+    ]
 
     return (
         <div className='bg-white'>
-            <div className=' bg-[#004D4D] text-[#ECFF8C]'>
-                <div className={`${bgColor} fixed top-0 w-full z-10 text-[#ECFF8C]`} >
-                    <NavBar logo={logo} color='[#ECFF8C]' bg={bgColor} />
+            <div className=' bg-[#A0522D] text-[#E5F1FF]'>
+                <div className={`${bgColor} fixed top-0 w-full z-10 text-[#E5F1FF]`} >
+                    <NavBar logo={logo} color='[#E5F1FF]' bg={bgColor} />
                 </div>
                 <div className='flex flex-col gap-4 flex-1 m-4 pb-10 text-[#ECFF8C] '>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 pt-60 md:pb-20'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 pt-40 md:pb-'>
                         <div className='flex flex-col'>
                             {/* <span className='text-[#0000FF]'>Acerca de</span> */}
-                            <h1 className='font-medium text-[35px] md:text-[60px]  text-[#ECFF8C]   '>{customization.title}</h1>
+                            <h1 className='font-medium text-[35px] md:text-[60px]  text-[#E5F1FF]   '>{customization.title}</h1>
                         </div>
                         <div>
-                            <h2 className='text-[#ECFF8C] text-md md:text-4xl pt-10'>{customization.subtitle}</h2>
+                           
+                            <div>
+                                <Image alt='persona entregando un pedido de comida' src={readyToPickUp} width={1200} height={0} className='py-6' />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,35 +92,66 @@ const Page = () => {
             <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
                 <div>
                     <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >
-                        Nuestra vision para el futuro en negocios de productos y servicios
+                    ¿Por qué es importante Ready to Pick Up?
                     </h2>
                     <p className='pt-10 mb-6'>
-                        Nuestra visión para el futuro es garantizar que las empresas de productos y servicios se transformen con soluciones tecnológicas para llegar a nuevos clientes, optimizar su eficiencia operativa y aumentar sus ventas
+                        Ready to Pick Up es mucho más que una simple modalidad de servicio. Se trata de una estrategia integral que abarca desde la optimización de la cocina hasta la experiencia del usuario. En esencia, este enfoque permite a los clientes realizar pedidos en línea y luego recogerlos directamente en el restaurante, eliminando la espera y proporcionando una experiencia más rápida y conveniente.
                     </p>
-                    <Link href={'/blog/our-vision'} className='my-10'>
-                        <span className='underline my-10'>Lea nuestro plan para las empresas</span>
-                    </Link>
                 </div>
                 <div>
-                    <Image alt='imagen de nuestra vision' src={ourVision} width={1200} height={0} className='py-6' />
+                    <Image alt='persona entregando un pedido de comida' src={readyToPickUp2} width={1200} height={0} className='py-6' />
                 </div>
             </section>
-            <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid '>
+            <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
                 <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >
-                    Estamos construyendo herramientas tecnológicas en el campo digital para el beneficio de negocios de productos y servicios. Consideramos cumplida nuestra misión si nuestro trabajo ayuda a otros a lograr este resultado
+                    Ready to pick up es la manera de impulsar tu negocio
                 </h2>
-                <Image alt='imagen de nuestra vision' src={bussines} width={1600} height={0} className='py-6' />
+                
+                <div>
+                    <h3 className='font-black pt-2'>Aumento de las ventas</h3>
+                    <ul>
+                        <p> Los servicios de comida para llevar y recogida en el local representan una oportunidad de crecimiento para los restaurantes. Ready to pick up ayuda a los restaurantes a llegar a nuevos clientes y aumentar sus ventas.</p>
+                    </ul>
+                    <h3 className='font-black pt-2'>Mejora de la eficiencia:</h3>
+                    <p>Ready to pick up simplifica el proceso de pedidos y recogidas, lo que ayuda a los restaurantes a mejorar su eficiencia y reducir los costes.</p>
+                    <h3 className='font-black pt-2'>Mejora de la experiencia del cliente:</h3>
+                    <p>Ready to pick up ofrece a los clientes una experiencia sencilla y cómoda, lo que puede contribuir a mejorar su satisfacción y fidelidad.</p>
+                </div>
+            </section>
+            <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
+                <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >
+                Optimización operativa: La clave del éxito
+                </h2>
+                <div>
+                    <p>La implementación de Ready to Pick Up va más allá de simplemente ofrecer una opción de servicio adicional. Requiere una transformación interna que optimice los procesos operativos, desde la gestión de inventario hasta la logística de preparación de pedidos. Al adoptar tecnologías modernas, como sistemas de gestión de pedidos y plataformas de pedidos en línea, los restaurantes pueden agilizar sus operaciones y garantizar una experiencia sin contratiempos para sus clientes.</p>
+                    <p>Además, Ready to Pick Up permite a los restaurantes mejorar la precisión de los pedidos y minimizar los errores, ya que la comunicación directa entre el cliente y la cocina se ve facilitada a través de plataformas digitales. Esto no solo aumenta la satisfacción del cliente, sino que también contribuye a construir una reputación positiva en línea.</p>
+                </div>
+            </section>
+            
+            <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid md:grid-cols-2 '>
+                <h2 className={`${garamond.variable} font-garamond text-3xl lg:text-6xl py-4`} >
+                Potencia la experiencia del cliente
+                </h2>
+                <div>
+                    <p>
+                    La experiencia del cliente es fundamental en el éxito de cualquier restaurante, y Ready to Pick Up ofrece una oportunidad única para destacar en este aspecto. Personalizar la experiencia del cliente a través de la interfaz de pedidos en línea, ofrecer promociones exclusivas para clientes habituales y garantizar la calidad del servicio son elementos clave para construir una lealtad a largo plazo.
+                        </p>
+                        <p>
+                        En conclusión, Ready to Pick Up se presenta como una estrategia imperativa para potenciar los restaurantes en la era digital. La combinación de eficiencia operativa y una experiencia del cliente inigualable posiciona a los establecimientos gastronómicos en el centro de la revolución digital, asegurando su relevancia y éxito continuo en un mercado en constante evolución.
+                        </p>
+                        </div>
             </section>
 
+
             <section className='my-10 mx-4 border-t border-black flex gap-10 items-center grid '>
-            <h2 className={`${garamond.variable} font-garamond  text-3xl lg:text-6xl py-4 border-t border-white`} >Nuestros productos</h2>
+                <h2 className={`${garamond.variable} font-garamond  text-3xl lg:text-6xl py-4 border-t border-white`} >Nuestros productos</h2>
                 <div className='lg-4  md:flex gap-4'>
                     {products.map(product => {
                         return <CardServices key={product.id} cardProduct={product} />
                     })}
                 </div>
             </section>
-            <Footer bgClass='[#004D4D]' colorText='[#ECFF8C]' src={logo}/>
+            <Footer bgClass='[#A0522D]' colorText='[#E5F1FF]' src={logo} />
 
         </div>
     )
