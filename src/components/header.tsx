@@ -34,9 +34,10 @@ const Header = () => {
         </div>
 
         <div className='flex flex-col mx-auto max-w-5xl  px-4 gap-6 absolute  bottom-0 mb-6'>
-         <h1 className=' text-4xl md:text-6xl '>  Aumenta tus ventas y mejorar tu reputación de marca con diseño web profesional</h1>  
+         <h1 className=' text-4xl md:text-6xl '>  Aumenta tus ventas y mejorar tu reputación de marca con el poder de la tecnología</h1>  
          <p>
-                        Creamos los sitios web de alta calidad  para atraer más clientes, mejorar la convercion y generar más ventas
+                        
+                        Atrae más clientes, mejorar la convercion y generar más ventas
                  </p>
                  <Link  className='bg-transparent  border border-white border-2 text-center text-lg  rounded w-32 px-1 py-1' href='/contacto'>
                            Contactar
