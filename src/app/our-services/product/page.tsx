@@ -41,22 +41,12 @@ const Page = () => {
         <div className=''>
             <Hero card={product} />
             <section>
-                <div className='border-t mx-4 border-black '>
+                <div className='border-t border-black '>
                     {blogs.map(blog => {
                         return <CardBlog key={blog.id} cardBlog={blog} />
                     })}
                 </div>
             </section>
-            {/* <Link href='/contacto' className=' text-[#0000FF] flex justify-center items-center border border-black  h-[50px] my-8 mx-4' target="_blank">
-                <p className='text-center text-black font-[16px] text-s'>Contactarme</p>
-            </Link> */}
-            {/* <div className='mx-4'>
-        <Pricing />
-      </div> */}
-            {/* <div className='grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-10'>
-        <ContactForm />
-        <Location />
-      </div> */}
             <Footer bgClass='white' colorText='black' src='/logo5black.svg' />
         </div>
     )

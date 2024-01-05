@@ -56,6 +56,7 @@ const NavBar: React.FC<colorLogo> = ({ logo, color, bg }) => {
                             >
                               <Menu.Items className={`inline-flex  absolute ${bg} mt-10 px-2 py-2  text-center  flex flex-col gap-4`}>
                               <Link href={'/our-services/product'}>Producto</Link>
+                              <Link href={'/our-services/commerce'}>Commercio</Link>
 
                                 {/* <Link href={'/tienda-virtual'}>Tienda online</Link> */}
                               </Menu.Items>
@@ -113,7 +114,7 @@ const NavBar: React.FC<colorLogo> = ({ logo, color, bg }) => {
                   >
                     <Menu.Items className={`inline-flex  ${bg} mt-2  py-2 flex flex-col gap-4`}>
                       <Link href={'/our-services/product'}>Producto</Link>
-                      {/* <Link href={'/tienda-virtual'}>Tienda online</Link> */}
+                      <Link href={'/our-services/commerce'}>Commercio</Link>
                     </Menu.Items>
                   </Transition>
                 </div>
