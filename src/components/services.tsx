@@ -14,9 +14,11 @@ const garamond = EB_Garamond({
 
 const Services = () => {
     let products = [
-        { id: 1, alt: "imagen de clientes", src: "/cx.svg", title: "CMS vs. Diseño Web Personalizado", date: '16 de diciembre de 2023', hrefa: '/blog/cms-vs-desarrollo-web'},
-        { id: 2, alt: "imagen de gafas de realidad virtual", src: '/metaverso.svg', title: "¿Cómo la personalización de experiencia impacta negocios?", date: '29 de noviembre de 2023', hrefa: '/blog/personalizacion' },
-        { id: 3, alt: "imagen de chatbot", src: '/chatbot.svg', title: "Omnicanalidad en tecnología: ¿qué es y cómo implementarla?", date: '4 de agosto de 2023', hrefa: '/blog/omnicanalidad' },
+        { id: 1, alt: "ilustración de una persona dejando un pedido", src: "/ready-to-pick-up.png", title: "La manera de potenciar los restaurantes con Ready to pick up", date: 'Dic 24, 2023', hrefa: '/blog/ready-to-pick-up'},
+        { id: 2, alt: "imagen de abstracción de icono de carrito de compras", src: '/digital-comerce.png', title: "5 tendencias tecnologicas para este 2024", date: 'Dic 6, 2023', hrefa: '/blog/tech-trends-2024' },
+        { id: 3, alt: "imagen de clientes", src: "/cx.svg", title: "CMS vs. Diseño Web Personalizado", date: 'Dic 16, 2023', hrefa: '/blog/cms-vs-desarrollo-web'},
+        { id: 4, alt: "imagen de gafas de realidad virtual", src: '/metaverso.svg', title: "¿Cómo la personalización de experiencia impacta negocios?", date: 'Nov 29, 2023', hrefa: '/blog/personalizacion' },
+        
     ]
 
     return (

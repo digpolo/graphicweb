@@ -27,13 +27,13 @@ const Footer: React.FC<CustomBackgroundProps> = ({ bgClass, colorText, src }) =>
                     <h2 className='py-3 font-black text-[16px]'>Experiencia del cliente</h2>
                     <ul className='gap-3 flex flex-col font-light'>
                     <li>
-                            <Link href='/pagina-web'>
-                                Pagina web
+                            <Link href='/our-services/product'>
+                                Producto
                             </Link>
                         </li>
                         <li>
-                            <Link href='/tienda-virtual'>
-                                Tienda Virtual
+                            <Link href='/our-services/commerce'>
+                            Commercio
                             </Link>
                         </li>
                         {/* <li>
