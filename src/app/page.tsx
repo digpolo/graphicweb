@@ -49,9 +49,9 @@ export default function Home() {
       <Mission/>
 
 
-  {sections.map(section => {
+  {/* {sections.map(section => {
         return <HomeSection key={section.id} card={section} />
-      })} 
+      })}  */}
       <Cx />
 
       <Footer bgClass='black' colorText='[#FFFFFF]' src='/logo5.svg' />
